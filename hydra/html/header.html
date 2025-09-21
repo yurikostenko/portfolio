@@ -1,0 +1,16 @@
+<header data-fls-header class="header">
+	<div class="header__container">
+		<div class="header__body">
+			<div class="header__wrapper">
+				<img class="header__logo" src="@img/logo.svg" alt="Logo">
+				<img class="header__logo-text" src="@img/logo-text.svg" alt="Logo">
+			</div>
+			<include src="@components/layout/menu/menu.html" locals='{"active":"[[active]]"}'></include>
+			<div class="header__link">
+				<a data-fls-button href="#" class="header__button button button--border"><span>CONTACT US</span></a>
+				<a data-fls-button href="#" class="header__button button"><span>JOIN HYDRA</span></a>
+			</div>
+			<button type="button" data-fls-menu class="icon-menu"><span></span></button>
+		</div>
+	</div>
+</header>

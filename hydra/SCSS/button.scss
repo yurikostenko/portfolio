@@ -1,0 +1,55 @@
+//<BUTTONS (a.btn+tab)>
+// Сніппет (HTML): btn
+.button {
+	display: inline-flex;
+	flex-shrink: 0;
+	align-items: center;
+	justify-content: center;
+	@include adaptiveValue("padding-block", 18, 10);
+	@include adaptiveValue("padding-inline", 38, 15);
+	border-radius: 40px;
+	background: linear-gradient(90deg, #8176af 0%, #c0b7e8 100%);
+	color: #343045;
+	font-size: 12px;
+	text-transform: uppercase;
+	font-weight: 700;
+	overflow: hidden;
+
+	transition:
+		color 0.5s,
+		border-color 0.3s;
+
+	@media (any-hover: hover) {
+		&:hover {
+			color: $mainColor;
+		}
+	}
+	@media (max-width: toEm($mobile)) {
+		flex-grow: 1;
+	}
+	&--border {
+		@include adaptiveValue("padding-block", 16, 10);
+		border: 2px solid #fff;
+		background: $bgColor;
+		color: $mainColor;
+
+		@media (any-hover: hover) {
+			&:hover {
+				border-color: #c0b7e8;
+				color: #c0b7e8;
+			}
+		}
+	}
+	&--maxi {
+		padding-block: 18px;
+		padding-inline: 41px;
+		@media (max-width: toEm($mobile)) {
+			padding-inline: 65px;
+			font-size: 14px;
+		}
+	}
+	&--mini {
+		padding-block: 16px;
+		@include adaptiveValue("padding-inline", 39, 60);
+	}
+}

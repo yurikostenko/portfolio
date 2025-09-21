@@ -1,0 +1,82 @@
+.header {
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 50px;
+	z-index: 50;
+	pointer-events: none;
+
+	&::before {
+		content: "";
+		height: 155px;
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100%;
+		background-color: rgba(48, 44, 66, 0.95);
+		z-index: -1;
+		@media (max-width: toEm($tablet)) {
+			height: 116px;
+		}
+		@media (max-width: toEm($mobile)) {
+			height: 93px;
+		}
+	}
+	@media (max-width: toEm($tablet)) {
+		top: 25px;
+	}
+
+	// .header__container
+	&__body {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 15px;
+	}
+	// .header__wrapper
+	&__wrapper {
+		@include adaptiveValue("margin-right", 65, 0);
+		flex-shrink: 0;
+		display: flex;
+		@include adaptiveValue("gap", 15, 11);
+		@media (max-width: toEm($tablet)) {
+			margin-inline-end: 0;
+		}
+	}
+	// .header__logo
+	&__logo {
+		aspect-ratio: 1;
+		@include adaptiveValue("width", 102, 68);
+		@media (max-width: toEm($mobile)) {
+			width: 68px;
+		}
+	}
+	// .header__logo-text
+	&__logo-text {
+		aspect-ratio: 76 / 46;
+		@include adaptiveValue("width", 76, 46);
+
+		@media (max-width: toEm($tablet)) {
+			display: none;
+		}
+		@media (max-width: toEm($mobile)) {
+			display: inline-flex;
+			width: 46px;
+		}
+	}
+	// .header__link
+	&__link {
+		display: flex;
+		align-items: center;
+		@include adaptiveValue("gap", 38, 5);
+		pointer-events: all;
+
+		@media (max-width: toEm($mobile)) {
+			flex: 1;
+		}
+
+		@media (max-width: toEm($mobileSmall)) {
+			display: none;
+		}
+	}
+}
