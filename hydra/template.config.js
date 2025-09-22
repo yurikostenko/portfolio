@@ -12,7 +12,7 @@ export default {
 		filename: '_components.html'
 	},
 	git: {
-		repo: `https://yurikostenko.github.io/portfolio/`,
+		repo: ``,
 		branch: `main`
 	},
 	navpanel: {
@@ -43,7 +43,7 @@ export default {
 	styles: {
 		tailwindcss: false,
 		pxtorem: true,
-		critical: true,
+		critical: false,
 		codesplit: true,
 		devfiles: true,
 	},
@@ -113,8 +113,8 @@ export default {
 		}
 	},
 	projectpage: {
-		enable: true,
-		projectname: 'hydra',
+		enable: false,
+		projectname: '',
 		template: "src/projectpage/projectpage.html",
 		outfilename: '',
 	},

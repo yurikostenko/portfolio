@@ -1,7 +1,7 @@
 @font-face { 
 	font-family: "iconfont"; 
 	font-display: swap;
-	src: url("D://portfolio-1/hydra/hydra/src/assets/svgicons/preview/iconfont.woff2?60a326d101628c238a115a79ad75c837") format("woff2"); 
+	src: url("C://Users/papay/OneDrive/Рабочий стол/hydra-new/src/assets/svgicons/preview/iconfont.woff2?2689fd81876b5d115319cf9e1ee2ffb4") format("woff2"); 
 } 
 [class*="--icon-"]::before{
 	font-family: iconfont; 
