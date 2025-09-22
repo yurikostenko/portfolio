@@ -7,7 +7,7 @@
 
 | Project | Demo | Repo |
 |---------|------|------|
-| Holiday Time | [Live Demo](https://yurikostenko.github.io/portfolio/holiday-time/dist/) | [Code](https://github.com/yurikostenko/portfolio/tree/main/holiday-time) |
+| Holiday Time | [Live Demo](https://yurikostenko.github.io/portfolio/holiday-time/) | [Code](https://github.com/yurikostenko/portfolio/tree/main/holiday-time) |
 | HYDRA | [Live Demo](https://yurikostenko.github.io/portfolio/hydra/dist/) | [Code](https://github.com/yurikostenko/portfolio/tree/main/hydra) |
 
 ---
@@ -36,3 +36,4 @@ _(сертифікат після проходження курсу HTML/CSS/JS)
 
 - [LinkedIn](https://www.linkedin.com/in/%D1%8E%D1%80%D1%96%D0%B9-%D0%BA%D0%BE%D1%81%D1%82%D0%B5%D0%BD%D0%BA%D0%BE-061247309/)
 - [Email](mailto:papayy3@gmail.com)
+
