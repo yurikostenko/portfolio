@@ -1,0 +1,113 @@
+//========================================================================================================================================================
+.subscribe {
+   background-color: $grey15;
+   @include adaptiveValue("padding-block", 40, 25);
+   // .subscribe__container
+   &__container {
+      display: flex;
+      align-items: center;
+      row-gap: 20px;
+      @include adaptiveValue("column-gap", 40, 25);
+
+      @media (max-width: toEm($tablet)) {
+         flex-wrap: wrap;
+      }
+   }
+   // .subscribe__content
+   &__content {
+      flex-grow: 1;
+   }
+   // .subscribe__title
+   &__title {
+      @include typography("XXL", 600);
+      color: $grey9;
+   }
+   // .subscribe__text
+   &__text {
+      @include typography("S");
+      color: $grey4;
+
+      @media (min-width: toEm(900)) {
+         max-width: 450px;
+      }
+   }
+   // .subscribe__form
+   &__form {
+      border-radius: 46px;
+      border: 1px solid $grey1;
+      background-color: $white;
+      display: flex;
+      min-width: min(375px, 100%);
+      flex-basis: 42.7%;
+      @media (max-width: toEm(900)) {
+         flex-grow: 1;
+      }
+      @media (max-width: toEm(440)) {
+         flex-direction: column;
+         gap: 5px;
+         border-radius: 46px;
+         background-color: transparent;
+         border: none;
+      }
+   }
+   // .subscribe__input
+   &__input {
+      padding-inline: 24px;
+      flex-grow: 1;
+      border-radius: 46px 0 0 46px;
+      height: 52px;
+      color: $grey9;
+      @include typography("M");
+      &::placeholder {
+         color: $grey5;
+         transition: all 0.2s;
+      }
+      &:focus {
+         &::placeholder {
+            opacity: 0;
+         }
+      }
+      @media (max-width: toEm(440)) {
+         border: 1px solid $grey1;
+         background-color: $white;
+         border-radius: 46px;
+      }
+   }
+   // .subscribe__button
+   &__button {
+   }
+   // .subscribe__social
+   &__social {
+   }
+}
+
+//========================================================================================================================================================
+.social {
+   display: flex;
+   // flex-wrap: wrap;
+   align-items: center;
+   gap: 8px;
+   // .social__item
+   &__item {
+      flex-shrink: 0;
+      flex-grow: 0;
+   }
+   // .social__link
+   &__link {
+      width: 40px;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $grey7;
+      @include typography("L");
+      transition: all 0.3s;
+      @media (any-hover: hover) and (any-pointer: fine) {
+         &:hover {
+            background-color: $success;
+            color: $white;
+         }
+      }
+   }
+}

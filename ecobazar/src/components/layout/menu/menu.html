@@ -1,0 +1,38 @@
+<div class="bottom-header__menu menu">
+	<nav class="menu__body">
+		<ul class="menu__list">
+			<each loop='item in [
+					{"href": "#","ancor": "Home","sub":[
+					{"href": "#","ancor": "Some link"},
+					{"href": "#","ancor": "Some link"},
+					{"href": "#","ancor": "Some link"}
+				]},
+				{"href": "catalog.html","ancor": "Shop"},
+				{"href": "#","ancor": "Pages"},
+				{"href": "#","ancor": "Blog","sub":[
+					{"href": "#","ancor": "Some link"},
+					{"href": "#","ancor": "Some link"},
+					{"href": "#","ancor": "Some link"}
+				]},
+				{"href": "#","ancor": "About Us"},
+				{"href": "#","ancor": "Contact Us"}
+				]'>
+				<li class="menu__item">
+					<a href="[[item.href]]" class="menu__link">[[item.ancor]]</a>
+					<if condition="item.sub">
+						<button class="menu__button">
+							<span class="menu__arrow menu__button--icon-shevron"></span>
+						</button>
+						<ul class="sub-menu">
+							<each loop='sub in [[item.sub]]'>
+								<li class="sub-menu__item">
+									<a href="[[sub.href]]" class="sub-menu__link">[[sub.ancor]]</a>
+								</li>
+							</each>
+						</ul>
+					</if>
+				</li>
+			</each>
+		</ul>
+	</nav>
+</div>

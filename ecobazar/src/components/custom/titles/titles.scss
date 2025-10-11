@@ -1,0 +1,89 @@
+.title {
+   color: $grey9;
+   line-height: 1.5;
+   @include typography("h5", 600);
+   &--big {
+      @include typography("h2", 600);
+   }
+}
+//========================================================================================================================================================
+.link-arrow {
+   color: $success;
+   line-height: 1.5;
+   @include typography("M", 500);
+   display: inline-flex;
+   flex-direction: row-reverse;
+   gap: 12px;
+   align-items: center;
+   transition: color 0.3s;
+
+   &::before {
+      translate: 0 -2px;
+   }
+   @media (any-hover: hover) and (any-pointer: fine) {
+      &:hover {
+         color: $successDark;
+      }
+   }
+}
+//========================================================================================================================================================
+.block-header {
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   gap: 10px;
+   &--margin {
+      @include adaptiveValue("margin-bottom", 32, 15);
+   }
+   // .block-header--center
+   &--center {
+      text-align: center;
+   }
+   // .block-header__title
+   &__title {
+      flex-grow: 1;
+   }
+   // .block-header__slider-arrows
+   &__slider-arrows {
+      display: flex;
+      flex-shrink: 0;
+      gap: 12px;
+   }
+   // .block-header__slider-arrow
+   &__slider-arrow {
+      width: 45px;
+      aspect-ratio: 1;
+      background-color: $white;
+      border: 1px solid $grey1;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @include typography("M");
+      color: $grey9;
+      transition:
+         background-color 0.3s,
+         color 0.3s,
+         border-color 0.3s;
+      // .block-header__slider-arrow--left
+      &--left {
+         &::before {
+            transform: rotate(-180deg);
+         }
+      }
+      // .block-header__slider-arrow--right
+      &--right {
+         &::before {
+            transform: translateY(-2px);
+         }
+      }
+
+      @media (any-hover: hover) and (any-pointer: fine) {
+         &:hover {
+            background-color: $success;
+            color: $white;
+            border-color: $success;
+         }
+      }
+   }
+}

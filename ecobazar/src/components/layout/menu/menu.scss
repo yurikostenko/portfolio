@@ -1,0 +1,199 @@
+//Burger Icon
+.icon-menu {
+	@media (min-width: toEm($mobile)) {
+		display: none;
+	}
+	@media (max-width: toEm($mobile)) {
+		flex-shrink: 0;
+		position: relative;
+		width: 30px;
+		height: 18px;
+		span,
+		&::before,
+		&::after {
+			content: "";
+			transition: all 0.3s;
+			position: absolute;
+			height: 2px;
+			width: 100%;
+			right: 0;
+			background-color: $grey9;
+		}
+		span {
+			top: 50%;
+			translate: 0 -50%;
+		}
+		&::before {
+			top: 0;
+		}
+		&::after {
+			bottom: 0;
+		}
+	}
+	[data-fls-menu-open] & {
+		span {
+			width: 0;
+		}
+		&::before {
+			top: 50%;
+			rotate: -45deg;
+			translate: 0 -50%;
+		}
+		&::after {
+			rotate: 45deg;
+			translate: 0 50%;
+			bottom: 50%;
+		}
+	}
+}
+
+.menu {
+	display: flex;
+	@media (max-width: toEm($mobile)) {
+		display: block;
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 100%;
+		transition: left 0.5s;
+		overflow: auto;
+		padding: 130px 15px 30px 15px;
+		background-color: $successDark;
+
+		[data-fls-menu-open] & {
+			left: 0;
+			&::before {
+				left: 0;
+			}
+		}
+	}
+	// .menu__body
+	&__body {
+		@media (min-width: toEm($mobile)) {
+			display: flex;
+		}
+	}
+	// .menu__list
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0 35px;
+		@media (max-width: toEm($mobile)) {
+			text-align: right;
+			flex-direction: column;
+			margin-bottom: 15px;
+		}
+	}
+	// .menu__item
+	&__item {
+		position: relative;
+		color: $grey4;
+		display: flex;
+		transition: color 0.3s;
+		@media (any-hover: hover) and (any-pointer: fine) {
+			&:hover {
+				color: $white;
+
+				.menu__arrow {
+					&::before {
+						rotate: -180deg;
+						transition: all 0.3s;
+					}
+				}
+				.sub-menu {
+					pointer-events: auto;
+					translate: 0 0;
+				}
+			}
+		}
+		&.--active {
+			color: $white;
+			.sub-menu {
+				display: block;
+				pointer-events: auto;
+				translate: 0 0;
+			}
+			.menu__arrow {
+				&::before {
+					rotate: -180deg;
+					transition: all 0.3s;
+				}
+			}
+		}
+		@media (max-width: toEm($mobile)) {
+			justify-content: flex-end;
+			flex-wrap: wrap;
+			flex-basis: 100%;
+		}
+	}
+	// .menu__link
+	&__link {
+		display: flex;
+		align-items: center;
+		padding-block: 16px;
+		@include typography("S", 500);
+		position: relative;
+		z-index: 4;
+		@media (max-width: toEm($mobile)) {
+			color: $white;
+			padding-block: 15px;
+			@include typography("h4", 500);
+		}
+	}
+	// .menu__button
+	&__button {
+		position: relative;
+		z-index: 4;
+		padding-left: 6.7px;
+		transition: color 0.3s;
+		font-size: 9px;
+
+		@media (max-width: toEm($mobile)) {
+			display: none;
+		}
+	}
+}
+.sub-menu {
+	transition: all 0.3s;
+	padding: 15px;
+	background-color: $successDark;
+	border-radius: 0 0 8px 8px;
+
+	// .sub-menu__item
+	&__item {
+		&:not(:last-child) {
+			margin-bottom: 8px;
+			@media (max-width: toEm($mobile)) {
+				margin-bottom: 15px;
+			}
+		}
+	}
+	// .sub-menu__link
+	&__link {
+		@include typography("M");
+		color: $white;
+		@media (any-hover: hover) and (any-pointer: fine) {
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+		@media (max-width: toEm($mobile)) {
+			@include typography("XL");
+		}
+	}
+	@media (max-width: toEm($mobile)) {
+		flex-grow: 1;
+		flex-basis: 100%;
+		background-color: $grey9;
+		border-radius: 8px;
+	}
+	@media (min-width: toEm($mobile)) {
+		position: absolute;
+		left: -15px;
+		top: 100%;
+		translate: 0 -100%;
+		pointer-events: none;
+		width: 200px;
+	}
+}

@@ -1,0 +1,56 @@
+.countdown {
+   &--mini {
+      .countdown__digits {
+         @include typography("L", 500);
+         color: $grey9;
+      }
+      .countdown__labels {
+         color: $grey4;
+         font-size: 10px;
+      }
+   }
+   &__label {
+      text-align: center;
+      font-size: 14px;
+      color: $grey4;
+      &:not(:last-child) {
+         margin-bottom: 8px;
+      }
+   }
+   // .countdown__timer
+   &__timer {
+      text-align: center;
+   }
+   // .countdown__digits
+   &__digits {
+      display: flex;
+      @include typography("XXL");
+      &:not(:last-child) {
+         margin-bottom: 4px;
+      }
+      span {
+         position: relative;
+         flex-grow: 1;
+         flex-basis: 20px;
+         &:not(:last-child) {
+            &::after {
+               content: ":";
+               position: absolute;
+               right: 0;
+               top: 50%;
+               translate: 0 -50%;
+            }
+         }
+      }
+   }
+   // .countdown__labels
+   &__labels {
+      display: flex;
+      font-size: 12px;
+      text-transform: uppercase;
+      span {
+         flex-grow: 1;
+         flex-basis: 20px;
+      }
+   }
+}

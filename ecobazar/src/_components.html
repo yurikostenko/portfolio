@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<include src="@components/layout/head/head.html" locals='{
+		"title":"Розробка компонентів", 
+		"preloader": {
+			"enable":"false",
+			"once":"false"
+		},
+		"keywords":"", 
+		"description":""
+	}'>
+</include>
+<style>
+	.components__container {
+		padding: 50px;
+
+		/* display: flex;
+		flex-direction: column;
+		gap: 30px; */
+		>* {
+			margin-bottom: 30px;
+		}
+	}
+</style>
+
+<body>
+	<div class="components">
+		<div class="components__container">
+
+			<include src="@components/custom/titles/titles.html"></include>
+
+			<button data-fls-button class="button">Some</button>
+			<button data-fls-button class="button button--middle">Some</button>
+			<button data-fls-button class="button button--small">Some</button>
+			<button data-fls-button class="button button--arrow button--icon-arrow button--white">Some</button>
+
+			<include src="@components/custom/products/products.html"></include>
+
+		</div>
+	</div>
+</body>
+<script type="module" src="@js/app.js"></script>
+
+</html>

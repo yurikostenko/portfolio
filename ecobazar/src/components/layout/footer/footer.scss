@@ -1,0 +1,131 @@
+.footer {
+	background-color: $grey9;
+	// .footer__body
+	&__body {
+		@include adaptiveValue("padding-block", 60, 20);
+	}
+}
+.body-footer {
+	// .body-footer__container
+	&__container {
+		display: flex;
+		justify-content: space-between;
+		@include adaptiveValue("row-gap", 50, 30);
+		@include adaptiveValue("column-gap", 100, 20, 0, $containerWidth, $tablet);
+
+		@media (max-width: toEm($tablet)) {
+			flex-wrap: wrap;
+		}
+	}
+	// .body-footer__content
+	&__content {
+		flex-basis: 340px;
+		display: grid;
+		gap: 16px;
+		color: $grey5;
+		@include typography("S");
+		@media (max-width: toEm($tablet)) {
+			flex-basis: 100%;
+		}
+	}
+	// .body-footer__links
+	&__links {
+		display: flex;
+		gap: 10px;
+		flex-wrap: wrap;
+	}
+	// .body-footer___link
+	&___link {
+		@include typography("S", 500);
+		color: $white;
+		text-decoration: underline;
+		transition: text-decoration-color 0.3s;
+		text-decoration-color: $success;
+		text-underline-offset: 8px;
+		text-decoration-thickness: 2px;
+
+		@media (any-hover: hover) and (any-pointer: fine) {
+			&:hover {
+				text-decoration-color: $warning;
+			}
+		}
+	}
+	// .body-footer__menus
+	&__menus {
+		flex-grow: 1;
+		display: flex;
+		column-gap: 15px;
+		justify-content: space-between;
+		row-gap: 25px;
+
+		@media (max-width: toEm($tablet)) {
+			flex-wrap: wrap;
+		}
+	}
+}
+.logo-footer {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	color: $white;
+	// .logo-footer__text
+	&__text {
+		@include typography("h5", 500);
+	}
+}
+.menus-footer {
+	// .menus-footer__title
+	&__title {
+		color: $white;
+		@include typography("M", 500);
+		&:not(:last-child) {
+			margin-bottom: 20px;
+		}
+	}
+	// .menus-footer__item
+	&__item {
+		&:not(:last-child) {
+			margin-bottom: 12px;
+		}
+	}
+	// .menus-footer__link
+	&__link {
+		color: $grey4;
+		transition: color 0.3s;
+		@include typography("S");
+		@media (any-hover: hover) and (any-pointer: fine) {
+			&:hover {
+				color: $white;
+			}
+		}
+	}
+}
+.bootom-footer {
+	border-top: 1px solid $grey8;
+	padding-block: 24px;
+	// .bootom-footer__container
+	&__container {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-between;
+		gap: 15px;
+
+		@media (max-width: toEm($mobile)) {
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+		}
+	}
+	// .bootom-footer__copy
+	&__copy {
+		@include typography("S");
+	}
+}
+.payments {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+	align-items: center;
+}
