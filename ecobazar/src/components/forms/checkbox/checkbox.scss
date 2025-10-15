@@ -1,49 +1,81 @@
-.checkbox {
-	display: inline-block;
+.checkbox-rating {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
 	position: relative;
-	&:not(:last-child) {
-		margin-bottom: 5px;
-	}
-	// .checkbox__input
+	// .checkbox-rating__input
 	&__input {
 		position: absolute;
 		width: 0;
 		height: 0;
 		opacity: 0;
-		&:focus-visible + .checkbox__text {
+		&:focus-visible + .checkbox-rating__label {
 			outline: 1px solid #000;
 		}
-		&:checked + .checkbox__text:after {
-			transform: scale(1);
+		&:checked + .checkbox-rating__label::before {
+			background-color: $success;
+			border-color: $success;
+			color: $white;
 		}
 	}
-	// .checkbox__text
-	&__text {
+	// .checkbox-rating__label
+	&__label {
 		cursor: pointer;
 		position: relative;
-		gap: 10px;
+		gap: 8px;
 		display: inline-flex;
 		align-items: center;
 		&:before {
-			content: "";
-			border-radius: 3px;
-			align-self: flex-start;
-			flex: 0 0 20px;
+			font-family: "iconfont";
+			content: "\f119";
+			font-size: 13px;
+			color: transparent;
+			border-radius: 5px;
+			text-align: center;
+			line-height: 1.2;
+			aspect-ratio: 1;
 			width: 20px;
-			height: 20px;
-			border: 1px solid #a7a9ac;
+			border: 1px solid $grey2;
+			transition:
+				background-color 0.2s ease,
+				border-color 0.2s ease,
+				color 0.2s ease;
 		}
-		&::after {
-			content: "";
-			transition: all 0.3s ease 0s;
-			transform: scale(0);
-			width: 10px;
-			height: 10px;
-			border-radius: 3px;
-			background-color: #7a956b;
-			position: absolute;
-			left: 5px;
-			top: 5px;
+	}
+}
+
+.checkbox-tags {
+	cursor: pointer;
+	&:has(input:focus-visible) {
+		outline: 1px solid $grey9;
+		border-radius: 3px;
+	}
+	&:has(input:checked) {
+		.checkbox-tags__text {
+			background-color: $success;
+			color: $white;
+		}
+	}
+	// .checkbox-tags__input
+	&__input {
+		position: absolute;
+		width: 0;
+		height: 0;
+		opacity: 0;
+	}
+	// .checkbox-tags__text
+	&__text {
+		display: block;
+		transition: all 0.3s;
+		border-radius: 30px;
+		background-color: $grey05;
+		padding: 6px 16px;
+		@include typography("S");
+		color: $grey9;
+		@media (any-hover: hover) and (any-pointer: fine) {
+			&:hover {
+				background-color: $grey1;
+			}
 		}
 	}
 }

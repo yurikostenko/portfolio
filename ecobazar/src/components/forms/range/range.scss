@@ -80,12 +80,12 @@
 /* Slider size and handle placement;
  */
 .noUi-horizontal {
-	height: 18px;
+	height: 6px;
 }
 .noUi-horizontal .noUi-handle {
-	width: 34px;
-	height: 28px;
-	right: -17px;
+	width: 18px;
+	aspect-ratio: 1;
+	right: -9px;
 	top: -6px;
 }
 .noUi-vertical {
@@ -105,16 +105,20 @@
  * Giving the connect element a border radius causes issues with using transform: scale
  */
 .noUi-target {
-	background: #fafafa;
-	border-radius: 4px;
-	border: 1px solid #d3d3d3;
-	box-shadow: inset 0 1px 1px #f0f0f0, 0 3px 6px -5px #bbb;
+	background-color: #e6e6e6;
+	border-radius: 0.9375rem;
+	// 	background: #fafafa;
+	// 	border-radius: 4px;
+	// 	border: 1px solid #d3d3d3;
+	// 	box-shadow:
+	// 		inset 0 1px 1px #f0f0f0,
+	// 		0 3px 6px -5px #bbb;
 }
 .noUi-connects {
 	border-radius: 3px;
 }
 .noUi-connect {
-	background: #3fb8af;
+	background: #00b207;
 }
 /* Handles and cursors;
  */
@@ -125,27 +129,37 @@
 	cursor: ns-resize;
 }
 .noUi-handle {
-	border: 1px solid #d9d9d9;
-	border-radius: 3px;
-	background: #fff;
-	cursor: default;
-	box-shadow: inset 0 0 1px #fff, inset 0 1px 7px #ebebeb, 0 3px 6px -3px #bbb;
+	border: 0.125rem solid #00b207;
+	border-radius: 50%;
+	background-color: #fff;
+	cursor: grab;
+	// border: 1px solid #d9d9d9;
+	// border-radius: 3px;
+	// background: #fff;
+	// cursor: default;
+	// box-shadow:
+	// 	inset 0 0 1px #fff,
+	// 	inset 0 1px 7px #ebebeb,
+	// 	0 3px 6px -3px #bbb;
 }
 .noUi-active {
-	box-shadow: inset 0 0 1px #fff, inset 0 1px 7px #ddd, 0 3px 6px -3px #bbb;
+	box-shadow:
+		inset 0 0 1px #fff,
+		inset 0 1px 7px #ddd,
+		0 3px 6px -3px #bbb;
 }
 /* Handle stripes;
  */
 .noUi-handle:before,
 .noUi-handle:after {
 	content: "";
-	display: block;
+	// display: block;
 	position: absolute;
-	height: 14px;
-	width: 1px;
-	background: #e8e7e6;
-	left: 14px;
-	top: 6px;
+	// height: 14px;
+	// width: 1px;
+	// background: #e8e7e6;
+	// left: 14px;
+	// top: 6px;
 }
 .noUi-handle:after {
 	left: 17px;
@@ -290,4 +304,37 @@
 	transform: translate(0, -18px);
 	top: auto;
 	right: 28px;
+}
+
+//==========================================
+
+.spollers {
+	// .spollers__range
+	&__range {
+	}
+}
+.range {
+	// .range__info
+	&__info {
+		padding-top: toRem(16);
+		display: flex;
+		gap: toRem(5);
+		align-items: center;
+		@include typography("S");
+	}
+	// .range__tag
+	&__tag {
+		color: $grey7;
+	}
+	// .range__value
+	&__value {
+		color: $grey9;
+		@include typography("S", 500);
+	}
+	// .range__from
+	&__from {
+	}
+	// .range__to
+	&__to {
+	}
 }

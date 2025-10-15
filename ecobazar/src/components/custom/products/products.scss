@@ -12,6 +12,12 @@
    border: 1px solid $grey1;
    margin: 0 -1px -1px 0;
 
+   .catalog &,
+   .product & {
+      margin: 0;
+      border-radius: 8px;
+   }
+
    &::before {
       content: "";
       position: absolute;
@@ -25,6 +31,15 @@
       pointer-events: none;
       opacity: 0;
       transition: opacity 0.3s;
+
+      .product &,
+      .catalog & {
+         top: 0;
+         left: 0;
+         right: 0;
+         bottom: 0;
+         border-radius: toRem(8);
+      }
    }
 
    &--big {
@@ -53,6 +68,13 @@
       }
       .item-products__picture {
          aspect-ratio: 527 / 448;
+      }
+   }
+   &--mini {
+      display: flex;
+      .item-products__picture {
+         width: 112px;
+         aspect-ratio: 1;
       }
    }
 
@@ -173,6 +195,7 @@
          &:hover {
             background-color: $success;
             color: $white;
+            border-color: $success;
          }
       }
    }

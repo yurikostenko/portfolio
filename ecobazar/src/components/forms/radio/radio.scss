@@ -1,56 +1,62 @@
 .options {
+	// padding-top: 20px;
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
-	// .options__item
-	&__item {
-		position: relative;
+	// .options__label
+	&__label {
+		display: inline-flex;
+		align-items: center;
+		gap: 8px;
 		cursor: pointer;
+		border-radius: 3px;
+
+		&::before {
+			content: "";
+			transition: all 0.2s;
+			width: 20px;
+			flex-shrink: 0;
+			aspect-ratio: 1;
+			border-radius: 50%;
+			outline-offset: -1px;
+			outline: 1px solid $grey2;
+			border: 4px solid transparent;
+		}
+		&:has(.options__input:focus-visible) {
+			outline: 1px solid $grey9;
+		}
+		&:has(.options__input:checked) {
+			&::before {
+				outline-color: $success;
+				border-color: $white;
+				background-color: $success;
+			}
+		}
 		&:not(:last-child) {
-			margin-bottom: 5px;
+			margin-bottom: 20px;
+		}
+		@media (any-hover: hover) and (any-pointer: fine) {
+			&:hover {
+				&::before {
+					outline-color: $grey4;
+				}
+			}
 		}
 	}
 	// .options__input
 	&__input {
+		appearance: none;
+		position: absolute;
 		width: 0;
 		height: 0;
 		opacity: 0;
-		position: absolute;
-		&:focus-visible + .options__text {
-			outline: 1px solid #000;
-		}
-		&:checked + .options__text:before {
-		}
-		&:checked + .options__text:after {
-			transform: scale(1);
-		}
 	}
 	// .options__text
 	&__text {
-		display: inline-flex;
-		align-items: center;
-		cursor: pointer;
-		gap: 10px;
-		&:before {
-			content: "";
-			align-self: flex-start;
-			width: 20px;
-			height: 20px;
-			flex: 0 0 20px;
-			border-radius: 50%;
-			border: 1px solid #a7a9ac;
-		}
-		&:after {
-			content: "";
-			transition: all 0.3s ease 0s;
-			transform: scale(0);
-			width: 10px;
-			height: 10px;
-			border-radius: 50%;
-			background-color: #7a956b;
-			position: absolute;
-			left: 5px;
-			top: 5px;
+		@include typography("S");
+		color: $grey9;
+		span {
+			color: $grey5;
 		}
 	}
 }

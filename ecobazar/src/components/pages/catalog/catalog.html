@@ -10,7 +10,7 @@
             <div class="header-catalog__filter">
                <button type="button" class="header-catalog__button button button--middle button--filter">Filter</button>
             </div>
-            <div class="header-catalog__body">
+            <div data-fls-dynamic=".catalog__body,767.98,1" class="header-catalog__body">
                <div class="header-catalog__sort sort-catalog">
                   <label class="sort-catalog__label">Sort by:</label>
                   <div class="sort-catalog__body sort-catalog__body--icon-shevron">
@@ -25,174 +25,9 @@
          </div>
          <div class="catalog__body">
             <aside class="catalog__filter filter">
-               <div class="filter__body">
-                  <details open class="filter__item item-filter">
-                     <summary class="item-filter__header">All Categories</summary>
-                     <div class="item-filter__body">
-                        <div class="item-filter__categories categories-filter">
-                           <label class="categories-filter__item">
-                              <input class="categories-filter__input" type="radio" name="form[category]">
-                              <span class="categories-filter__text">Fresh Fruit <span>(25)</span></span>
-                           </label>
-                           <label class="categories-filter__item">
-                              <input class="categories-filter__input" type="radio" name="form[category]">
-                              <span class="categories-filter__text">Vegetables <span>(150)</span></span>
-                           </label>
-                           <label class="categories-filter__item">
-                              <input class="categories-filter__input" type="radio" name="form[category]">
-                              <span class="categories-filter__text">Cooking <span>(85)</span></span>
-                           </label>
-                           <label class="categories-filter__item">
-                              <input class="categories-filter__input" type="radio" name="form[category]">
-                              <span class="categories-filter__text">Snacks <span>(15)</span></span>
-                           </label>
-                           <label class="categories-filter__item">
-                              <input class="categories-filter__input" type="radio" name="form[category]">
-                              <span class="categories-filter__text">Beverages <span>(15)</span></span>
-                           </label>
-                           <label class="categories-filter__item">
-                              <input class="categories-filter__input" type="radio" name="form[category]">
-                              <span class="categories-filter__text">Beauty & Health <span>(15)</span></span>
-                           </label>
-                           <label class="categories-filter__item">
-                              <input class="categories-filter__input" type="radio" name="form[category]">
-                              <span class="categories-filter__text">Bread & Bakery <span>(15)</span></span>
-                           </label>
-                        </div>
-                     </div>
-                  </details>
-                  <details open class="filter__item item-filter">
-                     <summary class="item-filter__header">Price</summary>
-                     <div class="item-filter__body">
-                        <div class="item-filter__price price-filter">
-                           <div class="price-filter__slider"></div>
-                           <div class="price-filter__info">
-                              <div class="price-filter__label">Price:</div>
-                              <div class="price-filter__value"></div>
-                              <input type="hidden" name="form[price-from]" class="price-filter__from">
-                              <input type="hidden" name="form[price-to]" class="price-filter__to">
-                           </div>
-                        </div>
-                     </div>
-                  </details>
-                  <details open class="filter__item item-filter">
-                     <summary class="item-filter__header">Rating</summary>
-                     <div class="item-filter__body">
-                        <div class="item-filter__rating rating-filter">
-                           <label class="rating-filter__item">
-                              <input class="rating-filter__input" type="checkbox" name="form[rating-5]">
-                              <div class="rating-filter__label">
-                                 <div class="rating-filter__body">
-                                    <div class="rating-filter__items">
-                                       <div class="rating-filter__star rating-filter__star--active"></div>
-                                       <div class="rating-filter__star"></div>
-                                       <div class="rating-filter__star"></div>
-                                       <div class="rating-filter__star"></div>
-                                       <div class="rating-filter__star"></div>
-                                    </div>
-                                    <div class="rating-filter__value">5.0</div>
-                                 </div>
-                              </div>
-                           </label>
-                           <label class="rating-filter__item">
-                              <input class="rating-filter__input" type="checkbox" name="form[rating-5]">
-                              <div class="rating-filter__label">
-                                 <div class="rating-filter__body">
-                                    <div class="rating-filter__items">
-                                       <div class="rating-filter__star"></div>
-                                       <div class="rating-filter__star rating-filter__star--active"></div>
-                                       <div class="rating-filter__star"></div>
-                                       <div class="rating-filter__star"></div>
-                                       <div class="rating-filter__star"></div>
-                                    </div>
-                                    <div class="rating-filter__value">4.0 & up</div>
-                                 </div>
-                              </div>
-                           </label>
-                           <label class="rating-filter__item">
-                              <input class="rating-filter__input" type="checkbox" name="form[rating-5]">
-                              <div class="rating-filter__label">
-                                 <div class="rating-filter__body">
-                                    <div class="rating-filter__items">
-                                       <div class="rating-filter__star"></div>
-                                       <div class="rating-filter__star"></div>
-                                       <div class="rating-filter__star rating-filter__star--active"></div>
-                                       <div class="rating-filter__star"></div>
-                                       <div class="rating-filter__star"></div>
-                                    </div>
-                                    <div class="rating-filter__value">3.0 & up</div>
-                                 </div>
-                              </div>
-                           </label>
-                           <label class="rating-filter__item">
-                              <input class="rating-filter__input" type="checkbox" name="form[rating-5]">
-                              <div class="rating-filter__label">
-                                 <div class="rating-filter__body">
-                                    <div class="rating-filter__items">
-                                       <div class="rating-filter__star"></div>
-                                       <div class="rating-filter__star"></div>
-                                       <div class="rating-filter__star"></div>
-                                       <div class="rating-filter__star rating-filter__star--active"></div>
-                                       <div class="rating-filter__star"></div>
-                                    </div>
-                                    <div class="rating-filter__value">2.0 & up</div>
-                                 </div>
-                              </div>
-                           </label>
-                           <label class="rating-filter__item">
-                              <input class="rating-filter__input" type="checkbox" name="form[rating-5]">
-                              <div class="rating-filter__label">
-                                 <div class="rating-filter__body">
-                                    <div class="rating-filter__items">
-                                       <div class="rating-filter__star"></div>
-                                       <div class="rating-filter__star"></div>
-                                       <div class="rating-filter__star"></div>
-                                       <div class="rating-filter__star "></div>
-                                       <div class="rating-filter__star rating-filter__star--active"></div>
-                                    </div>
-                                    <div class="rating-filter__value">1.0 & up</div>
-                                 </div>
-                              </div>
-                           </label>
-                        </div>
-                     </div>
-                  </details>
-                  <details open class="filter__item item-filter">
-                     <summary class="item-filter__header">Popular Tag</summary>
-                     <div class="item-filter__body">
-                        <div class="item-filter__tags tags-filter">
-                           <label class="tags-filter__item">
-                              <input class="tags-filter__input" name="form[tags]" type="checkbox">
-                              <span class="tags-filter__text">Healthy</span>
-                           </label>
-                           <label class="tags-filter__item">
-                              <input class="tags-filter__input" name="form[tags]" type="checkbox">
-                              <span class="tags-filter__text">Low fat</span>
-                           </label>
-                           <label class="tags-filter__item">
-                              <input class="tags-filter__input" name="form[tags]" type="checkbox">
-                              <span class="tags-filter__text">Vegetarian</span>
-                           </label>
-                           <label class="tags-filter__item">
-                              <input class="tags-filter__input" name="form[tags]" type="checkbox">
-                              <span class="tags-filter__text">Kid foods</span>
-                           </label>
-                           <label class="tags-filter__item">
-                              <input class="tags-filter__input" name="form[tags]" type="checkbox">
-                              <span class="tags-filter__text">Vitamins</span>
-                           </label>
-                           <label class="tags-filter__item">
-                              <input class="tags-filter__input" name="form[tags]" type="checkbox">
-                              <span class="tags-filter__text">Bread</span>
-                           </label>
-                           <label class="tags-filter__item">
-                              <input class="tags-filter__input" name="form[tags]" type="checkbox">
-                              <span class="tags-filter__text">Meat</span>
-                           </label>
-                        </div>
-                     </div>
-                  </details>
-               </div>
+
+               <include src="@components/layout/spollers/spollers.html"></include>
+
                <a href="#" class="filter__sale-banner sale-banner-filter">
                   <div class="sale-banner-filter__body">
                      <div class="sale-banner-filter__title">
@@ -201,85 +36,68 @@
                      <div class="sale-banner-filter__text">
                         <p>on your first order</p>
                      </div>
-                     <div class="sale-banner-filter__link link-arrow link-arrow--icon-arrow">Shop Now</div>
+                     <div data-fls-titles class="sale-banner-filter__link link-arrow link-arrow--icon-arrow">Shop Now
+                     </div>
                   </div>
-                  <img src="img/banners/banner-02.jpg" class="sale-banner-filter__image" alt="Image">
+                  <img src="@img/banners/banner-02.jpg" class="sale-banner-filter__image" alt="Image">
                </a>
                <div class="filter__sale-products sale-products-filter">
                   <h4 class="sale-products-filter__title">Sale Products</h4>
-                  <div class="sale-products-filter__items">
+                  <div class="sale-products-filter__items products">
                      <article class="sale-products-filter__item item-products item-products--mini">
                         <a href="#" class="item-products__picture">
-                           <img src="img/products/01.jpg" class="item-products__image" alt="Image">
+                           <img src="@img/products/red-capsicum.jpg" class="item-products__image" alt="Image">
                         </a>
                         <div class="item-products__body">
                            <div class="item-products__content">
                               <h3 class="item-products__title">
-                                 <a href="#" class="item-products__link-title">Green Apple</a>
+                                 <a href="#" class="item-products__link-title">Red Capsicum</a>
                               </h3>
                               <div class="item-products__prices">
-                                 <div class="item-products__current">$14.99</div>
-                                 <div class="item-products__old">$20.99</div>
+                                 <div class="item-products__current">$20.99</div>
+                                 <div class="item-products__old">$32.00</div>
                               </div>
-                              <form action="#" class="item-products__rating rating">
-                                 <div class="rating__items">
-                                    <input disabled type="radio" value="5" name="rating" class="rating__item">
-                                    <input disabled type="radio" value="4" name="rating" class="rating__item">
-                                    <input disabled checked type="radio" value="3" name="rating" class="rating__item">
-                                    <input disabled type="radio" value="2" name="rating" class="rating__item">
-                                    <input disabled type="radio" value="1" name="rating" class="rating__item">
-                                 </div>
-                              </form>
+                              <div data-fls-rating="set" data-fls-rating-value="4" action="#"
+                                 class="item-products__rating rating">
+                              </div>
                            </div>
                         </div>
                      </article>
                      <article class="sale-products-filter__item item-products item-products--mini">
                         <a href="#" class="item-products__picture">
-                           <img src="img/products/02.jpg" class="item-products__image" alt="Image">
+                           <img src="@img/products/surjapur-mango.jpg" class="item-products__image" alt="Image">
                         </a>
                         <div class="item-products__body">
                            <div class="item-products__content">
                               <h3 class="item-products__title">
-                                 <a href="#" class="item-products__link-title">Green Apple</a>
+                                 <a href="#" class="item-products__link-title">Surjapur Mango</a>
                               </h3>
                               <div class="item-products__prices">
-                                 <div class="item-products__current">$14.99</div>
-                                 <div class="item-products__old">$20.99</div>
+                                 <div class="item-products__current">$20.99</div>
+                                 <div class="item-products__old">$24.99</div>
                               </div>
-                              <form action="#" class="item-products__rating rating">
-                                 <div class="rating__items">
-                                    <input disabled type="radio" value="5" name="rating" class="rating__item">
-                                    <input disabled type="radio" value="4" name="rating" class="rating__item">
-                                    <input disabled checked type="radio" value="3" name="rating" class="rating__item">
-                                    <input disabled type="radio" value="2" name="rating" class="rating__item">
-                                    <input disabled type="radio" value="1" name="rating" class="rating__item">
-                                 </div>
-                              </form>
+                              <div data-fls-rating="set" data-fls-rating-value="4" action="#"
+                                 class="item-products__rating rating">
+                              </div>
                            </div>
                         </div>
                      </article>
                      <article class="sale-products-filter__item item-products item-products--mini">
                         <a href="#" class="item-products__picture">
-                           <img src="img/products/03.jpg" class="item-products__image" alt="Image">
+                           <img src="@img/products/green-capsicum.jpg" class="item-products__image" alt="Image">
                         </a>
                         <div class="item-products__body">
                            <div class="item-products__content">
                               <h3 class="item-products__title">
-                                 <a href="#" class="item-products__link-title">Green Apple</a>
+                                 <a href="#" class="item-products__link-title">Green Capsicum</a>
                               </h3>
                               <div class="item-products__prices">
-                                 <div class="item-products__current">$14.99</div>
-                                 <div class="item-products__old">$20.99</div>
+                                 <div class="item-products__current">$20.99</div>
+                                 <div class="item-products__old">$32.00</div>
                               </div>
-                              <form action="#" class="item-products__rating rating">
-                                 <div class="rating__items">
-                                    <input disabled type="radio" value="5" name="rating" class="rating__item">
-                                    <input disabled type="radio" value="4" name="rating" class="rating__item">
-                                    <input disabled checked type="radio" value="3" name="rating" class="rating__item">
-                                    <input disabled type="radio" value="2" name="rating" class="rating__item">
-                                    <input disabled type="radio" value="1" name="rating" class="rating__item">
-                                 </div>
-                              </form>
+                              <div data-fls-rating="set" data-fls-rating-value="4" action="#"
+                                 class="item-products__rating rating">
+                              </div>
                            </div>
                         </div>
                      </article>
@@ -287,8 +105,8 @@
                </div>
             </aside>
             <div class="catalog__content">
-               <div class="catalog__items products" data-fls-addtocart>
-                  <article class="products__item item-products" data-fls-products data-fls-addtocart-product>
+               <div class="catalog__items products" data-fls-products data-fls-addtocart>
+                  <article class="products__item item-products" data-fls-addtocart-product>
                      <div class="item-products__labels"> </div>
                      <div class="item-products__actions">
                         <a href="#" class="item-products__action item-products__action--icon-favorite"></a>
@@ -301,21 +119,21 @@
                      <div class="item-products__body">
                         <div class="item-products__content">
                            <h3 class="item-products__title">
-                              <a href="#" class="item-products__link-title">Green Apple</a>
+                              <a href="#" class="item-products__link-title">Big Potatos</a>
                            </h3>
                            <div class="item-products__prices">
                               <div class="item-products__current">$14.99</div>
                               <div class="item-products__old"></div>
                            </div>
-                           <form data-fls-rating="set" data-fls-rating-value="4" action="#"
+                           <div data-fls-rating="set" data-fls-rating-value="4" action="#"
                               class="item-products__rating rating">
-                           </form>
+                           </div>
                         </div>
                         <button type="button" data-fls-addtocart-button
                            class="item-products__add-to-cart add-to-cart add-to-cart--icon-cart"></button>
                      </div>
                   </article>
-                  <article class="products__item item-products" data-fls-products data-fls-addtocart-product>
+                  <article class="products__item item-products" data-fls-addtocart-product>
                      <div class="item-products__labels"></div>
                      <div class="item-products__actions">
                         <a href="#" class="item-products__action item-products__action--icon-favorite"></a>
@@ -328,21 +146,21 @@
                      <div class="item-products__body">
                         <div class="item-products__content">
                            <h3 class="item-products__title">
-                              <a href="#" class="item-products__link-title">Green Apple</a>
+                              <a href="#" class="item-products__link-title">Chanise Cabbage</a>
                            </h3>
                            <div class="item-products__prices">
                               <div class="item-products__current">$14.99</div>
                               <div class="item-products__old"></div>
                            </div>
-                           <form data-fls-rating="set" data-fls-rating-value="4" action="#"
+                           <div data-fls-rating="set" data-fls-rating-value="4" action="#"
                               class="item-products__rating rating">
-                           </form>
+                           </div>
                         </div>
                         <button type="button" data-fls-addtocart-button
                            class="item-products__add-to-cart add-to-cart add-to-cart--icon-cart"></button>
                      </div>
                   </article>
-                  <article class="products__item item-products" data-fls-products data-fls-addtocart-product>
+                  <article class="products__item item-products" data-fls-addtocart-product>
                      <div class="item-products__labels">
                         <span class="item-products__label item-products__label--out">Out of Stock</span>
                      </div>
@@ -357,21 +175,21 @@
                      <div class="item-products__body">
                         <div class="item-products__content">
                            <h3 class="item-products__title">
-                              <a href="#" class="item-products__link-title">Green Apple</a>
+                              <a href="#" class="item-products__link-title">Corn</a>
                            </h3>
                            <div class="item-products__prices">
                               <div class="item-products__current">$14.99</div>
                               <div class="item-products__old">$20.99</div>
                            </div>
-                           <form data-fls-rating="set" data-fls-rating-value="4" action="#"
+                           <div data-fls-rating="set" data-fls-rating-value="4" action="#"
                               class="item-products__rating rating">
-                           </form>
+                           </div>
                         </div>
                         <button type="button" data-fls-addtocart-button
                            class="item-products__add-to-cart add-to-cart add-to-cart--icon-cart"></button>
                      </div>
                   </article>
-                  <article class="products__item item-products" data-fls-products data-fls-addtocart-product>
+                  <article class="products__item item-products" data-fls-addtocart-product>
                      <div class="item-products__labels"></div>
                      <div class="item-products__actions">
                         <a href="#" class="item-products__action item-products__action--icon-favorite"></a>
@@ -384,21 +202,21 @@
                      <div class="item-products__body">
                         <div class="item-products__content">
                            <h3 class="item-products__title">
-                              <a href="#" class="item-products__link-title">Green Apple</a>
+                              <a href="#" class="item-products__link-title">Eggplant</a>
                            </h3>
                            <div class="item-products__prices">
                               <div class="item-products__current">$14.99</div>
                               <div class="item-products__old"></div>
                            </div>
-                           <form data-fls-rating="set" data-fls-rating-value="4" action="#"
+                           <div data-fls-rating="set" data-fls-rating-value="4" action="#"
                               class="item-products__rating rating">
-                           </form>
+                           </div>
                         </div>
                         <button type="button" data-fls-addtocart-button
                            class="item-products__add-to-cart add-to-cart add-to-cart--icon-cart"></button>
                      </div>
                   </article>
-                  <article class="products__item item-products" data-fls-products data-fls-addtocart-product>
+                  <article class="products__item item-products" data-fls-addtocart-product>
                      <div class="item-products__labels"></div>
                      <div class="item-products__actions">
                         <a href="#" class="item-products__action item-products__action--icon-favorite"></a>
@@ -411,22 +229,21 @@
                      <div class="item-products__body">
                         <div class="item-products__content">
                            <h3 class="item-products__title">
-                              <a href="#" class="item-products__link-title">Green Apple</a>
+                              <a href="#" class="item-products__link-title">Fresh Cauliflower</a>
                            </h3>
                            <div class="item-products__prices">
                               <div class="item-products__current">$14.99</div>
                               <div class="item-products__old"></div>
                            </div>
-                           <form data-fls-rating="set" data-fls-rating-value="4" action="#"
+                           <div data-fls-rating="set" data-fls-rating-value="4" action="#"
                               class="item-products__rating rating">
-                              <div class="rating__items">
-                           </form>
+                           </div>
                         </div>
                         <button type="button" data-fls-addtocart-button
                            class="item-products__add-to-cart add-to-cart add-to-cart--icon-cart"></button>
                      </div>
                   </article>
-                  <article class="products__item item-products" data-fls-products data-fls-addtocart-product>
+                  <article class="products__item item-products" data-fls-addtocart-product>
                      <div class="item-products__labels"></div>
                      <div class="item-products__actions">
                         <a href="#" class="item-products__action item-products__action--icon-favorite"></a>
@@ -445,15 +262,15 @@
                               <div class="item-products__current">$14.99</div>
                               <div class="item-products__old"></div>
                            </div>
-                           <form data-fls-rating="set" data-fls-rating-value="4" action="#"
+                           <div data-fls-rating="set" data-fls-rating-value="4" action="#"
                               class="item-products__rating rating">
-                           </form>
+                           </div>
                         </div>
                         <button type="button" data-fls-addtocart-button
                            class="item-products__add-to-cart add-to-cart add-to-cart--icon-cart"></button>
                      </div>
                   </article>
-                  <article class="products__item item-products" data-fls-products data-fls-addtocart-product>
+                  <article class="products__item item-products" data-fls-addtocart-product>
                      <div class="item-products__labels"></div>
                      <div class="item-products__actions">
                         <a href="#" class="item-products__action item-products__action--icon-favorite"></a>
@@ -466,21 +283,21 @@
                      <div class="item-products__body">
                         <div class="item-products__content">
                            <h3 class="item-products__title">
-                              <a href="#" class="item-products__link-title">Green Apple</a>
+                              <a href="#" class="item-products__link-title">Green Capsicum</a>
                            </h3>
                            <div class="item-products__prices">
                               <div class="item-products__current">$14.99</div>
                               <div class="item-products__old"></div>
                            </div>
-                           <form data-fls-rating="set" data-fls-rating-value="4" action="#"
+                           <div data-fls-rating="set" data-fls-rating-value="4" action="#"
                               class="item-products__rating rating">
-                           </form>
+                           </div>
                         </div>
                         <button type="button" data-fls-addtocart-button
                            class="item-products__add-to-cart add-to-cart add-to-cart--icon-cart"></button>
                      </div>
                   </article>
-                  <article class="products__item item-products" data-fls-products data-fls-addtocart-product>
+                  <article class="products__item item-products" data-fls-addtocart-product>
                      <div class="item-products__labels"></div>
                      <div class="item-products__actions">
                         <a href="#" class="item-products__action item-products__action--icon-favorite"></a>
@@ -493,21 +310,21 @@
                      <div class="item-products__body">
                         <div class="item-products__content">
                            <h3 class="item-products__title">
-                              <a href="#" class="item-products__link-title">Green Apple</a>
+                              <a href="#" class="item-products__link-title">Green Chili</a>
                            </h3>
                            <div class="item-products__prices">
                               <div class="item-products__current">$14.99</div>
                               <div class="item-products__old"></div>
                            </div>
-                           <form data-fls-rating="set" data-fls-rating-value="4" action="#"
+                           <div data-fls-rating="set" data-fls-rating-value="4" action="#"
                               class="item-products__rating rating">
-                           </form>
+                           </div>
                         </div>
                         <button type="button" data-fls-addtocart-button
                            class="item-products__add-to-cart add-to-cart add-to-cart--icon-cart"></button>
                      </div>
                   </article>
-                  <article class="products__item item-products" data-fls-products data-fls-addtocart-product>
+                  <article class="products__item item-products" data-fls-addtocart-product>
                      <div class="item-products__labels">
                         <a href="#" class="item-products__label item-products__label--sale">Sale <span>50%</span></a>
                      </div>
@@ -522,21 +339,21 @@
                      <div class="item-products__body">
                         <div class="item-products__content">
                            <h3 class="item-products__title">
-                              <a href="#" class="item-products__link-title">Green Apple</a>
+                              <a href="#" class="item-products__link-title">Green Cucumber</a>
                            </h3>
                            <div class="item-products__prices">
                               <div class="item-products__current">$14.99</div>
                               <div class="item-products__old"></div>
                            </div>
-                           <form data-fls-rating="set" data-fls-rating-value="4" action="#"
+                           <div data-fls-rating="set" data-fls-rating-value="4" action="#"
                               class="item-products__rating rating">
-                           </form>
+                           </div>
                         </div>
                         <button type="button" data-fls-addtocart-button
                            class="item-products__add-to-cart add-to-cart add-to-cart--icon-cart"></button>
                      </div>
                   </article>
-                  <article class="products__item item-products" data-fls-products data-fls-addtocart-product>
+                  <article class="products__item item-products" data-fls-addtocart-product>
                      <div class="item-products__labels"></div>
                      <div class="item-products__actions">
                         <a href="#" class="item-products__action item-products__action--icon-favorite"></a>
@@ -549,21 +366,21 @@
                      <div class="item-products__body">
                         <div class="item-products__content">
                            <h3 class="item-products__title">
-                              <a href="#" class="item-products__link-title">Green Apple</a>
+                              <a href="#" class="item-products__link-title">Green Littuce</a>
                            </h3>
                            <div class="item-products__prices">
                               <div class="item-products__current">$14.99</div>
                               <div class="item-products__old"></div>
                            </div>
-                           <form data-fls-rating="set" data-fls-rating-value="4" action="#"
+                           <div data-fls-rating="set" data-fls-rating-value="4" action="#"
                               class="item-products__rating rating">
-                           </form>
+                           </div>
                         </div>
                         <button type="button" data-fls-addtocart-button
                            class="item-products__add-to-cart add-to-cart add-to-cart--icon-cart"></button>
                      </div>
                   </article>
-                  <article class="products__item item-products" data-fls-products data-fls-addtocart-product>
+                  <article class="products__item item-products" data-fls-addtocart-product>
                      <div class="item-products__labels"></div>
                      <div class="item-products__actions">
                         <a href="#" class="item-products__action item-products__action--icon-favorite"></a>
@@ -576,21 +393,21 @@
                      <div class="item-products__body">
                         <div class="item-products__content">
                            <h3 class="item-products__title">
-                              <a href="#" class="item-products__link-title">Green Apple</a>
+                              <a href="#" class="item-products__link-title">Ladies Finger</a>
                            </h3>
                            <div class="item-products__prices">
                               <div class="item-products__current">$14.99</div>
                               <div class="item-products__old"></div>
                            </div>
-                           <form data-fls-rating="set" data-fls-rating-value="4" action="#"
+                           <div data-fls-rating="set" data-fls-rating-value="4" action="#"
                               class="item-products__rating rating">
-                           </form>
+                           </div>
                         </div>
                         <button type="button" data-fls-addtocart-button
                            class="item-products__add-to-cart add-to-cart add-to-cart--icon-cart"></button>
                      </div>
                   </article>
-                  <article class="products__item item-products" data-fls-products data-fls-addtocart-product>
+                  <article class="products__item item-products" data-fls-addtocart-product>
                      <div class="item-products__labels"></div>
                      <div class="item-products__actions">
                         <a href="#" class="item-products__action item-products__action--icon-favorite"></a>
@@ -603,21 +420,21 @@
                      <div class="item-products__body">
                         <div class="item-products__content">
                            <h3 class="item-products__title">
-                              <a href="#" class="item-products__link-title">Green Apple</a>
+                              <a href="#" class="item-products__link-title">Red Capsicum</a>
                            </h3>
                            <div class="item-products__prices">
                               <div class="item-products__current">$14.99</div>
                               <div class="item-products__old"></div>
                            </div>
-                           <form data-fls-rating="set" data-fls-rating-value="4" action="#"
+                           <div data-fls-rating="set" data-fls-rating-value="4" action="#"
                               class="item-products__rating rating">
-                           </form>
+                           </div>
                         </div>
                         <button type="button" data-fls-addtocart-button
                            class="item-products__add-to-cart add-to-cart add-to-cart--icon-cart"></button>
                      </div>
                   </article>
-                  <article class="products__item item-products" data-fls-products data-fls-addtocart-product>
+                  <article class="products__item item-products" data-fls-addtocart-product>
                      <div class="item-products__labels"></div>
                      <div class="item-products__actions">
                         <a href="#" class="item-products__action item-products__action--icon-favorite"></a>
@@ -630,21 +447,21 @@
                      <div class="item-products__body">
                         <div class="item-products__content">
                            <h3 class="item-products__title">
-                              <a href="#" class="item-products__link-title">Green Apple</a>
+                              <a href="#" class="item-products__link-title">Red Chili</a>
                            </h3>
                            <div class="item-products__prices">
                               <div class="item-products__current">$14.99</div>
                               <div class="item-products__old"></div>
                            </div>
-                           <form data-fls-rating="set" data-fls-rating-value="4" action="#"
+                           <div data-fls-rating="set" data-fls-rating-value="4" action="#"
                               class="item-products__rating rating">
-                           </form>
+                           </div>
                         </div>
                         <button type="button" data-fls-addtocart-button
                            class="item-products__add-to-cart add-to-cart add-to-cart--icon-cart"></button>
                      </div>
                   </article>
-                  <article class="products__item item-products" data-fls-products data-fls-addtocart-product>
+                  <article class="products__item item-products" data-fls-addtocart-product>
                      <div class="item-products__labels"></div>
                      <div class="item-products__actions">
                         <a href="#" class="item-products__action item-products__action--icon-favorite"></a>
@@ -657,21 +474,21 @@
                      <div class="item-products__body">
                         <div class="item-products__content">
                            <h3 class="item-products__title">
-                              <a href="#" class="item-products__link-title">Green Apple</a>
+                              <a href="#" class="item-products__link-title">Red Tomatos</a>
                            </h3>
                            <div class="item-products__prices">
                               <div class="item-products__current">$14.99</div>
                               <div class="item-products__old"></div>
                            </div>
-                           <form data-fls-rating="set" data-fls-rating-value="4" action="#"
+                           <div data-fls-rating="set" data-fls-rating-value="4" action="#"
                               class="item-products__rating rating">
-                           </form>
+                           </div>
                         </div>
                         <button type="button" data-fls-addtocart-button
                            class="item-products__add-to-cart add-to-cart add-to-cart--icon-cart"></button>
                      </div>
                   </article>
-                  <article class="products__item item-products" data-fls-products data-fls-addtocart-product>
+                  <article class="products__item item-products" data-fls-addtocart-product>
                      <div class="item-products__labels"></div>
                      <div class="item-products__actions">
                         <a href="#" class="item-products__action item-products__action--icon-favorite"></a>
@@ -690,44 +507,18 @@
                               <div class="item-products__current">$14.99</div>
                               <div class="item-products__old"></div>
                            </div>
-                           <form data-fls-rating="set" data-fls-rating-value="4" action="#"
+                           <div data-fls-rating="set" data-fls-rating-value="4" action="#"
                               class="item-products__rating rating">
-                           </form>
+                           </div>
                         </div>
                         <button type="button" data-fls-addtocart-button
                            class="item-products__add-to-cart add-to-cart add-to-cart--icon-cart"></button>
                      </div>
                   </article>
                </div>
-               <ul class="catalog__pages pages">
-                  <li class="pages__item">
-                     <a href="#" class="pages__link pages__link--icon-shevron"></a>
-                  </li>
-                  <li class="pages__item">
-                     <a href="#" class="pages__link pages__link--current">1</a>
-                  </li>
-                  <li class="pages__item">
-                     <a href="#" class="pages__link">2</a>
-                  </li>
-                  <li class="pages__item">
-                     <a href="#" class="pages__link">3</a>
-                  </li>
-                  <li class="pages__item">
-                     <a href="#" class="pages__link">4</a>
-                  </li>
-                  <li class="pages__item">
-                     <a href="#" class="pages__link">5</a>
-                  </li>
-                  <li class="pages__item">
-                     <a href="#" class="pages__link">...</a>
-                  </li>
-                  <li class="pages__item">
-                     <a href="#" class="pages__link">21</a>
-                  </li>
-                  <li class="pages__item">
-                     <a href="#" class="pages__link pages__link--icon-shevron"></a>
-                  </li>
-               </ul>
+
+               <include src="@components/custom/sheets/sheets.html"></include>
+
             </div>
          </div>
       </form>

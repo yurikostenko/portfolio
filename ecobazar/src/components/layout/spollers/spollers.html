@@ -1,6 +1,35 @@
-<div data-fls-spollers class="spollers">
-	<details class="spollers__item">
-		<summary class="spollers__title">Заголовок спойлера</summary>
-		<div class="spollers__body">Контент спойлера</div>
+<div data-fls-spollers class="filter__spollers spollers">
+
+	<details class="spollers__item" data-fls-spollers-open>
+		<summary class="spollers__title">All Categories</summary>
+		<div class="spollers__body">
+			<include src="@components/forms/radio/radio.html"></include>
+		</div>
 	</details>
+
+	<details class="spollers__item" data-fls-spollers-open>
+		<summary class="spollers__title">Price</summary>
+		<div class="spollers__body">
+			<include src="@components/forms/range/range.html"></include>
+		</div>
+	</details>
+
+	<details class="spollers__item" data-fls-spollers-open>
+		<summary class="spollers__title">Rating</summary>
+		<div class="spollers__body">
+			<div class="spollers__wrapper spollers__wrapper--rating">
+				<include src="@components/forms/checkbox/checkbox-rating.html"></include>
+			</div>
+		</div>
+	</details>
+
+	<details class="spollers__item" data-fls-spollers-open>
+		<summary class="spollers__title">Popular Tag</summary>
+		<div class="spollers__body">
+			<div class="spollers__wrapper spollers__wrapper--tags">
+				<include src="@components/forms/checkbox/checkbox-tags.html"></include>
+			</div>
+		</div>
+	</details>
+
 </div>

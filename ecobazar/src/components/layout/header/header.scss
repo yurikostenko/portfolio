@@ -169,7 +169,8 @@
 		flex-shrink: 0;
 	}
 }
-.logo-header {
+.logo-header,
+.logo-header__link {
 	display: flex;
 	gap: 8px;
 	align-items: center;

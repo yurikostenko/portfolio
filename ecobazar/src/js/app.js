@@ -8,7 +8,18 @@ addTouchAttr()
 addLoadedAttr()
 
 
+document.addEventListener('DOMContentLoaded', () => {
+   const filterButton = document.querySelector('.header-catalog__button')
+   const filterAside = document.querySelector('.catalog__filter')
 
+   if (filterButton && filterAside) {
+      filterButton.addEventListener('click', () => {
+         filterAside.classList.toggle('filter--active')
+         filterButton.classList.toggle('active')
+         document.body.classList.toggle('lock')
+      })
+   }
+})
 
 
 

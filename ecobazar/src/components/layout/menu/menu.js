@@ -40,6 +40,14 @@ export function menuInit() {
 			document.querySelectorAll('.menu__item.--active').forEach(i => i.classList.remove('--active'))
 		}
 	})
+
+	const current = window.location.pathname.split('/').pop() || 'index.html'
+	const links = document.querySelectorAll('.menu__link')
+	links.forEach(link => {
+		const href = link.getAttribute('href')
+		if (href === current) link.classList.add('is-active')
+	})
+
 }
 
 document.querySelector('[data-fls-menu]') ?

@@ -140,6 +140,9 @@
 			padding-block: 15px;
 			@include typography("h4", 500);
 		}
+		&.is-active {
+			color: $white;
+		}
 	}
 	// .menu__button
 	&__button {

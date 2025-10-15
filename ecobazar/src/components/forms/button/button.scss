@@ -34,6 +34,19 @@
 			@include typography("M", 500);
 		}
 	}
+	&--filter {
+		display: inline-flex;
+		justify-content: center;
+		flex-direction: row-reverse;
+		align-items: center;
+		gap: 12px;
+		&::before {
+			content: "\f113";
+			line-height: 1 !important;
+			font-family: "iconfont";
+			@include typography("L");
+		}
+	}
 
 	@media (any-hover: hover) and (any-pointer: fine) {
 		&:hover {

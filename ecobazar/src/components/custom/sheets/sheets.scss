@@ -1,0 +1,60 @@
+.pages {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   // .pages__item
+   &__item {
+      color: $grey6;
+      &:first-child,
+      &:last-child {
+         border-radius: 50%;
+         overflow: hidden;
+         color: $grey9;
+         transition: all 0.3s;
+         border: 1px solid $grey1;
+         @media (any-hover: hover) and (any-pointer: fine) {
+            &:hover {
+               background-color: $grey1;
+            }
+         }
+      }
+      &:first-child {
+         rotate: 90deg;
+         margin-right: 12px;
+      }
+      &:last-child {
+         rotate: -90deg;
+         margin-left: 12px;
+      }
+      @media (max-width: toEm($mobileSmall)) {
+         &:nth-child(5),
+         &:nth-child(6) {
+            display: none;
+         }
+      }
+   }
+   // .pages__link
+   &__link {
+      @include typography("M");
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 36px;
+      border-radius: 50%;
+      aspect-ratio: 1;
+      transition: color 0.3s;
+      &::before {
+         font-size: 12px;
+      }
+      @media (any-hover: hover) and (any-pointer: fine) {
+         &:not(.pages__link--current):hover {
+            color: $grey3;
+         }
+      }
+      // .pages__link--current
+      &--current {
+         background-color: $success;
+         color: $white;
+      }
+   }
+}

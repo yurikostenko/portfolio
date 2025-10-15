@@ -1,6 +1,7 @@
 <template src="@components/templates/inner/inner.html" locals='{
 		"title":"catalog", 
 		"lang":"en",
+		"home": false,
 		"preloader": {
 			"enable":"false",
 			"once":"false"
@@ -9,7 +10,10 @@
 		"description":""
 	}'>
 	<block name="header">
-		<include src="@components/layout/header/header.html" locals='{"active":"Home"}'></include>
+		<include src="@components/layout/header/header.html" locals='{
+			"active":"Home",
+			"home": false
+		}'></include>
 	</block>
 	<block name="main">
 		<include src="@components/pages/catalog/catalog.html" locals='{}'></include>
