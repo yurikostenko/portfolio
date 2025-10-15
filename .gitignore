@@ -15,8 +15,6 @@ dist/
 # Логи
 *.log
 
-# Згенеровані CSS
-*.css
-*.css.map
+
 
 
