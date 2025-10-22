@@ -1,0 +1,92 @@
+@font-face { 
+	font-family: "iconfont"; 
+	font-display: swap;
+	src: url("D://portfolio/ecobazar/src/assets/svgicons/preview/iconfont.woff2?d7f019346d2093f51ed43c679dd3a6d8") format("woff2"); 
+} 
+[class*="--icon-"]::before{
+	font-family: iconfont; 
+}
+	[class*="--icon-warning"]::before { 
+		content: "\f101"; 
+	} 
+	[class*="--icon-star"]::before { 
+		content: "\f102"; 
+	} 
+	[class*="--icon-star-active"]::before { 
+		content: "\f103"; 
+	} 
+	[class*="--icon-shevron"]::before { 
+		content: "\f104"; 
+	} 
+	[class*="--icon-search"]::before { 
+		content: "\f105"; 
+	} 
+	[class*="--icon-saccess"]::before { 
+		content: "\f106"; 
+	} 
+	[class*="--icon-s-twitter"]::before { 
+		content: "\f107"; 
+	} 
+	[class*="--icon-s-pinterest"]::before { 
+		content: "\f108"; 
+	} 
+	[class*="--icon-s-link"]::before { 
+		content: "\f109"; 
+	} 
+	[class*="--icon-s-instagram"]::before { 
+		content: "\f10a"; 
+	} 
+	[class*="--icon-s-facebook"]::before { 
+		content: "\f10b"; 
+	} 
+	[class*="--icon-quote"]::before { 
+		content: "\f10c"; 
+	} 
+	[class*="--icon-plus"]::before { 
+		content: "\f10d"; 
+	} 
+	[class*="--icon-phone"]::before { 
+		content: "\f10e"; 
+	} 
+	[class*="--icon-minus"]::before { 
+		content: "\f10f"; 
+	} 
+	[class*="--icon-location"]::before { 
+		content: "\f110"; 
+	} 
+	[class*="--icon-label"]::before { 
+		content: "\f111"; 
+	} 
+	[class*="--icon-home"]::before { 
+		content: "\f112"; 
+	} 
+	[class*="--icon-filter"]::before { 
+		content: "\f113"; 
+	} 
+	[class*="--icon-favorite"]::before { 
+		content: "\f114"; 
+	} 
+	[class*="--icon-eye"]::before { 
+		content: "\f115"; 
+	} 
+	[class*="--icon-error"]::before { 
+		content: "\f116"; 
+	} 
+	[class*="--icon-cross"]::before { 
+		content: "\f117"; 
+	} 
+	[class*="--icon-comments"]::before { 
+		content: "\f118"; 
+	} 
+	[class*="--icon-chek"]::before { 
+		content: "\f119"; 
+	} 
+	[class*="--icon-cart"]::before { 
+		content: "\f11a"; 
+	} 
+	[class*="--icon-author"]::before { 
+		content: "\f11b"; 
+	} 
+	[class*="--icon-arrow"]::before { 
+		content: "\f11c"; 
+	} 
