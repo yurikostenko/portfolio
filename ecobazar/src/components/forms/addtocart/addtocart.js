@@ -14,8 +14,11 @@ function addToCart() {
 			const addToCartProduct = addToCartButton.closest('[data-fls-addtocart-product]')
 
 			if (addToCartProduct) {
-				let addToCartQuantity = addToCartProduct.querySelector('[data-fls-addtocart-quantity]')
-				addToCartQuantity = addToCartQuantity ? +addToCartQuantity.value : 1
+				// let addToCartQuantity = addToCartProduct.querySelector('[data-fls-addtocart-quantity]')
+				// addToCartQuantity = addToCartQuantity ? +addToCartQuantity.value : 1
+				const inputQuantity = addToCartProduct.querySelector('[data-fls-quantity-value]')
+				const addToCartQuantity = inputQuantity && !isNaN(+inputQuantity.value) ? +inputQuantity.value : 1
+
 
 				const addToCartImage = addToCartProduct.querySelector('[data-fls-addtocart-image]')
 				const flyImgSpeed = +addToCartImage.dataset.flsAddtocartImage || 1000
@@ -60,5 +63,6 @@ function addToCart() {
 		}, flyImgSpeed);
 	}
 }
+
 document.querySelector('[data-fls-addtocart]') ?
 	window.addEventListener('load', addToCart) : null

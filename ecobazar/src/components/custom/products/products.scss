@@ -38,12 +38,12 @@
          left: 0;
          right: 0;
          bottom: 0;
-         border-radius: toRem(8);
+         border-radius: 8px;
       }
    }
 
    &--big {
-      @media (min-width: 530px) {
+      @media (min-width: toRem(530)) {
          grid-column: span 2;
          grid-row: span 2;
       }

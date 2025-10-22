@@ -105,3 +105,11 @@ $starHeight: toRem(10);
 		}
 	}
 }
+a.rating__quantity {
+	transition: color 0.3s;
+	@media (any-hover: hover) and (any-pointer: fine) {
+		&:hover {
+			color: $successDark;
+		}
+	}
+}

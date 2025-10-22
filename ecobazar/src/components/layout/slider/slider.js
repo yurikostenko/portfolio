@@ -1,82 +1,23 @@
-/*
-Документація по роботі у шаблоні: 
-Документація слайдера: https://swiperjs.com/
-Сніппет(HTML): swiper
-*/
 
-// Підключаємо слайдер Swiper з node_modules
-// При необхідності підключаємо додаткові модулі слайдера, вказуючи їх у {} через кому
-// Приклад: { Navigation, Autoplay }
-import Swiper from 'swiper';
-import { Navigation } from 'swiper/modules';
-/*
-Основні модулі слайдера:
-Navigation, Pagination, Autoplay, 
-EffectFade, Lazy, Manipulation
-Детальніше дивись https://swiperjs.com/
-*/
+import Swiper from 'swiper'
+import { Navigation, Thumbs, Zoom, EffectFade } from 'swiper/modules'
+import './slider.scss'
+import 'swiper/css/zoom'
 
-// Стилі Swiper
-// Підключення базових стилів
-import "./slider.scss";
-// Повний набір стилів з node_modules
-// import 'swiper/css/bundle';
 
 // Ініціалізація слайдерів
 function initSliders() {
-	// Список слайдерів
-	// Перевіряємо, чи є слайдер на сторінці
-	if (document.querySelector('.swiper')) { // <- Вказуємо склас потрібного слайдера
-		// Створюємо слайдер
-		new Swiper('.swiper', { // <- Вказуємо склас потрібного слайдера
-			// Підключаємо модулі слайдера
-			// для конкретного випадку
+
+	// ====================== REVIEWS SLIDER ======================
+	if (document.querySelector('.slider-reviews')) {
+		new Swiper('.slider-reviews', {
 			modules: [Navigation],
-			observer: true,
-			observeParents: true,
-			slidesPerView: 3,
-			spaceBetween: 24,
-			//autoHeight: true,
-			speed: 800,
-
-			//touchRatio: 0,
-			//simulateTouch: false,
 			loop: true,
-			//preloadImages: false,
-			//lazy: true,
-
-			/*
-			// Ефекти
-			effect: 'fade',
-			autoplay: {
-				delay: 3000,
-				disableOnInteraction: false,
-			},
-			*/
-
-			// Пагінація
-			/*
-			pagination: {
-				el: '.swiper-pagination',
-				clickable: true,
-			},
-			*/
-
-			// Скроллбар
-			/*
-			scrollbar: {
-				el: '.swiper-scrollbar',
-				draggable: true,
-			},
-			*/
-
-			// Кнопки "вліво/вправо"
+			speed: 800,
 			navigation: {
-				prevEl: '.block-header__slider-arrow--left',
 				nextEl: '.block-header__slider-arrow--right',
+				prevEl: '.block-header__slider-arrow--left',
 			},
-
-			// Брейкпоінти
 			breakpoints: {
 				320: {
 					slidesPerView: 1.1,
@@ -95,13 +36,69 @@ function initSliders() {
 					spaceBetween: 24,
 				},
 			},
+		})
+	}
 
-			// Події
-			on: {
+	// ====================== PRODUCT GALLERY SLIDERS ======================
+	// ====================== PRODUCT GALLERY SLIDERS ======================
+	// ⚠️ Примітка: effect: 'fade' та zoom у Swiper несумісні (баг з v10+)
+	// Якщо потрібен зум — залишайте effect закоментованим або видаляйте його.
+	// Якщо fade-ефект важливіший — зум потрібно вимкнути.
+	//
+	// Тобто:
+	//   ✅ loop + zoom → працює
+	//   ✅ fade → працює, але без zoom
+	//   ❌ fade + zoom → обрізає зображення через overflow:hidden
 
-			}
-		});
+	if (document.querySelector('.gallery-product')) {
+
+		// Слайдер мініатюр
+		const thumbsSlider = new Swiper('.thumbs-gallery-product__slider', {
+			modules: [Navigation],
+			loop: true,
+			spaceBetween: 12,
+			navigation: {
+				nextEl: '.thumbs-gallery-product__arrow--down',
+				prevEl: '.thumbs-gallery-product__arrow--up',
+			},
+			breakpoints: {
+				320: {
+					slidesPerView: 3,
+					direction: 'horizontal',
+				},
+				550: {
+					slidesPerView: 4,
+					direction: 'vertical',
+				},
+			},
+		})
+
+		// Слайдер головного зображення
+		const mainSlider = new Swiper('.main-gallery-product', {
+			modules: [Thumbs, Zoom, EffectFade],
+			loop: true,
+			speed: 300,
+			slidesPerView: 1,
+			// effect: 'fade',
+			fadeEffect: {
+				crossFade: true,
+			},
+			zoom: {
+				enabled: true,
+				maxRatio: 3,
+				minRatio: 1,
+				toggle: true,
+				panOnMouseMove: true,
+			},
+			thumbs: {
+				swiper: thumbsSlider,
+			},
+		})
 	}
 }
-document.querySelector('[data-fls-slider]') ?
-	window.addEventListener("load", initSliders) : null
+
+// Запуск після завантаження сторінки
+window.addEventListener('load', initSliders)
+
+
+

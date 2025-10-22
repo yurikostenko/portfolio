@@ -1,18 +1,91 @@
-<div data-fls-tabs class="tabs">
-	<nav data-fls-tabs-titles class="tabs__navigation">
-		<button type="button" class="tabs__title --tab-active">Таб №1</button>
-		<button type="button" class="tabs__title">Таб №2</button>
-		<button type="button" class="tabs__title">Таб №3</button>
-	</nav>
-	<div data-fls-tabs-body class="tabs__content">
-		<div class="tabs__body">
-			Вміст першого таба
-		</div>
-		<div class="tabs__body">
-			Вміст другого таба
-		</div>
-		<div class="tabs__body">
-			Вміст третього таба
+<div data-fls-tabs class="product__tabs tabs">
+	<div class="tabs__container">
+		<nav data-fls-tabs-titles class="tabs__navigation">
+			<button type="button" class="tabs__title --tab-active">Descriptions</button>
+			<button type="button" class="tabs__title">Additional Information</button>
+			<button type="button" class="tabs__title">Customer Feedback</button>
+		</nav>
+		<div data-fls-tabs-body class="tabs__content">
+			<div class="tabs__body">
+				<div class="tabs__inner">
+					<div class="tabs__text">
+						<p>
+							Sed commodo aliquam dui ac porta. Fusce ipsum felis, imperdiet at posuere ac, viverra at mauris.
+							Maecenas tincidunt ligula a sem vestibulum pharetra. Maecenas auctor tortor lacus, nec laoreet nisi
+							porttitor vel. Etiam tincidunt metus vel dui interdum sollicitudin. Mauris sem ante, vestibulum nec
+							orci vitae, aliquam mollis lacus. Sed et condimentum arcu, id molestie tellus. Nulla facilisi. Nam
+							scelerisque vitae justo a convallis. Morbi urna ipsum, placerat quis commodo quis, egestas
+							elementum
+							leo. Donec convallis mollis enim. Aliquam id mi quam. Phasellus nec fringilla elit.
+						</p>
+						<p>
+							Nulla mauris tellus, feugiat quis pharetra sed, gravida ac dui. Sed iaculis, metus faucibus
+							elementum
+							tincidunt, turpis mi viverra velit, pellentesque tristique neque mi eget nulla. Proin luctus
+							elementum
+							neque et pharetra.
+						</p>
+						<ul>
+							<li>100 g of fresh leaves provides.</li>
+							<li>Aliquam ac est at augue volutpat elementum.</li>
+							<li>Quisque nec enim eget sapien molestie.</li>
+							<li>Proin convallis odio volutpat finibus posuere.</li>
+						</ul>
+						<p>
+							Cras et diam maximus, accumsan sapien et, sollicitudin velit. Nulla blandit eros non turpis
+							lobortis
+							iaculis at ut massa.
+						</p>
+					</div>
+					<include src="@components/custom/wiget/wiget.html"></include>
+				</div>
+			</div>
+
+			<div class="tabs__body">
+				<div class="tabs__inner">
+					<div class="tabs__text">
+						<table class="tabs__table">
+							<tr>
+								<td>Weight:</td>
+								<td>03</td>
+							</tr>
+							<tr>
+								<td>Color:</td>
+								<td>Green</td>
+							</tr>
+							<tr>
+								<td>Type:</td>
+								<td>Organic</td>
+							</tr>
+							<tr>
+								<td>Category:</td>
+								<td>Vegetables</td>
+							</tr>
+							<tr>
+								<td>Stock Status:</td>
+								<td>Available <span>(5,413)</span></td>
+							</tr>
+							<tr>
+								<td>Tags:</td>
+								<td>
+									<a href="#">Vegetables,</a>
+									<a href="#">Healthy,</a>
+									<a href="#">Chinese,</a>
+									<a href="#">Cabbage,</a>
+									<a href="#">Green Cabbage,</a>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<include src="@components/custom/wiget/wiget.html"></include>
+				</div>
+			</div>
+
+			<div class="tabs__body">
+				<include src="@components/custom/reviewtabs/reviewtabs.html"></include>
+				<button class="tabs__button button button--middle">Load More</button>
+			</div>
+
 		</div>
 	</div>
 </div>

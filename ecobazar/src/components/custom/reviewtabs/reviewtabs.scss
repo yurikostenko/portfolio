@@ -1,0 +1,52 @@
+// =========================================
+
+.review-tabs {
+   max-width: 760px;
+
+   &:not(:last-child) {
+      border-bottom: 1px solid $grey1;
+      padding-bottom: 20px;
+   }
+   // .review-tabs__footer
+   &__footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+   }
+   // .review-tabs__picture
+   &__picture {
+      flex-shrink: 0;
+      width: 41px;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      overflow: hidden;
+   }
+   // .review-tabs__avatar
+   &__avatar {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+   }
+   // .review-tabs__body
+   &__body {
+      flex-grow: 1;
+   }
+   // .review-tabs__title
+   &__title {
+      color: $grey9;
+      @include typography("S", 500);
+   }
+   // .review-tabs__rating
+   &__rating.rating {
+      gap: 3px;
+   }
+   // .review-tabs__time
+   &__time {
+      color: $grey4;
+   }
+   // .review-tabs__text
+   &__text {
+      color: $grey5;
+   }
+}

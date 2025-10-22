@@ -1,0 +1,62 @@
+.wiget {
+   width: 100%;
+   @media (min-width: toEm($tablet)) {
+      max-width: 536px;
+   }
+   // .wiget__video
+   &__video {
+      width: 100%;
+      border-radius: 10px;
+      overflow: hidden;
+      aspect-ratio: 536 / 300;
+      &:not(:last-child) {
+         margin-bottom: 20px;
+      }
+   }
+   // .wiget__items
+   &__items {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: start;
+      gap: 22px;
+      border: 1px solid $grey1;
+      border-radius: 6px;
+      padding: 24px 20px;
+   }
+   // .wiget__item
+   &__item {
+      flex-basis: 200px;
+      flex-grow: 1;
+      display: flex;
+      align-items: start;
+      gap: 12px;
+   }
+
+   // .wiget__picture
+   &__picture {
+      min-height: 48px;
+      display: flex;
+      flex-shrink: 0;
+      align-items: center;
+   }
+   // .wiget__icon
+   &__icon {
+      align-self: center;
+   }
+   // .wiget__body
+   &__body {
+   }
+   // .wiget__title
+   &__title {
+      color: $grey9;
+      @include typography("S", 500);
+      &:not(:last-child) {
+         margin-bottom: 6px;
+      }
+   }
+   // .wiget__text
+   &__text {
+      font-size: 13px;
+      color: $grey5;
+   }
+}

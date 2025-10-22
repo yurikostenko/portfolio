@@ -55,3 +55,15 @@
 		}
 	}
 }
+
+// Анімація натискання для кнопки додавання в кошик
+.actions-product__button {
+	transition:
+		background-color 0.3s ease,
+		color 0.3s ease;
+
+	&.added {
+		background-color: $successDark;
+		color: $white;
+	}
+}
