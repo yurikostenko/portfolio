@@ -52,6 +52,15 @@ function addLoadedAttr() {
     });
   }
 }
+function getHash() {
+  if (location.hash) {
+    return location.hash.replace("#", "");
+  }
+}
+function setHash(hash) {
+  hash = hash ? `#${hash}` : window.location.href.split("#")[0];
+  history.pushState("", "", hash);
+}
 let slideUp = (target, duration = 500, showmore = 0) => {
   if (!target.classList.contains("--slide")) {
     target.classList.add("--slide");
@@ -395,8 +404,8 @@ function addToCart() {
       const addToCartButton = targetElement.closest("[data-fls-addtocart-button]");
       const addToCartProduct = addToCartButton.closest("[data-fls-addtocart-product]");
       if (addToCartProduct) {
-        let addToCartQuantity = addToCartProduct.querySelector("[data-fls-addtocart-quantity]");
-        addToCartQuantity = addToCartQuantity ? +addToCartQuantity.value : 1;
+        const inputQuantity = addToCartProduct.querySelector("[data-fls-quantity-value]");
+        const addToCartQuantity = inputQuantity && !isNaN(+inputQuantity.value) ? +inputQuantity.value : 1;
         const addToCartImage = addToCartProduct.querySelector("[data-fls-addtocart-image]");
         const flyImgSpeed = +addToCartImage.dataset.flsAddtocartImage || 1e3;
         addToCartImage ? addToCartImageFly(addToCartImage, addToCart2, flyImgSpeed) : null;
@@ -448,7 +457,10 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 export {
-  slideUp as a,
+  setHash as a,
+  slideUp as b,
+  slideToggle as c,
   dataMediaQueries as d,
-  slideToggle as s
+  getHash as g,
+  slideDown as s
 };
