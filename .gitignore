@@ -15,6 +15,10 @@ dist/
 # Логи
 *.log
 
+# Кеш Vite
+.vite
+.vite/deps
+
 
 
 
