@@ -1222,19 +1222,19 @@ a.rating__quantity {
   [data-fls-menu-open] .menu__link {
     font-size: 2.25rem;
   }
-  .sub-menu__link {
+  [data-fls-menu-open] .sub-menu__link {
     font-size: 1.25rem;
   }
-  .top-header__link-location {
+  [data-fls-menu-open] .top-header__link-location {
     font-size: 1.125rem;
   }
-  .top-header__link-location::before {
+  [data-fls-menu-open] .top-header__link-location::before {
     font-size: 1.5rem;
   }
-  .lang-currency__select {
+  [data-fls-menu-open] .lang-currency__select {
     font-size: 1.5rem;
   }
-  .auth-top-header {
+  [data-fls-menu-open] .auth-top-header {
     font-size: 1.25rem;
   }
 }
@@ -1242,19 +1242,19 @@ a.rating__quantity {
   [data-fls-menu-open] .menu__link {
     font-size: 1.5rem;
   }
-  .sub-menu__link {
+  [data-fls-menu-open] .sub-menu__link {
     font-size: 1.125rem;
   }
-  .top-header__link-location {
+  [data-fls-menu-open] .top-header__link-location {
     font-size: 1rem;
   }
-  .top-header__link-location::before {
+  [data-fls-menu-open] .top-header__link-location::before {
     font-size: 1.25rem;
   }
-  .lang-currency__select {
+  [data-fls-menu-open] .lang-currency__select {
     font-size: 1.25rem;
   }
-  .auth-top-header {
+  [data-fls-menu-open] .auth-top-header {
     font-size: 1.125rem;
   }
 }
@@ -1324,7 +1324,7 @@ a.rating__quantity {
   .sub-menu__item:not(:last-child) {
     margin-bottom: 0.9375rem;
   }
-  .sub-menu__link {
+  [data-fls-menu-open] .sub-menu__link {
     font-weight: 400;
     line-height: 1.5;
   }
@@ -1340,12 +1340,12 @@ a.rating__quantity {
     background-color: #1a1a1a;
     border-radius: 0.5rem;
   }
-  .top-header__link-location {
+  [data-fls-menu-open] .top-header__link-location {
     color: #fff;
     font-weight: 400;
     line-height: 1.5;
   }
-  .top-header__link-location::before {
+  [data-fls-menu-open] .top-header__link-location::before {
     font-weight: 400;
     line-height: 1.5;
   }
@@ -1357,16 +1357,16 @@ a.rating__quantity {
     color: #fff;
     top: 40%;
   }
-  .lang-currency__select {
+  [data-fls-menu-open] .lang-currency__select {
     padding-right: 1.0625rem;
     font-weight: 400;
     line-height: 1.5;
     color: #fff;
   }
-  .lang-currency__select option {
+  [data-fls-menu-open] .lang-currency__select option {
     color: #1a1a1a;
   }
-  .auth-top-header {
+  [data-fls-menu-open] .auth-top-header {
     font-weight: 400;
     line-height: 1.5;
     color: #fff;
@@ -1594,19 +1594,19 @@ a.rating__quantity {
   [data-fls-menu-open] .menu__link {
     font-size: clamp( 1.5rem , 1.2669902912625rem  +  1.1650485437vw , 2.25rem );
   }
-  .sub-menu__link {
+  [data-fls-menu-open] .sub-menu__link {
     font-size: clamp( 1.125rem , 1.08616504854375rem  +  0.1941747573vw , 1.25rem );
   }
-  .top-header__link-location {
+  [data-fls-menu-open] .top-header__link-location {
     font-size: clamp( 1rem , 0.96116504854375rem  +  0.1941747573vw , 1.125rem );
   }
-  .top-header__link-location::before {
+  [data-fls-menu-open] .top-header__link-location::before {
     font-size: clamp( 1.25rem , 1.1723300970875rem  +  0.3883495146vw , 1.5rem );
   }
-  .lang-currency__select {
+  [data-fls-menu-open] .lang-currency__select {
     font-size: clamp( 1.25rem , 1.1723300970875rem  +  0.3883495146vw , 1.5rem );
   }
-  .auth-top-header {
+  [data-fls-menu-open] .auth-top-header {
     font-size: clamp( 1.125rem , 1.08616504854375rem  +  0.1941747573vw , 1.25rem );
   }
 }
