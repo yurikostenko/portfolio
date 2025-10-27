@@ -74,7 +74,7 @@ address {
 @font-face { 
 	font-family: "iconfont"; 
 	font-display: swap;
-	src: url("/portfolio/ecobazar/dist/assets/fonts/iconfont.woff2?d7f019346d2093f51ed43c679dd3a6d8") format("woff2"); 
+	src: url("../assets/fonts/iconfont.woff2?d7f019346d2093f51ed43c679dd3a6d8") format("woff2"); 
 } 
 [class*="--icon-"]::before{
 	font-family: iconfont; 

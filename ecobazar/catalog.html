@@ -3,15 +3,15 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="shortcut icon" href="/portfolio/ecobazar/dist/assets/img/favicon.ico">
+		<link rel="shortcut icon" href="./assets/img/favicon.ico">
 		<title>catalog</title>
-		<script type="module" crossorigin="" src="/portfolio/ecobazar/dist/js/catalog.min.js?v=1761567591955"></script>
-		<link rel="modulepreload" crossorigin="" href="/portfolio/ecobazar/dist/js/app.min.js">
-		<link rel="modulepreload" crossorigin="" href="/portfolio/ecobazar/dist/js/breadcrumbs.min.js">
-		<link rel="modulepreload" crossorigin="" href="/portfolio/ecobazar/dist/js/products.min.js">
-		<link rel="stylesheet" crossorigin="" href="/portfolio/ecobazar/dist/css/app.min.css?v=1761567591955">
-		<link rel="stylesheet" crossorigin="" href="/portfolio/ecobazar/dist/css/breadcrumbs.min.css?v=1761567591955">
-		<link rel="stylesheet" crossorigin="" href="/portfolio/ecobazar/dist/css/catalog.min.css?v=1761567591955">
+		<script type="module" crossorigin="" src="./js/catalog.min.js?v=1761570857468"></script>
+		<link rel="modulepreload" crossorigin="" href="./js/app.min.js">
+		<link rel="modulepreload" crossorigin="" href="./js/breadcrumbs.min.js">
+		<link rel="modulepreload" crossorigin="" href="./js/products.min.js">
+		<link rel="stylesheet" crossorigin="" href="./css/app.min.css?v=1761570857468">
+		<link rel="stylesheet" crossorigin="" href="./css/breadcrumbs.min.css?v=1761570857468">
+		<link rel="stylesheet" crossorigin="" href="./css/catalog.min.css?v=1761570857468">
 	</head>
 	<body>
 		<div class="wrapper">
@@ -50,7 +50,7 @@
 				<div class="header__body body-header">
 					<div class="body-header__container">
 						<div class="body-header__logo logo-header">
-							<img src="/portfolio/ecobazar/dist/assets/img/logo.svg" alt="Logo" class="logo-header__icon">
+							<img src="./assets/img/logo.svg" alt="Logo" class="logo-header__icon">
 							<span class="logo-header__text">Ecobazar</span>
 						</div>
 						<div class="body-header__place-search">
@@ -152,7 +152,11 @@
 							</li>
 						</ul>
 					</div>
-					<img src="/portfolio/ecobazar/dist/assets/img/breadcrumbs/breadcrumbs.jpg" class="breadcrumbs__image" alt="Image">
+					<picture>
+						<source media="(max-width: 600px)" srcset="./assets/img/breadcrumbs/breadcrumbs-600.webp" type="image/webp">
+						<source media="(max-width: 1200px)" srcset="./assets/img/breadcrumbs/breadcrumbs-1200.webp" type="image/webp">
+						<img class="breadcrumbs__image" alt="Image" src="./assets/img/breadcrumbs/breadcrumbs.webp">
+					</picture>
 				</aside>
 				<main class="catalog">
 					<div class="catalog__container">
@@ -407,14 +411,18 @@
 											</div>
 											<div data-fls-titles="" class="sale-banner-filter__link link-arrow link-arrow--icon-arrow">Shop Now</div>
 										</div>
-										<img src="/portfolio/ecobazar/dist/assets/img/banners/banner-02.jpg" class="sale-banner-filter__image" alt="Image">
+										<picture>
+											<img class="sale-banner-filter__image" alt="Image" src="./assets/img/banners/banner-02.webp">
+										</picture>
 									</a>
 									<div class="filter__sale-products sale-products-filter">
 										<h4 class="sale-products-filter__title">Sale Products</h4>
 										<div class="sale-products-filter__items products">
 											<article class="sale-products-filter__item item-products item-products--mini">
 												<a href="product.html" class="item-products__picture">
-													<img src="/portfolio/ecobazar/dist/assets/img/products/red-capsicum.jpg" class="item-products__image" alt="Image">
+													<picture>
+														<img class="item-products__image" alt="Image" src="./assets/img/products/red-capsicum.webp">
+													</picture>
 												</a>
 												<div class="item-products__body">
 													<div class="item-products__content">
@@ -431,7 +439,9 @@
 											</article>
 											<article class="sale-products-filter__item item-products item-products--mini">
 												<a href="product.html" class="item-products__picture">
-													<img src="/portfolio/ecobazar/dist/assets/img/products/surjapur-mango.jpg" class="item-products__image" alt="Image">
+													<picture>
+														<img class="item-products__image" alt="Image" src="./assets/img/products/surjapur-mango.webp">
+													</picture>
 												</a>
 												<div class="item-products__body">
 													<div class="item-products__content">
@@ -448,7 +458,9 @@
 											</article>
 											<article class="sale-products-filter__item item-products item-products--mini">
 												<a href="product.html" class="item-products__picture">
-													<img src="/portfolio/ecobazar/dist/assets/img/products/green-capsicum.jpg" class="item-products__image" alt="Image">
+													<picture>
+														<img class="item-products__image" alt="Image" src="./assets/img/products/green-capsicum.webp">
+													</picture>
 												</a>
 												<div class="item-products__body">
 													<div class="item-products__content">
@@ -475,7 +487,9 @@
 												<a href="#" class="item-products__action item-products__action--icon-eye"></a>
 											</div>
 											<a href="product.html" class="item-products__picture">
-												<img src="/portfolio/ecobazar/dist/assets/img/products/potatoes.jpg" class="item-products__image" alt="Image" data-fls-addtocart-image="">
+												<picture>
+													<img class="item-products__image" alt="Image" data-fls-addtocart-image="" src="./assets/img/products/potatoes.webp">
+												</picture>
 											</a>
 											<div class="item-products__body">
 												<div class="item-products__content">
@@ -498,7 +512,9 @@
 												<a href="#" class="item-products__action item-products__action--icon-eye"></a>
 											</div>
 											<a href="product.html" class="item-products__picture">
-												<img src="/portfolio/ecobazar/dist/assets/img/products/cabbage.jpg" class="item-products__image" alt="Image" data-fls-addtocart-image="">
+												<picture>
+													<img class="item-products__image" alt="Image" data-fls-addtocart-image="" src="./assets/img/products/cabbage.webp">
+												</picture>
 											</a>
 											<div class="item-products__body">
 												<div class="item-products__content">
@@ -523,7 +539,9 @@
 												<a href="#" class="item-products__action item-products__action--icon-eye"></a>
 											</div>
 											<a href="product.html" class="item-products__picture">
-												<img src="/portfolio/ecobazar/dist/assets/img/products/corn.jpg" class="item-products__image" alt="Image" data-fls-addtocart-image="">
+												<picture>
+													<img class="item-products__image" alt="Image" data-fls-addtocart-image="" src="./assets/img/products/corn.webp">
+												</picture>
 											</a>
 											<div class="item-products__body">
 												<div class="item-products__content">
@@ -546,7 +564,9 @@
 												<a href="#" class="item-products__action item-products__action--icon-eye"></a>
 											</div>
 											<a href="product.html" class="item-products__picture">
-												<img src="/portfolio/ecobazar/dist/assets/img/products/eggplant.jpg" class="item-products__image" alt="Image" data-fls-addtocart-image="">
+												<picture>
+													<img class="item-products__image" alt="Image" data-fls-addtocart-image="" src="./assets/img/products/eggplant.webp">
+												</picture>
 											</a>
 											<div class="item-products__body">
 												<div class="item-products__content">
@@ -569,7 +589,9 @@
 												<a href="#" class="item-products__action item-products__action--icon-eye"></a>
 											</div>
 											<a href="product.html" class="item-products__picture">
-												<img src="/portfolio/ecobazar/dist/assets/img/products/cauliflower.jpg" class="item-products__image" alt="Image" data-fls-addtocart-image="">
+												<picture>
+													<img class="item-products__image" alt="Image" data-fls-addtocart-image="" src="./assets/img/products/cauliflower.webp">
+												</picture>
 											</a>
 											<div class="item-products__body">
 												<div class="item-products__content">
@@ -592,7 +614,9 @@
 												<a href="#" class="item-products__action item-products__action--icon-eye"></a>
 											</div>
 											<a href="product.html" class="item-products__picture">
-												<img src="/portfolio/ecobazar/dist/assets/img/products/apple.jpg" class="item-products__image" alt="Image" data-fls-addtocart-image="">
+												<picture>
+													<img class="item-products__image" alt="Image" data-fls-addtocart-image="" src="./assets/img/products/apple.webp">
+												</picture>
 											</a>
 											<div class="item-products__body">
 												<div class="item-products__content">
@@ -615,7 +639,9 @@
 												<a href="#" class="item-products__action item-products__action--icon-eye"></a>
 											</div>
 											<a href="product.html" class="item-products__picture">
-												<img src="/portfolio/ecobazar/dist/assets/img/products/green-capsicum.jpg" class="item-products__image" alt="Image" data-fls-addtocart-image="">
+												<picture>
+													<img class="item-products__image" alt="Image" data-fls-addtocart-image="" src="./assets/img/products/green-capsicum.webp">
+												</picture>
 											</a>
 											<div class="item-products__body">
 												<div class="item-products__content">
@@ -638,7 +664,9 @@
 												<a href="#" class="item-products__action item-products__action--icon-eye"></a>
 											</div>
 											<a href="product.html" class="item-products__picture">
-												<img src="/portfolio/ecobazar/dist/assets/img/products/green-chili.jpg" class="item-products__image" alt="Image" data-fls-addtocart-image="">
+												<picture>
+													<img class="item-products__image" alt="Image" data-fls-addtocart-image="" src="./assets/img/products/green-chili.webp">
+												</picture>
 											</a>
 											<div class="item-products__body">
 												<div class="item-products__content">
@@ -666,7 +694,9 @@
 												<a href="#" class="item-products__action item-products__action--icon-eye"></a>
 											</div>
 											<a href="product.html" class="item-products__picture">
-												<img src="/portfolio/ecobazar/dist/assets/img/products/green-cucumber.jpg" class="item-products__image" alt="Image" data-fls-addtocart-image="">
+												<picture>
+													<img class="item-products__image" alt="Image" data-fls-addtocart-image="" src="./assets/img/products/green-cucumber.webp">
+												</picture>
 											</a>
 											<div class="item-products__body">
 												<div class="item-products__content">
@@ -689,7 +719,9 @@
 												<a href="#" class="item-products__action item-products__action--icon-eye"></a>
 											</div>
 											<a href="product.html" class="item-products__picture">
-												<img src="/portfolio/ecobazar/dist/assets/img/products/lettuce.jpg" class="item-products__image" alt="Image" data-fls-addtocart-image="">
+												<picture>
+													<img class="item-products__image" alt="Image" data-fls-addtocart-image="" src="./assets/img/products/lettuce.webp">
+												</picture>
 											</a>
 											<div class="item-products__body">
 												<div class="item-products__content">
@@ -712,7 +744,9 @@
 												<a href="#" class="item-products__action item-products__action--icon-eye"></a>
 											</div>
 											<a href="product.html" class="item-products__picture">
-												<img src="/portfolio/ecobazar/dist/assets/img/products/ladies-finger.jpg" class="item-products__image" alt="Image" data-fls-addtocart-image="">
+												<picture>
+													<img class="item-products__image" alt="Image" data-fls-addtocart-image="" src="./assets/img/products/ladies-finger.webp">
+												</picture>
 											</a>
 											<div class="item-products__body">
 												<div class="item-products__content">
@@ -735,7 +769,9 @@
 												<a href="#" class="item-products__action item-products__action--icon-eye"></a>
 											</div>
 											<a href="product.html" class="item-products__picture">
-												<img src="/portfolio/ecobazar/dist/assets/img/products/red-capsicum.jpg" class="item-products__image" alt="Image" data-fls-addtocart-image="">
+												<picture>
+													<img class="item-products__image" alt="Image" data-fls-addtocart-image="" src="./assets/img/products/red-capsicum.webp">
+												</picture>
 											</a>
 											<div class="item-products__body">
 												<div class="item-products__content">
@@ -758,7 +794,9 @@
 												<a href="#" class="item-products__action item-products__action--icon-eye"></a>
 											</div>
 											<a href="product.html" class="item-products__picture">
-												<img src="/portfolio/ecobazar/dist/assets/img/products/red-chili.jpg" class="item-products__image" alt="Image" data-fls-addtocart-image="">
+												<picture>
+													<img class="item-products__image" alt="Image" data-fls-addtocart-image="" src="./assets/img/products/red-chili.webp">
+												</picture>
 											</a>
 											<div class="item-products__body">
 												<div class="item-products__content">
@@ -781,7 +819,9 @@
 												<a href="#" class="item-products__action item-products__action--icon-eye"></a>
 											</div>
 											<a href="product.html" class="item-products__picture">
-												<img src="/portfolio/ecobazar/dist/assets/img/products/red-tomatos.jpg" class="item-products__image" alt="Image" data-fls-addtocart-image="">
+												<picture>
+													<img class="item-products__image" alt="Image" data-fls-addtocart-image="" src="./assets/img/products/red-tomatos.webp">
+												</picture>
 											</a>
 											<div class="item-products__body">
 												<div class="item-products__content">
@@ -804,7 +844,9 @@
 												<a href="#" class="item-products__action item-products__action--icon-eye"></a>
 											</div>
 											<a href="product.html" class="item-products__picture">
-												<img src="/portfolio/ecobazar/dist/assets/img/products/surjapur-mango.jpg" class="item-products__image" alt="Image" data-fls-addtocart-image="">
+												<picture>
+													<img class="item-products__image" alt="Image" data-fls-addtocart-image="" src="./assets/img/products/surjapur-mango.webp">
+												</picture>
 											</a>
 											<div class="item-products__body">
 												<div class="item-products__content">
@@ -891,7 +933,7 @@
 					<div class="body-footer__container">
 						<div class="body-footer__content">
 							<div class="body-footer__logo logo-footer">
-								<img src="/portfolio/ecobazar/dist/assets/img/logo.svg" alt="Logo" class="logo-footer__icon">
+								<img src="./assets/img/logo.svg" alt="Logo" class="logo-footer__icon">
 								<div class="logo-footer__text">Ecobazar</div>
 							</div>
 							<div class="body-footer__text">
@@ -983,19 +1025,19 @@
 						<div class="bootom-footer__copy">Ecobazar eCommerce © 2021. All Rights Reserved</div>
 						<ul class="bootom-footer__payments payments">
 							<li class="payments__item">
-								<img src="/portfolio/ecobazar/dist/assets/img/payments/01.svg" alt="Image">
+								<img src="./assets/img/payments/01.svg" alt="Image">
 							</li>
 							<li class="payments__item">
-								<img src="/portfolio/ecobazar/dist/assets/img/payments/02.svg" alt="Image">
+								<img src="./assets/img/payments/02.svg" alt="Image">
 							</li>
 							<li class="payments__item">
-								<img src="/portfolio/ecobazar/dist/assets/img/payments/03.svg" alt="Image">
+								<img src="./assets/img/payments/03.svg" alt="Image">
 							</li>
 							<li class="payments__item">
-								<img src="/portfolio/ecobazar/dist/assets/img/payments/04.svg" alt="Image">
+								<img src="./assets/img/payments/04.svg" alt="Image">
 							</li>
 							<li class="payments__item">
-								<img src="/portfolio/ecobazar/dist/assets/img/payments/05.svg" alt="Image">
+								<img src="./assets/img/payments/05.svg" alt="Image">
 							</li>
 						</ul>
 					</div>
