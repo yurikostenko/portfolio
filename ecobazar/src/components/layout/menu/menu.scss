@@ -135,10 +135,12 @@
 		@include typography("S", 500);
 		position: relative;
 		z-index: 4;
-		@media (max-width: toEm($mobile)) {
-			color: $white;
-			padding-block: 15px;
-			@include typography("h4", 500);
+		[data-fls-menu-open] & {
+			@media (max-width: toEm($mobile)) {
+				color: $white;
+				padding-block: 15px;
+				@include typography("h4", 500);
+			}
 		}
 		&.is-active {
 			color: $white;
@@ -181,8 +183,10 @@
 				text-decoration: underline;
 			}
 		}
-		@media (max-width: toEm($mobile)) {
-			@include typography("XL");
+		[data-fls-menu-open] & {
+			@media (max-width: toEm($mobile)) {
+				@include typography("XL");
+			}
 		}
 	}
 	@media (max-width: toEm($mobile)) {

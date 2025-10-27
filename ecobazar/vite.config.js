@@ -54,7 +54,8 @@ export default defineConfig(({ command, mode, ssrBuild }) => {
 				...aliases
 			},
 		},
-		base: templateConfig.server.path,
+		// base: templateConfig.server.path,
+		base: '/portfolio/ecobazar/dist/',
 		assetsInclude: ['src/components/**/*.html'],
 		clearScreen: true,
 		root: path.join(__dirname, "src"),

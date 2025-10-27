@@ -47,11 +47,13 @@
 				color: $successDark;
 			}
 		}
-		@media (max-width: toEm($mobile)) {
-			color: $white;
-			@include typography("L");
-			&::before {
-				@include typography("XXL");
+		[data-fls-menu-open] & {
+			@media (max-width: toEm($mobile)) {
+				color: $white;
+				@include typography("L");
+				&::before {
+					@include typography("XXL");
+				}
 			}
 		}
 	}
@@ -89,8 +91,9 @@
 			font-size: 7.2px;
 			pointer-events: none;
 			@media (max-width: toEm($mobile)) {
-				font-size: 8px;
+				font-size: 12px;
 				color: $white;
+				top: 40%;
 			}
 		}
 	}
@@ -98,12 +101,16 @@
 		padding-right: 10.5px;
 		appearance: none;
 		@include typography("T");
-		@media (max-width: toEm($mobile)) {
-			padding-right: 17px;
-			@include typography("XXL");
-			color: $white;
-			option {
-				color: $grey9;
+		background-color: transparent;
+
+		[data-fls-menu-open] & {
+			@media (max-width: toEm($mobile)) {
+				padding-right: 17px;
+				@include typography("XXL");
+				color: $white;
+				option {
+					color: $grey9;
+				}
 			}
 		}
 	}
@@ -118,9 +125,11 @@
 			}
 		}
 	}
-	@media (max-width: toEm($mobile)) {
-		@include typography("XL");
-		color: $white;
+	[data-fls-menu-open] & {
+		@media (max-width: toEm($mobile)) {
+			@include typography("XL");
+			color: $white;
+		}
 	}
 }
 
