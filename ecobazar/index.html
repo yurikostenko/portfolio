@@ -4,16 +4,19 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="shortcut icon" href="./assets/img/favicon.ico">
-		<title>Home Page</title>
-		<script type="module" crossorigin="" src="./js/index.min.js?v=1761570857470"></script>
+		<title>Home</title>
+		<script type="module" crossorigin="" src="./js/index.min.js?v=1761910370864"></script>
 		<link rel="modulepreload" crossorigin="" href="./js/app.min.js">
 		<link rel="modulepreload" crossorigin="" href="./js/slider.min.js">
 		<link rel="modulepreload" crossorigin="" href="./js/products.min.js">
-		<link rel="stylesheet" crossorigin="" href="./css/app.min.css?v=1761570857470">
-		<link rel="stylesheet" crossorigin="" href="./css/slider.min.css?v=1761570857470">
-		<link rel="stylesheet" crossorigin="" href="./css/index.min.css?v=1761570857470">
+		<link rel="modulepreload" crossorigin="" href="./js/products.min2.js">
+		<link rel="stylesheet" crossorigin="" href="./css/app.min.css?v=1761910370864">
+		<link rel="stylesheet" crossorigin="" href="./css/slider.min.css?v=1761910370864">
+		<link rel="stylesheet" crossorigin="" href="./css/products.min.css?v=1761910370864">
+		<link rel="stylesheet" crossorigin="" href="./css/index.min.css?v=1761910370864">
+		<link rel="stylesheet" crossorigin="" href="./css/index.min2.css?v=1761910370864">
 	</head>
-	<body>
+	<body data-page="<%= title.toLowerCase() %>">
 		<div class="wrapper">
 			<header data-fls-header="" class="header">
 				<div data-fls-dynamic=".menu, 767.98" class="header__top top-header">
@@ -84,7 +87,7 @@
 									<li class="menu__item">
 										<a href="index.html" class="menu__link">Home</a>
 										<button class="menu__button">
-											<span class="menu__arrow menu__button--icon-shevron"></span>
+											<span class="menu__arrow menu__arrow--icon-shevron"></span>
 										</button>
 										<ul class="sub-menu">
 											<li class="sub-menu__item">
@@ -105,9 +108,9 @@
 										<a href="#" class="menu__link">Pages</a>
 									</li>
 									<li class="menu__item">
-										<a href="#" class="menu__link">Blog</a>
+										<a href="bloglist.html" class="menu__link">Blog</a>
 										<button class="menu__button">
-											<span class="menu__arrow menu__button--icon-shevron"></span>
+											<span class="menu__arrow menu__arrow--icon-shevron"></span>
 										</button>
 										<ul class="sub-menu">
 											<li class="sub-menu__item">

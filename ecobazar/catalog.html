@@ -4,16 +4,19 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="shortcut icon" href="./assets/img/favicon.ico">
-		<title>catalog</title>
-		<script type="module" crossorigin="" src="./js/catalog.min.js?v=1761570857468"></script>
+		<title>Catalog</title>
+		<script type="module" crossorigin="" src="./js/catalog.min.js?v=1761910370863"></script>
 		<link rel="modulepreload" crossorigin="" href="./js/app.min.js">
-		<link rel="modulepreload" crossorigin="" href="./js/breadcrumbs.min.js">
 		<link rel="modulepreload" crossorigin="" href="./js/products.min.js">
-		<link rel="stylesheet" crossorigin="" href="./css/app.min.css?v=1761570857468">
-		<link rel="stylesheet" crossorigin="" href="./css/breadcrumbs.min.css?v=1761570857468">
-		<link rel="stylesheet" crossorigin="" href="./css/catalog.min.css?v=1761570857468">
+		<link rel="modulepreload" crossorigin="" href="./js/titles.min.js">
+		<link rel="modulepreload" crossorigin="" href="./js/products.min2.js">
+		<link rel="stylesheet" crossorigin="" href="./css/app.min.css?v=1761910370863">
+		<link rel="stylesheet" crossorigin="" href="./css/products.min.css?v=1761910370863">
+		<link rel="stylesheet" crossorigin="" href="./css/catalog.min.css?v=1761910370863">
+		<link rel="stylesheet" crossorigin="" href="./css/sheets.min.css?v=1761910370863">
+		<link rel="stylesheet" crossorigin="" href="./css/breadcrumbs.min.css?v=1761910370863">
 	</head>
-	<body>
+	<body data-page="<%= title.toLowerCase() %>">
 		<div class="wrapper">
 			<header data-fls-header="" class="header">
 				<div data-fls-dynamic=".menu, 767.98" class="header__top top-header">
@@ -50,8 +53,10 @@
 				<div class="header__body body-header">
 					<div class="body-header__container">
 						<div class="body-header__logo logo-header">
-							<img src="./assets/img/logo.svg" alt="Logo" class="logo-header__icon">
-							<span class="logo-header__text">Ecobazar</span>
+							<a href="index.html" class="logo-header__link">
+								<img src="./assets/img/logo.svg" alt="Logo" class="logo-header__icon">
+								<span class="logo-header__text">Ecobazar</span>
+							</a>
 						</div>
 						<div class="body-header__place-search">
 							<form data-fls-dynamic=".bottom-header__container, 767.98,0" action="#" class="body-header__search search-header search-header--icon-search">
@@ -84,7 +89,7 @@
 									<li class="menu__item">
 										<a href="index.html" class="menu__link">Home</a>
 										<button class="menu__button">
-											<span class="menu__arrow menu__button--icon-shevron"></span>
+											<span class="menu__arrow menu__arrow--icon-shevron"></span>
 										</button>
 										<ul class="sub-menu">
 											<li class="sub-menu__item">
@@ -105,9 +110,9 @@
 										<a href="#" class="menu__link">Pages</a>
 									</li>
 									<li class="menu__item">
-										<a href="#" class="menu__link">Blog</a>
+										<a href="bloglist.html" class="menu__link">Blog</a>
 										<button class="menu__button">
-											<span class="menu__arrow menu__button--icon-shevron"></span>
+											<span class="menu__arrow menu__arrow--icon-shevron"></span>
 										</button>
 										<ul class="sub-menu">
 											<li class="sub-menu__item">
@@ -142,10 +147,10 @@
 					<div class="breadcrumbs__container">
 						<ul class="breadcrumbs__list">
 							<li class="breadcrumbs__item">
-								<a href="#" class="breadcrumbs__link breadcrumbs__link--icon-home"></a>
+								<a href="index.html" class="breadcrumbs__link breadcrumbs__link--icon-home" aria-label="Home"></a>
 							</li>
 							<li class="breadcrumbs__item">
-								<a href="#" class="breadcrumbs__link">Categories</a>
+								<a href="catalog.html" class="breadcrumbs__link">Categories</a>
 							</li>
 							<li class="breadcrumbs__item">
 								<span class="breadcrumbs__current">Vegetables</span>
@@ -160,8 +165,9 @@
 				</aside>
 				<main class="catalog">
 					<div class="catalog__container">
+						<h1 class="visually-hidden">Shop Catalog</h1>
 						<form action="#" class="catalog__form">
-							<div class="catalog__header header-catalog">
+							<div data-fls-headercatalog="" class="catalog__header header-catalog">
 								<div class="header-catalog__filter">
 									<button type="button" class="header-catalog__button button button--middle button--filter">Filter</button>
 								</div>
@@ -416,7 +422,7 @@
 										</picture>
 									</a>
 									<div class="filter__sale-products sale-products-filter">
-										<h4 class="sale-products-filter__title">Sale Products</h4>
+										<h2 class="sale-products-filter__title">Sale Products</h2>
 										<div class="sale-products-filter__items products">
 											<article class="sale-products-filter__item item-products item-products--mini">
 												<a href="product.html" class="item-products__picture">
@@ -863,7 +869,7 @@
 											</div>
 										</article>
 									</div>
-									<ul class="catalog__pages pages">
+									<ul class="pages">
 										<li class="pages__item">
 											<a href="#" class="pages__link pages__link--icon-shevron"></a>
 										</li>

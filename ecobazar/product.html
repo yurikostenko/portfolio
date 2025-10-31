@@ -4,17 +4,19 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="shortcut icon" href="./assets/img/favicon.ico">
-		<title>product</title>
-		<script type="module" crossorigin="" src="./js/product.min.js?v=1761570857469"></script>
+		<title>Product</title>
+		<script type="module" crossorigin="" src="./js/product.min.js?v=1761910370861"></script>
 		<link rel="modulepreload" crossorigin="" href="./js/app.min.js">
 		<link rel="modulepreload" crossorigin="" href="./js/slider.min.js">
-		<link rel="modulepreload" crossorigin="" href="./js/breadcrumbs.min.js">
-		<link rel="stylesheet" crossorigin="" href="./css/app.min.css?v=1761570857469">
-		<link rel="stylesheet" crossorigin="" href="./css/slider.min.css?v=1761570857469">
-		<link rel="stylesheet" crossorigin="" href="./css/breadcrumbs.min.css?v=1761570857469">
-		<link rel="stylesheet" crossorigin="" href="./css/product.min.css?v=1761570857469">
+		<link rel="modulepreload" crossorigin="" href="./js/products.min.js">
+		<link rel="modulepreload" crossorigin="" href="./js/titles.min.js">
+		<link rel="stylesheet" crossorigin="" href="./css/app.min.css?v=1761910370861">
+		<link rel="stylesheet" crossorigin="" href="./css/slider.min.css?v=1761910370861">
+		<link rel="stylesheet" crossorigin="" href="./css/products.min.css?v=1761910370861">
+		<link rel="stylesheet" crossorigin="" href="./css/product.min.css?v=1761910370861">
+		<link rel="stylesheet" crossorigin="" href="./css/breadcrumbs.min.css?v=1761910370861">
 	</head>
-	<body>
+	<body data-page="<%= title.toLowerCase() %>">
 		<div class="wrapper">
 			<header data-fls-header="" class="header">
 				<div data-fls-dynamic=".menu, 767.98" class="header__top top-header">
@@ -51,8 +53,10 @@
 				<div class="header__body body-header">
 					<div class="body-header__container">
 						<div class="body-header__logo logo-header">
-							<img src="./assets/img/logo.svg" alt="Logo" class="logo-header__icon">
-							<span class="logo-header__text">Ecobazar</span>
+							<a href="index.html" class="logo-header__link">
+								<img src="./assets/img/logo.svg" alt="Logo" class="logo-header__icon">
+								<span class="logo-header__text">Ecobazar</span>
+							</a>
 						</div>
 						<div class="body-header__place-search">
 							<form data-fls-dynamic=".bottom-header__container, 767.98,0" action="#" class="body-header__search search-header search-header--icon-search">
@@ -85,7 +89,7 @@
 									<li class="menu__item">
 										<a href="index.html" class="menu__link">Home</a>
 										<button class="menu__button">
-											<span class="menu__arrow menu__button--icon-shevron"></span>
+											<span class="menu__arrow menu__arrow--icon-shevron"></span>
 										</button>
 										<ul class="sub-menu">
 											<li class="sub-menu__item">
@@ -106,9 +110,9 @@
 										<a href="#" class="menu__link">Pages</a>
 									</li>
 									<li class="menu__item">
-										<a href="#" class="menu__link">Blog</a>
+										<a href="bloglist.html" class="menu__link">Blog</a>
 										<button class="menu__button">
-											<span class="menu__arrow menu__button--icon-shevron"></span>
+											<span class="menu__arrow menu__arrow--icon-shevron"></span>
 										</button>
 										<ul class="sub-menu">
 											<li class="sub-menu__item">
@@ -139,17 +143,17 @@
 				</div>
 			</header>
 			<div class="inner">
-				<aside data-fls-breadcrumbs="" class="breadcrumbs breadcrumbs--margin">
+				<aside class="breadcrumbs breadcrumbs--margin">
 					<div class="breadcrumbs__container">
 						<ul class="breadcrumbs__list">
 							<li class="breadcrumbs__item">
-								<a href="#" class="breadcrumbs__link breadcrumbs__link--icon-home"></a>
+								<a href="index.html" class="breadcrumbs__link breadcrumbs__link--icon-home" aria-label="Home"></a>
 							</li>
 							<li class="breadcrumbs__item">
-								<a href="#" class="breadcrumbs__link">Categories</a>
+								<a href="catalog.html" class="breadcrumbs__link">Category</a>
 							</li>
 							<li class="breadcrumbs__item">
-								<a href="#" class="breadcrumbs__link">Vegetables</a>
+								<a href="catalog.html" class="breadcrumbs__link">Vegetables</a>
 							</li>
 							<li class="breadcrumbs__item">
 								<span class="breadcrumbs__current">Chinese Cabbage</span>
