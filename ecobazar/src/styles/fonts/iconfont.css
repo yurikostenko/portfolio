@@ -1,7 +1,7 @@
 @font-face { 
 	font-family: "iconfont"; 
 	font-display: swap;
-	src: url("D://portfolio/ecobazar/src/assets/svgicons/preview/iconfont.woff2?d7f019346d2093f51ed43c679dd3a6d8") format("woff2"); 
+	src: url("D://portfolio/ecobazar/src/assets/svgicons/preview/iconfont.woff2?9f7b96898b4d440ad9daf2211fb0231d") format("woff2"); 
 } 
 [class*="--icon-"]::before{
 	font-family: iconfont; 
@@ -84,9 +84,12 @@
 	[class*="--icon-cart"]::before { 
 		content: "\f11a"; 
 	} 
-	[class*="--icon-author"]::before { 
+	[class*="--icon-calendar"]::before { 
 		content: "\f11b"; 
 	} 
-	[class*="--icon-arrow"]::before { 
+	[class*="--icon-author"]::before { 
 		content: "\f11c"; 
+	} 
+	[class*="--icon-arrow"]::before { 
+		content: "\f11d"; 
 	} 

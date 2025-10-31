@@ -91,6 +91,7 @@
 		color: $grey4;
 		display: flex;
 		transition: color 0.3s;
+
 		@media (any-hover: hover) and (any-pointer: fine) {
 			&:hover {
 				color: $white;
@@ -98,7 +99,6 @@
 				.menu__arrow {
 					&::before {
 						rotate: -180deg;
-						transition: all 0.3s;
 					}
 				}
 				.sub-menu {
@@ -117,7 +117,6 @@
 			.menu__arrow {
 				&::before {
 					rotate: -180deg;
-					transition: all 0.3s;
 				}
 			}
 		}
@@ -156,6 +155,13 @@
 
 		@media (max-width: toEm($mobile)) {
 			display: none;
+		}
+	}
+
+	// .menu__arrow
+	&__arrow {
+		&::before {
+			transition: all 0.3s;
 		}
 	}
 }
@@ -202,5 +208,34 @@
 		translate: 0 -100%;
 		pointer-events: none;
 		width: 200px;
+	}
+}
+
+body[data-page="catalog"] .menu,
+body[data-page="product"] .menu,
+body[data-page="bloglist"] .menu {
+	// .menu__item
+	&__item {
+		color: $grey6;
+		@media (any-hover: hover) and (any-pointer: fine) {
+			&:hover {
+				color: $success;
+
+				.menu__arrow::before {
+					color: $success;
+				}
+			}
+		}
+	}
+	// .menu__link
+	&__link {
+		@media (min-width: toEm($mobile)) {
+			&.is-active {
+				color: $success;
+				+ .menu__button .menu__arrow::before {
+					color: $success;
+				}
+			}
+		}
 	}
 }

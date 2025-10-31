@@ -1,7 +1,13 @@
 .breadcrumbs {
    background-color: $grey9;
-   position: relative;
+   position: sticky;
+   top: 195.8px;
+   z-index: 10;
    overflow: hidden;
+   @media (max-width: toEm($mobile)) {
+      top: 118px;
+   }
+
    &--margin {
       @include adaptiveValue("margin-bottom", 32, 20);
    }
@@ -18,6 +24,7 @@
       gap: 8px;
       display: flex;
       align-items: center;
+      flex-wrap: wrap;
       @include adaptiveValue("padding-block", 50, 15);
    }
    // .breadcrumbs__item

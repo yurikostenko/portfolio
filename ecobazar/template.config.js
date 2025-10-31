@@ -11,8 +11,12 @@ export default {
 		enable: true,
 		filename: '_components.html'
 	},
+	newpage: {
+		copyfromindex: true,
+		usetemplate: 'main'
+	},
 	git: {
-		repo: `https://github.com/FreelancerLifeStyle/fls.git`,
+		repo: ``,
 		branch: `main`
 	},
 	navpanel: {

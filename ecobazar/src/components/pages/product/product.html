@@ -2,25 +2,13 @@
 <link rel="stylesheet" href="@components/pages/product/product.scss">
 <link rel="stylesheet" href="@components/custom/products/products.scss">
 
-<aside data-fls-breadcrumbs class="breadcrumbs breadcrumbs--margin">
-   <div class="breadcrumbs__container">
-      <ul class="breadcrumbs__list">
-         <li class="breadcrumbs__item">
-            <a href="#" class="breadcrumbs__link breadcrumbs__link--icon-home"></a>
-         </li>
-         <li class="breadcrumbs__item">
-            <a href="#" class="breadcrumbs__link">Categories</a>
-         </li>
-         <li class="breadcrumbs__item">
-            <a href="#" class="breadcrumbs__link">Vegetables</a>
-         </li>
-         <li class="breadcrumbs__item">
-            <span class="breadcrumbs__current">Chinese Cabbage</span>
-         </li>
-      </ul>
-   </div>
-   <img src="@img/breadcrumbs/breadcrumbs.jpg" class="breadcrumbs__image" alt="Image">
-</aside>
+<include src="@components/custom/breadcrumbs/breadcrumbs.html" locals='{
+  "breadcrumbs": [
+    { "name": "Category", "url": "catalog.html" },
+    { "name": "Vegetables", "url": "catalog.html" },
+    { "name": "Chinese Cabbage", "last": true }
+  ]
+}'></include>
 
 <main class="product">
    <section class="product__body body-product" data-fls-addtocart-product>

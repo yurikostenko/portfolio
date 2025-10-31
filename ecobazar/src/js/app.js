@@ -7,11 +7,18 @@ addTouchAttr()
 // Додає атрибут [data-loaded] після завантаження сторінки
 addLoadedAttr()
 
-
 document.addEventListener('DOMContentLoaded', () => {
-   const filterButton = document.querySelector('.header-catalog__button')
-   const filterAside = document.querySelector('.catalog__filter')
 
+   const body = document.body
+   if (!body.hasAttribute('data-page') || body.getAttribute('data-page').includes('<%')) {
+      const path = window.location.pathname
+      let pageName = path.split('/').pop().replace('.html', '').toLowerCase()
+      if (pageName === '' || pageName === 'index') pageName = 'home'
+      body.setAttribute('data-page', pageName)
+   }
+
+   const filterButton = document.querySelector('.header-catalog__button')
+   const filterAside = document.querySelector('.filter')
    if (filterButton && filterAside) {
       filterButton.addEventListener('click', () => {
          filterAside.classList.toggle('filter--active')

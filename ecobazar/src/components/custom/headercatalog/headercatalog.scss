@@ -1,0 +1,104 @@
+.header-catalog {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   gap: 10px 20px;
+   min-height: 46px;
+
+   &:not(:last-child) {
+      margin-bottom: 22px;
+   }
+   @media (max-width: toEm($mobile)) {
+      display: block;
+   }
+   // .header-catalog__filter
+   &__filter {
+      transition: all 0.3s;
+      flex-basis: 312px;
+
+      @media (min-width: toEm($tablet)) {
+         visibility: hidden;
+         margin-left: -332px;
+      }
+   }
+   // .header-catalog__button
+   &__button {
+      @media (max-width: toEm($mobile)) {
+         width: 100%;
+      }
+   }
+   // .header-catalog__body
+   &__body {
+      flex-grow: 1;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px 20px;
+      justify-content: space-between;
+
+      @media (max-width: toEm($mobile)) {
+         margin-bottom: 20px;
+      }
+   }
+   // .header-catalog__sort
+   &__sort {
+   }
+   // .header-catalog__result
+   &__result {
+      @include typography("M");
+      color: $grey6;
+      span {
+         color: $grey9;
+         font-weight: 600;
+      }
+   }
+}
+.button.header-catalog__button.active {
+   background-color: $successDark;
+}
+
+.sort-catalog {
+   display: flex;
+   align-items: center;
+   @include typography("S");
+   gap: 8px;
+   @media (max-width: toEm($mobileSmall)) {
+      flex-grow: 1;
+   }
+   // .sort-catalog__label
+   &__label {
+      color: $grey5;
+   }
+   // .sort-catalog__body
+   &__body {
+      position: relative;
+      flex: 0 0 166px;
+
+      &::before {
+         position: absolute;
+         right: 16px;
+         top: 50%;
+         z-index: 2;
+         translate: 0 -50%;
+         font-size: 8px;
+         pointer-events: none;
+      }
+      @media (max-width: toEm($mobileSmall)) {
+         flex-grow: 1;
+      }
+   }
+   // .sort-catalog__select
+   &__select {
+      padding-right: 40px;
+      appearance: none;
+      border-radius: 4px;
+      height: 41px;
+      color: $grey7;
+      padding-left: 16px;
+      border: 1px solid $grey1;
+      width: 100%;
+   }
+   // .sort-catalog__item
+   &__item {
+   }
+}

@@ -387,3 +387,68 @@
 		}
 	}
 }
+
+// ====================
+// Варіації для сторінок
+// ====================
+body[data-page="home"] .header {
+	.top-header {
+		// background-color: transparent;
+		// color: $white;
+	}
+	.bottom-header {
+		// background-color: transparent;
+		// color: $white;
+	}
+}
+
+body[data-page="catalog"] .header,
+body[data-page="product"] .header,
+body[data-page="bloglist"] .header {
+	.top-header {
+		background-color: $grey8;
+		color: $grey3;
+	}
+	.lang-currency {
+		&::after {
+			background-color: $grey3;
+		}
+		// .lang-currency__select
+		&__select {
+			color: $grey3;
+
+			[data-fls-menu-open] & {
+				@media (max-width: toEm($mobile)) {
+					color: $white;
+				}
+			}
+		}
+	}
+
+	.search-header {
+		outline: 1px solid $grey1;
+	}
+
+	.body-header {
+		box-shadow: inset 0px -1px 0px 0px rgba(230, 230, 230, 1);
+	}
+
+	.bottom-header {
+		// background-color: $darkColor;
+		// color: $white;
+		&::before {
+			background-color: $white;
+		}
+		// .bottom-header__phone
+		&__phone {
+			color: $grey9;
+		}
+	}
+}
+
+body[data-page="product"] .header {
+	.top-header {
+		// background-color: $accentLight;
+		// color: $darkColor;
+	}
+}

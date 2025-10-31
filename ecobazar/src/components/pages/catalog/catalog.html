@@ -1,12 +1,19 @@
 <script type="module" src="@components/pages/catalog/catalog.js"></script>
 <link rel="stylesheet" href="@components/pages/catalog/catalog.scss">
 
-<include src="@components/custom/breadcrumbs/breadcrumbs.html"></include>
+<include src="@components/custom/breadcrumbs/breadcrumbs.html" locals='{
+  "breadcrumbs": [
+    { "name": "Categories", "url": "catalog.html" },
+    { "name": "Vegetables", "last": true }
+  ]
+}'></include>
 
 <main class="catalog">
    <div class="catalog__container">
+      <h1 class="visually-hidden">Shop Catalog</h1>
       <form action="#" class="catalog__form">
-         <div class="catalog__header header-catalog">
+
+         <div data-fls-headercatalog class="catalog__header header-catalog">
             <div class="header-catalog__filter">
                <button type="button" class="header-catalog__button button button--middle button--filter">Filter</button>
             </div>
@@ -23,6 +30,7 @@
                <div class="header-catalog__result"><span>52</span> Results Found</div>
             </div>
          </div>
+
          <div class="catalog__body">
             <aside class="catalog__filter filter">
 
@@ -42,7 +50,7 @@
                   <img src="@img/banners/banner-02.jpg" class="sale-banner-filter__image" alt="Image">
                </a>
                <div class="filter__sale-products sale-products-filter">
-                  <h4 class="sale-products-filter__title">Sale Products</h4>
+                  <h2 class="sale-products-filter__title">Sale Products</h2>
                   <div class="sale-products-filter__items products">
                      <article class="sale-products-filter__item item-products item-products--mini">
                         <a href="product.html" class="item-products__picture">

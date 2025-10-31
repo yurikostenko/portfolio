@@ -9,7 +9,7 @@
 				]},
 				{"href": "catalog.html","ancor": "Shop"},
 				{"href": "#","ancor": "Pages"},
-				{"href": "#","ancor": "Blog","sub":[
+				{"href": "bloglist.html","ancor": "Blog","sub":[
 					{"href": "#","ancor": "Some link"},
 					{"href": "#","ancor": "Some link"},
 					{"href": "#","ancor": "Some link"}
@@ -21,7 +21,7 @@
 					<a href="[[item.href]]" class="menu__link">[[item.ancor]]</a>
 					<if condition="item.sub">
 						<button class="menu__button">
-							<span class="menu__arrow menu__button--icon-shevron"></span>
+							<span class="menu__arrow menu__arrow--icon-shevron"></span>
 						</button>
 						<ul class="sub-menu">
 							<each loop='sub in [[item.sub]]'>

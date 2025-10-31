@@ -1,5 +1,5 @@
 <template src="@components/templates/inner/inner.html" locals='{
-		"title":"Product", 
+		"title":"Bloglist", 
 		"lang":"en",
 		"home":"false",
 		"preloader": {
@@ -11,13 +11,13 @@
 	}'>
 	<block name="header">
 		<include src="@components/layout/header/header.html" locals='{
-			"active":"",
-			 "title": "Product",
+			"active":"Blog",
+			"title":"Bloglist",
 			"home": false
 		}'></include>
 	</block>
 	<block name="main">
-		<include src="@components/pages/product/product.html" locals='{}'></include>
+		<include src="@components/pages/bloglist/bloglist.html" locals='{}'></include>
 	</block>
 	<block name="aside">
 		<include src="@components/layout/aside/aside.html"></include>

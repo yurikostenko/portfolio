@@ -1,5 +1,5 @@
 <template src="@components/templates/inner/inner.html" locals='{
-		"title":"Home Page", 
+		"title":"Home", 
 		"lang":"en",
 		"home": true,
 		"preloader": {
@@ -12,7 +12,8 @@
 	<block name="header">
 		<include src="@components/layout/header/header.html" locals='{
 			"active":"Home",
-			"home":"true"
+			"title":"Home", 
+			"home": true
 		}'></include>
 	</block>
 	<block name="main">

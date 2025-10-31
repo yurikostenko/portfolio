@@ -1,0 +1,362 @@
+<script type="module" src="@components/pages/bloglist/bloglist.js"></script>
+<link rel="stylesheet" href="@components/pages/bloglist/bloglist.scss">
+<link rel="stylesheet" href="@components/pages/catalog/catalog.scss">
+<link rel="stylesheet" href="@components/pages/index/index.scss">
+<link rel="stylesheet" href="@components/custom/titles/titles.scss">
+
+<include src="@components/custom/breadcrumbs/breadcrumbs.html" locals='{
+  "breadcrumbs": [
+    { "name": "Blog", "last": true }
+  ]
+}'></include>
+
+<main class="bloglist">
+   <div class="bloglist__container">
+
+      <h1 class="visually-hidden">Blog</h1>
+
+      <div data-fls-headercatalog class="bloglist__header header-catalog">
+         <div class="header-catalog__filter">
+            <button type="button" class="header-catalog__button button button--middle button--filter">Filter</button>
+         </div>
+         <div data-fls-dynamic=".bloglist__body,767.98,1" class="header-catalog__body">
+            <div class="header-catalog__sort sort-catalog">
+               <label class="sort-catalog__label">Sort by:</label>
+               <div class="sort-catalog__body sort-catalog__body--icon-shevron">
+                  <select name="form[sort]" class="sort-catalog__select">
+                     <option class="sort-catalog__item">Latest</option>
+                     <option class="sort-catalog__item">Newest</option>
+                  </select>
+               </div>
+            </div>
+            <div class="header-catalog__result"><span>52</span> Results Found</div>
+         </div>
+      </div>
+
+      <div class="bloglist__body">
+         <aside class="bloglist__filter filter">
+
+            <div class="filter__section">
+               <form data-fls-form action="#" class="filter__search search-filter">
+                  <input data-fls-input autocomplete="off" type="text" name="search" placeholder="Search"
+                     class="search-filter__input input">
+                  <button type="submit" class="search-filter__button search-filter__button--icon-search"
+                     aria-label="Search"></button>
+               </form>
+            </div>
+
+            <section class="filter__top top-categories">
+               <h2 class="top-categories__title title-filter">Top Categories</h2>
+               <ul class="top-categories__list">
+                  <li class="top-categories__item">Fresh Fruit <span>(134)</span></li>
+                  <li class="top-categories__item">Vegetables <span>(150)</span></li>
+                  <li class="top-categories__item">Cooking <span>(54)</span></li>
+                  <li class="top-categories__item">Snacks <span>(47)</span></li>
+                  <li class="top-categories__item">Beverages <span>(43)</span></li>
+                  <li class="top-categories__item">Beauty & Health <span>(38)</span></li>
+                  <li class="top-categories__item">Bread & Bakery <span>(15)</span></li>
+               </ul>
+            </section>
+
+            <section class="filter__tags tag-popular">
+               <h2 class="tag-popular__title title-filter">Popular Tags</h2>
+               <ul class="tag-popular__list">
+                  <li class="tag-popular__item"><a href="#" class="tag-popular__link">Healthy</a></li>
+                  <li class="tag-popular__item"><a href="#" class="tag-popular__link">Low fat</a></li>
+                  <li class="tag-popular__item"><a href="#" class="tag-popular__link">Vegetarian</a></li>
+                  <li class="tag-popular__item"><a href="#" class="tag-popular__link">Bread</a></li>
+                  <li class="tag-popular__item"><a href="#" class="tag-popular__link">Kid foods</a></li>
+                  <li class="tag-popular__item"><a href="#" class="tag-popular__link">Vitamins</a></li>
+                  <li class="tag-popular__item"><a href="#" class="tag-popular__link">Snacks</a></li>
+                  <li class="tag-popular__item"><a href="#" class="tag-popular__link">Tiffin</a></li>
+                  <li class="tag-popular__item"><a href="#" class="tag-popular__link">Meat</a></li>
+                  <li class="tag-popular__item"><a href="#" class="tag-popular__link">Launch</a></li>
+                  <li class="tag-popular__item"><a href="#" class="tag-popular__link">Dinner</a></li>
+               </ul>
+            </section>
+
+            <section class="filter__gallery gallery-filter">
+               <h2 class="gallery-filter__title title-filter">Our Gallery</h2>
+               <ul class="gallery-filter__list">
+                  <li class="gallery-filter__item"><img src="@img/gallery-filter/01.webp" alt="Image"
+                        class="gallery-filter__image"></li>
+                  <li class="gallery-filter__item"><img src="@img/gallery-filter/02.webp" alt="Image"
+                        class="gallery-filter__image"></li>
+                  <li class="gallery-filter__item"><img src="@img/gallery-filter/03.webp" alt="Image"
+                        class="gallery-filter__image"></li>
+                  <li class="gallery-filter__item"><img src="@img/gallery-filter/04.webp" alt="Image"
+                        class="gallery-filter__image"></li>
+                  <li class="gallery-filter__item"><img src="@img/gallery-filter/05.webp" alt="Image"
+                        class="gallery-filter__image"></li>
+                  <li class="gallery-filter__item"><img src="@img/gallery-filter/06.webp" alt="Image"
+                        class="gallery-filter__image"></li>
+                  <li class="gallery-filter__item"><img src="@img/gallery-filter/07.webp" alt="Image"
+                        class="gallery-filter__image"></li>
+                  <li class="gallery-filter__item"><img src="@img/gallery-filter/08.webp" alt="Image"
+                        class="gallery-filter__image"></li>
+               </ul>
+            </section>
+
+            <section class="filter__recently recently-filter">
+               <h2 class="recently-filter__title title-filter">Recently Added</h2>
+               <ul class="recently-filter__list">
+                  <li class="recently-filter__item">
+                     <figure class="recently-filter__picture">
+                        <img class="recently-filter__image" src="@img/recently/01.webp" alt="Image">
+                     </figure>
+                     <div class="recently-filter__body">
+                        <div class="recently-filter__text">Curabitur porttitor orci eget nequ accumsan.</div>
+                        <time class="recently-filter__date recently-filter__date--icon-calendar"
+                           datetime="2021-04-25">Apr
+                           25, 2021</time>
+                     </div>
+                  </li>
+                  <li class="recently-filter__item">
+                     <figure class="recently-filter__picture">
+                        <img class="recently-filter__image" src="@img/recently/02.webp" alt="Image">
+                     </figure>
+                     <div class="recently-filter__body">
+                        <div class="recently-filter__text">Donec mattis arcu faucibus suscipit viverra.</div>
+                        <time class="recently-filter__date recently-filter__date--icon-calendar"
+                           datetime="2021-04-25">Apr
+                           25, 2021</time>
+                     </div>
+                  </li>
+                  <li class="recently-filter__item">
+                     <figure class="recently-filter__picture">
+                        <img class="recently-filter__image" src="@img/recently/03.webp" alt="Image">
+                     </figure>
+                     <div class="recently-filter__body">
+                        <div class="recently-filter__text">Quisque posuere tempus rutrum. Integer velit ex.</div>
+                        <time class="recently-filter__date recently-filter__date--icon-calendar"
+                           datetime="2021-04-25">Apr
+                           25, 2021</time>
+                     </div>
+                  </li>
+               </ul>
+            </section>
+         </aside>
+
+         <div class="bloglist__content">
+            <div class="bloglist__items news-items">
+
+               <article class="news-items__item news-item">
+                  <div class="news-item__header">
+                     <a href="#" class="news-item__image-link">
+                        <img src="@img/blog/01.webp" class="news-item__image" alt="Image">
+                     </a>
+                     <time datetime class="news-item__date">18 <small>nov</small></time>
+                  </div>
+                  <div class="news-item__body">
+                     <ul class="news-item__tags">
+                        <li><a href="#" class="news-item__tag news-item__tag--icon-label">Food</a></li>
+                        <li><a href="#" class="news-item__tag news-item__tag--icon-author">By Admin</a></li>
+                        <li><a href="#" class="news-item__tag news-item__tag--icon-comments">65 Comments</a></li>
+                     </ul>
+                     <h4 class="news-item__title">
+                        <a href="#" class="news-item__link-title">Curabitur porttitor orci eget neque accumsan
+                           venenatis.
+                           Nunc fermentum.</a>
+                     </h4>
+                     <a href="#" class="news-item__arrow-link link-arrow link-arrow--icon-arrow">Read More</a>
+                  </div>
+               </article>
+               <article class="news-items__item news-item">
+                  <div class="news-item__header">
+                     <a href="#" class="news-item__image-link">
+                        <img src="@img/blog/02.webp" class="news-item__image" alt="Image">
+                     </a>
+                     <time datetime class="news-item__date">18 <small>nov</small></time>
+                  </div>
+                  <div class="news-item__body">
+                     <ul class="news-item__tags">
+                        <li><a href="#" class="news-item__tag news-item__tag--icon-label">Food</a></li>
+                        <li><a href="#" class="news-item__tag news-item__tag--icon-author">By Admin</a></li>
+                        <li><a href="#" class="news-item__tag news-item__tag--icon-comments">65 Comments</a></li>
+                     </ul>
+                     <h4 class="news-item__title">
+                        <a href="#" class="news-item__link-title">Curabitur porttitor orci eget neque accumsan
+                           venenatis.
+                           Nunc fermentum.</a>
+                     </h4>
+                     <a href="#" class="news-item__arrow-link link-arrow link-arrow--icon-arrow">Read More</a>
+                  </div>
+               </article>
+               <article class="news-items__item news-item">
+                  <div class="news-item__header">
+                     <a href="#" class="news-item__image-link">
+                        <img src="@img/blog/03.webp" class="news-item__image" alt="Image">
+                     </a>
+                     <time datetime class="news-item__date">18 <small>nov</small></time>
+                  </div>
+                  <div class="news-item__body">
+                     <ul class="news-item__tags">
+                        <li><a href="#" class="news-item__tag news-item__tag--icon-label">Food</a></li>
+                        <li><a href="#" class="news-item__tag news-item__tag--icon-author">By Admin</a></li>
+                        <li><a href="#" class="news-item__tag news-item__tag--icon-comments">65 Comments</a></li>
+                     </ul>
+                     <h4 class="news-item__title">
+                        <a href="#" class="news-item__link-title">Curabitur porttitor orci eget neque accumsan
+                           venenatis.
+                           Nunc fermentum.</a>
+                     </h4>
+                     <a href="#" class="news-item__arrow-link link-arrow link-arrow--icon-arrow">Read More</a>
+                  </div>
+               </article>
+               <article class="news-items__item news-item">
+                  <div class="news-item__header">
+                     <a href="#" class="news-item__image-link">
+                        <img src="@img/blog/04.webp" class="news-item__image" alt="Image">
+                     </a>
+                     <time datetime class="news-item__date">18 <small>nov</small></time>
+                  </div>
+                  <div class="news-item__body">
+                     <ul class="news-item__tags">
+                        <li><a href="#" class="news-item__tag news-item__tag--icon-label">Food</a></li>
+                        <li><a href="#" class="news-item__tag news-item__tag--icon-author">By Admin</a></li>
+                        <li><a href="#" class="news-item__tag news-item__tag--icon-comments">65 Comments</a></li>
+                     </ul>
+                     <h4 class="news-item__title">
+                        <a href="#" class="news-item__link-title">Curabitur porttitor orci eget neque accumsan
+                           venenatis.
+                           Nunc fermentum.</a>
+                     </h4>
+                     <a href="#" class="news-item__arrow-link link-arrow link-arrow--icon-arrow">Read More</a>
+                  </div>
+               </article>
+               <article class="news-items__item news-item">
+                  <div class="news-item__header">
+                     <a href="#" class="news-item__image-link">
+                        <img src="@img/blog/05.webp" class="news-item__image" alt="Image">
+                     </a>
+                     <time datetime class="news-item__date">18 <small>nov</small></time>
+                  </div>
+                  <div class="news-item__body">
+                     <ul class="news-item__tags">
+                        <li><a href="#" class="news-item__tag news-item__tag--icon-label">Food</a></li>
+                        <li><a href="#" class="news-item__tag news-item__tag--icon-author">By Admin</a></li>
+                        <li><a href="#" class="news-item__tag news-item__tag--icon-comments">65 Comments</a></li>
+                     </ul>
+                     <h4 class="news-item__title">
+                        <a href="#" class="news-item__link-title">Curabitur porttitor orci eget neque accumsan
+                           venenatis.
+                           Nunc fermentum.</a>
+                     </h4>
+                     <a href="#" class="news-item__arrow-link link-arrow link-arrow--icon-arrow">Read More</a>
+                  </div>
+               </article>
+               <article class="news-items__item news-item">
+                  <div class="news-item__header">
+                     <a href="#" class="news-item__image-link">
+                        <img src="@img/blog/06.webp" class="news-item__image" alt="Image">
+                     </a>
+                     <time datetime class="news-item__date">18 <small>nov</small></time>
+                  </div>
+                  <div class="news-item__body">
+                     <ul class="news-item__tags">
+                        <li><a href="#" class="news-item__tag news-item__tag--icon-label">Food</a></li>
+                        <li><a href="#" class="news-item__tag news-item__tag--icon-author">By Admin</a></li>
+                        <li><a href="#" class="news-item__tag news-item__tag--icon-comments">65 Comments</a></li>
+                     </ul>
+                     <h4 class="news-item__title">
+                        <a href="#" class="news-item__link-title">Curabitur porttitor orci eget neque accumsan
+                           venenatis.
+                           Nunc fermentum.</a>
+                     </h4>
+                     <a href="#" class="news-item__arrow-link link-arrow link-arrow--icon-arrow">Read More</a>
+                  </div>
+               </article>
+               <article class="news-items__item news-item">
+                  <div class="news-item__header">
+                     <a href="#" class="news-item__image-link">
+                        <img src="@img/blog/07.webp" class="news-item__image" alt="Image">
+                     </a>
+                     <time datetime class="news-item__date">18 <small>nov</small></time>
+                  </div>
+                  <div class="news-item__body">
+                     <ul class="news-item__tags">
+                        <li><a href="#" class="news-item__tag news-item__tag--icon-label">Food</a></li>
+                        <li><a href="#" class="news-item__tag news-item__tag--icon-author">By Admin</a></li>
+                        <li><a href="#" class="news-item__tag news-item__tag--icon-comments">65 Comments</a></li>
+                     </ul>
+                     <h4 class="news-item__title">
+                        <a href="#" class="news-item__link-title">Curabitur porttitor orci eget neque accumsan
+                           venenatis.
+                           Nunc fermentum.</a>
+                     </h4>
+                     <a href="#" class="news-item__arrow-link link-arrow link-arrow--icon-arrow">Read More</a>
+                  </div>
+               </article>
+               <article class="news-items__item news-item">
+                  <div class="news-item__header">
+                     <a href="#" class="news-item__image-link">
+                        <img src="@img/blog/08.webp" class="news-item__image" alt="Image">
+                     </a>
+                     <time datetime class="news-item__date">18 <small>nov</small></time>
+                  </div>
+                  <div class="news-item__body">
+                     <ul class="news-item__tags">
+                        <li><a href="#" class="news-item__tag news-item__tag--icon-label">Food</a></li>
+                        <li><a href="#" class="news-item__tag news-item__tag--icon-author">By Admin</a></li>
+                        <li><a href="#" class="news-item__tag news-item__tag--icon-comments">65 Comments</a></li>
+                     </ul>
+                     <h4 class="news-item__title">
+                        <a href="#" class="news-item__link-title">Curabitur porttitor orci eget neque accumsan
+                           venenatis.
+                           Nunc fermentum.</a>
+                     </h4>
+                     <a href="#" class="news-item__arrow-link link-arrow link-arrow--icon-arrow">Read More</a>
+                  </div>
+               </article>
+               <article class="news-items__item news-item">
+                  <div class="news-item__header">
+                     <a href="#" class="news-item__image-link">
+                        <img src="@img/blog/09.webp" class="news-item__image" alt="Image">
+                     </a>
+                     <time datetime class="news-item__date">18 <small>nov</small></time>
+                  </div>
+                  <div class="news-item__body">
+                     <ul class="news-item__tags">
+                        <li><a href="#" class="news-item__tag news-item__tag--icon-label">Food</a></li>
+                        <li><a href="#" class="news-item__tag news-item__tag--icon-author">By Admin</a></li>
+                        <li><a href="#" class="news-item__tag news-item__tag--icon-comments">65 Comments</a></li>
+                     </ul>
+                     <h4 class="news-item__title">
+                        <a href="#" class="news-item__link-title">Curabitur porttitor orci eget neque accumsan
+                           venenatis.
+                           Nunc fermentum.</a>
+                     </h4>
+                     <a href="#" class="news-item__arrow-link link-arrow link-arrow--icon-arrow">Read More</a>
+                  </div>
+               </article>
+               <article class="news-items__item news-item">
+                  <div class="news-item__header">
+                     <a href="#" class="news-item__image-link">
+                        <img src="@img/blog/10.webp" class="news-item__image" alt="Image">
+                     </a>
+                     <time datetime class="news-item__date">18 <small>nov</small></time>
+                  </div>
+                  <div class="news-item__body">
+                     <ul class="news-item__tags">
+                        <li><a href="#" class="news-item__tag news-item__tag--icon-label">Food</a></li>
+                        <li><a href="#" class="news-item__tag news-item__tag--icon-author">By Admin</a></li>
+                        <li><a href="#" class="news-item__tag news-item__tag--icon-comments">65 Comments</a></li>
+                     </ul>
+                     <h4 class="news-item__title">
+                        <a href="#" class="news-item__link-title">Curabitur porttitor orci eget neque accumsan
+                           venenatis.
+                           Nunc fermentum.</a>
+                     </h4>
+                     <a href="#" class="news-item__arrow-link link-arrow link-arrow--icon-arrow">Read More</a>
+                  </div>
+               </article>
+
+            </div>
+
+            <include src="@components/custom/sheets/sheets.html"></include>
+
+         </div>
+
+      </div>
+   </div>
+</main>
