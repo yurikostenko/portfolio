@@ -88,7 +88,7 @@
   color: #1a1a1a;
 }
 .tabs__table tr td + td {
-  color: #666;
+  color: #666666;
 }
 .tabs__review > *:not(:last-child) {
   margin-bottom: 0.875rem;
@@ -211,7 +211,7 @@
   height: 1.3125rem;
 }
 .info-product__sku {
-  color: #666;
+  color: #666666;
   display: flex;
   align-items: center;
 }
@@ -476,7 +476,7 @@
   gap: 0.1875rem;
 }
 .review-tabs__time {
-  color: #999;
+  color: #999999;
 }
 .review-tabs__text {
   color: #808080;

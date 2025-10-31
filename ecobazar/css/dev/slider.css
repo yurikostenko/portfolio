@@ -79,7 +79,7 @@
 .thumbs-gallery-product__arrow::before {
   font-family: "iconfont";
   content: "\f104";
-  color: #999;
+  color: #999999;
   font-size: 0.875rem;
   transition: color 0.3s;
 }
