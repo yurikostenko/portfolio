@@ -1,6 +1,8 @@
 import "./app.min.js";
 import "./slider.min.js";
 import "./products.min.js";
+import "./products.min2.js";
+/* empty css           */
 const countdowns = document.querySelectorAll("[data-coundown]");
 if (countdowns.length) {
   const updateCountdowns = () => {

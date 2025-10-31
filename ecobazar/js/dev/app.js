@@ -188,6 +188,39 @@ function dataMediaQueries(array, dataSetValue) {
     return { itemsArray, matchMedia };
   });
 }
+const gotoBlock = (targetBlock, noHeader = false, speed = 500, offsetTop = 0) => {
+  const targetBlockElement = document.querySelector(targetBlock);
+  if (targetBlockElement) {
+    let headerItem = "";
+    let headerItemHeight = 0;
+    if (noHeader) {
+      headerItem = "header.header";
+      const headerElement = document.querySelector(headerItem);
+      if (!headerElement.classList.contains("--header-scroll")) {
+        headerElement.style.cssText = `transition-duration: 0s;`;
+        headerElement.classList.add("--header-scroll");
+        headerItemHeight = headerElement.offsetHeight;
+        headerElement.classList.remove("--header-scroll");
+        setTimeout(() => {
+          headerElement.style.cssText = ``;
+        }, 0);
+      } else {
+        headerItemHeight = headerElement.offsetHeight;
+      }
+    }
+    if (document.documentElement.hasAttribute("data-fls-menu-open")) {
+      bodyUnlock();
+      document.documentElement.removeAttribute("data-fls-menu-open");
+    }
+    let targetBlockElementPosition = targetBlockElement.getBoundingClientRect().top + scrollY;
+    targetBlockElementPosition = headerItemHeight ? targetBlockElementPosition - headerItemHeight : targetBlockElementPosition;
+    targetBlockElementPosition = offsetTop ? targetBlockElementPosition - offsetTop : targetBlockElementPosition;
+    window.scrollTo({
+      top: targetBlockElementPosition,
+      behavior: "smooth"
+    });
+  }
+};
 function menuInit() {
   document.addEventListener("click", function(e) {
     const t = e.target;
@@ -340,61 +373,6 @@ class DynamicAdapt {
 if (document.querySelector("[data-fls-dynamic]")) {
   window.addEventListener("load", () => new DynamicAdapt());
 }
-function formRating() {
-  const ratings = document.querySelectorAll("[data-fls-rating]");
-  if (ratings) {
-    ratings.forEach((rating) => {
-      const ratingValue = +rating.dataset.flsRatingValue;
-      const ratingSize = +rating.dataset.flsRatingSize ? +rating.dataset.flsRatingSize : 5;
-      formRatingInit(rating, ratingSize);
-      ratingValue ? formRatingSet(rating, ratingValue) : null;
-      document.addEventListener("click", formRatingAction);
-    });
-  }
-  function formRatingAction(e) {
-    const targetElement = e.target;
-    if (targetElement.closest(".rating__input")) {
-      const currentElement = targetElement.closest(".rating__input");
-      const ratingValue = +currentElement.value;
-      const rating = currentElement.closest(".rating");
-      const ratingSet = rating.dataset.flsRating === "set";
-      ratingSet ? formRatingGet(rating, ratingValue) : null;
-    }
-  }
-  function formRatingInit(rating, ratingSize) {
-    let ratingItems = ``;
-    for (let index = 0; index < ratingSize; index++) {
-      index === 0 ? ratingItems += `<div class="rating__items">` : null;
-      ratingItems += `
-				<label class="rating__item">
-					<input class="rating__input" type="radio" name="rating" value="${index + 1}">
-				</label>`;
-      index === ratingSize ? ratingItems += `</div">` : null;
-    }
-    rating.insertAdjacentHTML("beforeend", ratingItems);
-  }
-  function formRatingGet(rating, ratingValue) {
-    const resultRating = ratingValue;
-    formRatingSet(rating, resultRating);
-  }
-  function formRatingSet(rating, value) {
-    const ratingItems = rating.querySelectorAll(".rating__item");
-    const resultFullItems = parseInt(value);
-    const resultPartItem = value - resultFullItems;
-    rating.hasAttribute("data-rating-title") ? rating.title = value : null;
-    ratingItems.forEach((ratingItem, index) => {
-      ratingItem.classList.remove("rating__item--active");
-      ratingItem.querySelector("span") ? ratingItems[index].querySelector("span").remove() : null;
-      if (index <= resultFullItems - 1) {
-        ratingItem.classList.add("rating__item--active");
-      }
-      if (index === resultFullItems && resultPartItem) {
-        ratingItem.insertAdjacentHTML("beforeend", `<span style="width:${resultPartItem * 100}%"></span>`);
-      }
-    });
-  }
-}
-document.querySelector("[data-fls-rating]") ? window.addEventListener("load", formRating) : null;
 function addToCart() {
   document.addEventListener("click", addToCartAction);
   function addToCartAction(e) {
@@ -446,8 +424,15 @@ document.querySelector("[data-fls-addtocart]") ? window.addEventListener("load",
 addTouchAttr();
 addLoadedAttr();
 document.addEventListener("DOMContentLoaded", () => {
+  const body = document.body;
+  if (!body.hasAttribute("data-page") || body.getAttribute("data-page").includes("<%")) {
+    const path = window.location.pathname;
+    let pageName = path.split("/").pop().replace(".html", "").toLowerCase();
+    if (pageName === "" || pageName === "index") pageName = "home";
+    body.setAttribute("data-page", pageName);
+  }
   const filterButton = document.querySelector(".header-catalog__button");
-  const filterAside = document.querySelector(".catalog__filter");
+  const filterAside = document.querySelector(".filter");
   if (filterButton && filterAside) {
     filterButton.addEventListener("click", () => {
       filterAside.classList.toggle("filter--active");
@@ -461,6 +446,7 @@ export {
   slideUp as b,
   slideToggle as c,
   dataMediaQueries as d,
+  gotoBlock as e,
   getHash as g,
   slideDown as s
 };
