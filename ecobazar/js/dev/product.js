@@ -3,6 +3,7 @@ import "./slider.min.js";
 import "./products.min.js";
 import "./titles.min.js";
 /* empty css                */
+/* empty css            */
 function tabs() {
   const tabs2 = document.querySelectorAll("[data-fls-tabs]");
   let tabsActiveHash = [];
