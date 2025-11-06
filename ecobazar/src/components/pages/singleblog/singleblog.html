@@ -1,0 +1,346 @@
+<script type="module" src="@components/pages/singleblog/singleblog.js"></script>
+<link rel="stylesheet" href="@components/pages/singleblog/singleblog.scss">
+<link rel="stylesheet" href="@components/pages/catalog/catalog.scss">
+<link rel="stylesheet" href="@components/pages/bloglist/bloglist.scss">
+<!-- <link rel="stylesheet" href="@components/pages/index/index.scss"> -->
+
+<include src="@components/custom/breadcrumbs/breadcrumbs.html" locals='{
+  "breadcrumbs": [
+    { "name": "Blog", "url": "bloglist.html" },
+    { "name": "Single Blog", "last": true }
+  ]
+}'></include>
+
+<main class="singleblog">
+   <div class="singleblog__container">
+      <h1 class="visually-hidden">Singleblog</h1>
+
+      <div data-fls-headercatalog class="singleblog__header header-catalog">
+         <div class="header-catalog__filter">
+            <button type="button" class="header-catalog__button button button--middle button--filter">Filter</button>
+         </div>
+      </div>
+
+      <div class="singleblog__body">
+
+         <div class="singleblog__content">
+            <section class="singleblog__hero hero-single">
+               <figure class="hero-single__picture">
+                  <img class="hero-single__image" src="@img/singleblog/01.webp" alt="Image">
+               </figure>
+               <div class="hero-single__body">
+                  <ul class="hero-single__tags">
+                     <li>
+                        <a href="#" class="hero-single__tag hero-single__tag--icon-label">Food</a>
+                     </li>
+                     <li>
+                        <a href="#" class="hero-single__tag hero-single__tag--icon-author">By Admin</a>
+                     </li>
+                     <li>
+                        <a href="#" class="hero-single__tag hero-single__tag--icon-comments">65 Comments</a>
+                     </li>
+                  </ul>
+                  <h2 class="hero-single__title">Maecenas tempor urna sed quam mollis, a placerat dui fringill
+                     Suspendisse.
+                  </h2>
+                  <div class="hero-single__content">
+                     <div class="hero-single__author">
+                        <figure class="hero-single__avatar">
+                           <img class="hero-single__image" src="@img//reviews/avatar-05.jpg" alt="Image">
+                        </figure>
+                        <div class="hero-single__info">
+                           <div class="hero-single__name">Cameron Williamson</div>
+                           <div class="hero-single__date">
+                              <time class="hero-single__time" datetime="2021-04-04">4 April, 2021</time>
+                              <span>6 min read</span>
+                           </div>
+                        </div>
+                     </div>
+                     <ul class="hero-single__items social">
+                        <li class="social__item">
+                           <a href="#" class="social__link social__link--icon-s-facebook"></a>
+                        </li>
+                        <li class="social__item">
+                           <a href="#" class="social__link social__link--icon-s-twitter"></a>
+                        </li>
+                        <li class="social__item">
+                           <a href="#" class="social__link social__link--icon-s-pinterest"></a>
+                        </li>
+                        <li class="social__item">
+                           <a href="#" class="social__link social__link--icon-s-instagram"></a>
+                        </li>
+                        <li class="social__item">
+                           <a href="#" class="social__link social__link--icon-s-link"></a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+
+            </section>
+
+            <section class="singleblog__description description-single">
+               <h2 class="description-single__title">Maecenas lacinia felis nec placerat sollicitudin. Quisque placerat
+                  dolor at scelerisque imperdiet. Phasellus tristique felis dolor.
+               </h2>
+               <p>Maecenas elementum in risus sed condimentum. Duis convallis ante ac tempus maximus. Fusce malesuada
+                  sed velit ut dictum. Morbi faucibus vitae orci at euismod. Integer auctor augue in erat vehicula, quis
+                  fermentum ex finibus.
+               </p>
+               <p>Mauris pretium elit a dui pulvinar, in ornare sapien euismod. Nullam interdum nisl ante, id feugiat
+                  quam euismod commodo. Sed ultrices lectus ut iaculis rhoncus. Aenean non dignissim justo, at fermentum
+                  turpis. Sed molestie, ligula ut molestie ultrices, tellus ligula viverra neque, malesuada consectetur
+                  diam sapien volutpat risus.Quisque eget tortor lobortis, facilisis metus eu, elementum est. Nunc sit
+                  amet erat quis ex convallis suscipit. ur ridiculus mus.
+               </p>
+               <div class="description-single__media">
+                  <figure class="description-single__picture">
+                     <img class="description-single__image" src="@img/singleblog/02.webp" alt="Image">
+                  </figure>
+                  <figure class="description-single__picture">
+                     <img class="description-single__image" src="@img/singleblog/03.webp" alt="Image">
+                  </figure>
+               </div>
+               <p>Sed dictum non nulla eu imperdiet. Duis elit libero, vulputate quis vehicula ut, vestibulum ut mauris.
+                  Nullam non felis varius dui rutrum rutrum in a nisi. Suspendisse elementum rutrum lorem sed luctus.
+                  Proin iaculis euismod metus non sollicitudin. Duis vel luctus lacus. Nullam faucibus iaculis
+                  convallis. In ullamcorper nibh ipsum, eget lacinia eros pulvinar a. Integer accumsan arcu nec faucibus
+                  ultricies.
+               </p>
+            </section>
+
+            <section class="singleblog__banner sale-banner">
+               <div class="sale-banner__body">
+                  <div class="sale-banner__content">
+                     <div class="sale-banner__label">Summer Sales</div>
+                     <h2 class="sale-banner__title">Fresh Fruit</h2>
+                     <a data-fls-button href="#"
+                        class="sale-banner__button button button--middle button--arrow button--icon-arrow">Shop Now</a>
+                  </div>
+                  <div class="sale-banner__wrap">
+                     <div class="sale-banner__up">up to</div>
+                     <div class="sale-banner__value">56%</div>
+                     <div class="sale-banner__off">Off</div>
+                  </div>
+                  <img class="sale-banner__image" src="@img/banners/single-banner.webp" alt="Image">
+               </div>
+            </section>
+
+            <section class="singleblog__comment comment-single">
+               <h3 class="comment-single__title">Leave a Comment</h3>
+
+               <form data-fls-form="dev" action="files/sendmail/sendmail.php" method="POST"
+                  class="comment-single__form">
+                  <div class="comment-single__inputs">
+                     <label class="comment-single__line">Full Name
+                        <input data-fls-input data-fls-form-validatenow required autocomplete="off" type="text"
+                           name="form[name]" data-fls-form-errtext="Please enter your name" placeholder="Full Name"
+                           class="comment-single__input input" />
+                     </label>
+                     <label class="comment-single__line">Email
+                        <input data-fls-input data-fls-form-validatenow required autocomplete="off" type="email"
+                           name="form[email]" data-fls-form-errtext="Please enter a valid email" placeholder="Email"
+                           class="comment-single__input input" />
+                     </label>
+                  </div>
+
+                  <label class="comment-single__message">Message
+                     <textarea data-fls-input data-fls-form-validatenow data-fls-input-autoheight required
+                        autocomplete="off" name="form[message]" data-fls-form-errtext="Please enter your message"
+                        placeholder="Write your comment here..." class="comment-single__textarea input"></textarea>
+                  </label>
+
+                  <label class="comment-single__checkbox">
+                     <input data-fls-input type="checkbox" name="form[save]" class="comment-single__input-checkbox" />
+                     <div class="comment-single__box"></div>
+                     <span class="comment-single__text">
+                        Save my name and email in this browser for the next time I comment.
+                     </span>
+                  </label>
+
+                  <button type="submit" class="comment-single__button button">
+                     Post comment
+                  </button>
+               </form>
+            </section>
+
+            <section class="singleblog__comments comments-single">
+               <h2 class="comments-single__title">Comments</h2>
+               <ul class="comments-single__list">
+                  <li class="comments-single__item">
+                     <figure class="comments-single__picture">
+                        <img class="comments-single__avatar" src="@img/reviews/avatar-06.webp" alt="Image">
+                     </figure>
+                     <div class="comments-single__body">
+                        <div class="comments-single__info">
+                           <div class="comments-single__name">Annette Black</div>
+                           <time datetime="2021-04-26" class="comments-single__date">26 Apr, 2021</time>
+                        </div>
+                        <p>In a nisi commodo, porttitor ligula consequat, tincidunt dui. Nulla volutpat, metus eu
+                           aliquam malesuada, elit libero venenatis urna, consequat maximus arcu diam non diam.</p>
+                     </div>
+                  </li>
+                  <li class="comments-single__item">
+                     <figure class="comments-single__picture">
+                        <img class="comments-single__avatar" src="@img/reviews/avatar-07.webp" alt="Image">
+                     </figure>
+                     <div class="comments-single__body">
+                        <div class="comments-single__info">
+                           <div class="comments-single__name">Annette Black</div>
+                           <time datetime="2021-04-24" class="comments-single__date">24 Apr, 2021</time>
+                        </div>
+                        <p>Quisque eget tortor lobortis, facilisis metus eu, elementum est. Nunc sit amet erat quis ex
+                           convallis suscipit. Nam hendrerit, velit ut aliquam euismod, nibh tortor rutrum nisi, ac
+                           sodales nunc eros porta nisi. Sed scelerisque, est eget aliquam venenatis, est sem tempor
+                           eros.</p>
+                     </div>
+                  </li>
+                  <li class="comments-single__item">
+                     <figure class="comments-single__picture">
+                        <img class="comments-single__avatar" src="@img/reviews/avatar-08.webp" alt="Image">
+                     </figure>
+                     <div class="comments-single__body">
+                        <div class="comments-single__info">
+                           <div class="comments-single__name">Annette Black</div>
+                           <time datetime="2021-04-20" class="comments-single__date">20 Apr, 2021</time>
+                        </div>
+                        <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.</p>
+                     </div>
+                  </li>
+                  <li class="comments-single__item">
+                     <figure class="comments-single__picture">
+                        <img class="comments-single__avatar" src="@img/reviews/avatar-09.webp" alt="Image">
+                     </figure>
+                     <div class="comments-single__body">
+                        <div class="comments-single__info">
+                           <div class="comments-single__name">Annette Black</div>
+                           <time datetime="2021-04-18" class="comments-single__date">18 Apr, 2021</time>
+                        </div>
+                        <p>Pellentesque feugiat, nibh vel vehicula pretium, nibh nibh bibendum elit, a volutpat arcu dui
+                           nec orci. Aenean dui odio, ullamcorper quis turpis ac, volutpat imperdiet ex.</p>
+                     </div>
+                  </li>
+                  <li class="comments-single__item">
+                     <figure class="comments-single__picture">
+                        <img class="comments-single__avatar" src="@img/reviews/avatar-10.webp" alt="Image">
+                     </figure>
+                     <div class="comments-single__body">
+                        <div class="comments-single__info">
+                           <div class="comments-single__name">Annette Black</div>
+                           <time datetime="2021-04-07" class="comments-single__date">7 Apr, 2021</time>
+                        </div>
+                        <p>Nulla molestie interdum ultricies. </p>
+                     </div>
+                  </li>
+               </ul>
+               <button class="comments-single__button button button--white">Load More</button>
+            </section>
+
+         </div>
+
+         <aside class="singleblog__filter filter">
+
+            <div class="filter__section">
+               <form data-fls-form action="#" class="filter__search search-filter">
+                  <input data-fls-input autocomplete="off" type="text" name="search" placeholder="Search"
+                     class="search-filter__input input">
+                  <button type="submit" class="search-filter__button search-filter__button--icon-search"
+                     aria-label="Search"></button>
+               </form>
+            </div>
+
+            <section class="filter__top top-categories">
+               <h2 class="top-categories__title title-filter">Top Categories</h2>
+               <ul class="top-categories__list">
+                  <li class="top-categories__item">Fresh Fruit <span>(134)</span></li>
+                  <li class="top-categories__item">Vegetables <span>(150)</span></li>
+                  <li class="top-categories__item">Cooking <span>(54)</span></li>
+                  <li class="top-categories__item">Snacks <span>(47)</span></li>
+                  <li class="top-categories__item">Beverages <span>(43)</span></li>
+                  <li class="top-categories__item">Beauty & Health <span>(38)</span></li>
+                  <li class="top-categories__item">Bread & Bakery <span>(15)</span></li>
+               </ul>
+            </section>
+
+            <section class="filter__tags tag-popular">
+               <h2 class="tag-popular__title title-filter">Popular Tags</h2>
+               <ul class="tag-popular__list">
+                  <li class="tag-popular__item"><a href="#" class="tag-popular__link">Healthy</a></li>
+                  <li class="tag-popular__item"><a href="#" class="tag-popular__link">Low fat</a></li>
+                  <li class="tag-popular__item"><a href="#" class="tag-popular__link">Vegetarian</a></li>
+                  <li class="tag-popular__item"><a href="#" class="tag-popular__link">Bread</a></li>
+                  <li class="tag-popular__item"><a href="#" class="tag-popular__link">Kid foods</a></li>
+                  <li class="tag-popular__item"><a href="#" class="tag-popular__link">Vitamins</a></li>
+                  <li class="tag-popular__item"><a href="#" class="tag-popular__link">Snacks</a></li>
+                  <li class="tag-popular__item"><a href="#" class="tag-popular__link">Tiffin</a></li>
+                  <li class="tag-popular__item"><a href="#" class="tag-popular__link">Meat</a></li>
+                  <li class="tag-popular__item"><a href="#" class="tag-popular__link">Launch</a></li>
+                  <li class="tag-popular__item"><a href="#" class="tag-popular__link">Dinner</a></li>
+               </ul>
+            </section>
+
+            <section class="filter__gallery gallery-filter">
+               <h2 class="gallery-filter__title title-filter">Our Gallery</h2>
+               <ul class="gallery-filter__list">
+                  <li class="gallery-filter__item"><img src="@img/gallery-filter/01.webp" alt="Image"
+                        class="gallery-filter__image"></li>
+                  <li class="gallery-filter__item"><img src="@img/gallery-filter/02.webp" alt="Image"
+                        class="gallery-filter__image"></li>
+                  <li class="gallery-filter__item"><img src="@img/gallery-filter/03.webp" alt="Image"
+                        class="gallery-filter__image"></li>
+                  <li class="gallery-filter__item"><img src="@img/gallery-filter/04.webp" alt="Image"
+                        class="gallery-filter__image"></li>
+                  <li class="gallery-filter__item"><img src="@img/gallery-filter/05.webp" alt="Image"
+                        class="gallery-filter__image"></li>
+                  <li class="gallery-filter__item"><img src="@img/gallery-filter/06.webp" alt="Image"
+                        class="gallery-filter__image"></li>
+                  <li class="gallery-filter__item"><img src="@img/gallery-filter/07.webp" alt="Image"
+                        class="gallery-filter__image"></li>
+                  <li class="gallery-filter__item"><img src="@img/gallery-filter/08.webp" alt="Image"
+                        class="gallery-filter__image"></li>
+               </ul>
+            </section>
+
+            <section class="filter__recently recently-filter">
+               <h2 class="recently-filter__title title-filter">Recently Added</h2>
+               <ul class="recently-filter__list">
+                  <li class="recently-filter__item">
+                     <figure class="recently-filter__picture">
+                        <img class="recently-filter__image" src="@img/recently/01.webp" alt="Image">
+                     </figure>
+                     <div class="recently-filter__body">
+                        <div class="recently-filter__text">Curabitur porttitor orci eget nequ accumsan.</div>
+                        <time class="recently-filter__date recently-filter__date--icon-calendar"
+                           datetime="2021-04-25">Apr
+                           25, 2021</time>
+                     </div>
+                  </li>
+                  <li class="recently-filter__item">
+                     <figure class="recently-filter__picture">
+                        <img class="recently-filter__image" src="@img/recently/02.webp" alt="Image">
+                     </figure>
+                     <div class="recently-filter__body">
+                        <div class="recently-filter__text">Donec mattis arcu faucibus suscipit viverra.</div>
+                        <time class="recently-filter__date recently-filter__date--icon-calendar"
+                           datetime="2021-04-25">Apr
+                           25, 2021</time>
+                     </div>
+                  </li>
+                  <li class="recently-filter__item">
+                     <figure class="recently-filter__picture">
+                        <img class="recently-filter__image" src="@img/recently/03.webp" alt="Image">
+                     </figure>
+                     <div class="recently-filter__body">
+                        <div class="recently-filter__text">Quisque posuere tempus rutrum. Integer velit ex.</div>
+                        <time class="recently-filter__date recently-filter__date--icon-calendar"
+                           datetime="2021-04-25">Apr
+                           25, 2021</time>
+                     </div>
+                  </li>
+               </ul>
+            </section>
+         </aside>
+
+      </div>
+
+   </div>
+</main>

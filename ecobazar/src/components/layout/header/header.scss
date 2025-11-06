@@ -390,21 +390,12 @@
 
 // ====================
 // Варіації для сторінок
-// ====================
-body[data-page="home"] .header {
-	.top-header {
-		// background-color: transparent;
-		// color: $white;
-	}
-	.bottom-header {
-		// background-color: transparent;
-		// color: $white;
-	}
-}
+// ===================
 
 body[data-page="catalog"] .header,
 body[data-page="product"] .header,
-body[data-page="bloglist"] .header {
+body[data-page="bloglist"] .header,
+body[data-page="singleblog"] .header {
 	.top-header {
 		background-color: $grey8;
 		color: $grey3;
@@ -434,8 +425,6 @@ body[data-page="bloglist"] .header {
 	}
 
 	.bottom-header {
-		// background-color: $darkColor;
-		// color: $white;
 		&::before {
 			background-color: $white;
 		}
@@ -443,12 +432,5 @@ body[data-page="bloglist"] .header {
 		&__phone {
 			color: $grey9;
 		}
-	}
-}
-
-body[data-page="product"] .header {
-	.top-header {
-		// background-color: $accentLight;
-		// color: $darkColor;
 	}
 }

@@ -12,8 +12,8 @@ export default {
 		filename: '_components.html'
 	},
 	newpage: {
-		copyfromindex: true,
-		usetemplate: 'main'
+		copyfromindex: false,
+		usetemplate: 'inner'
 	},
 	git: {
 		repo: ``,

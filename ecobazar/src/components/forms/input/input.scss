@@ -9,10 +9,11 @@ textarea {
 	appearance: none;
 }
 .input {
-	border-radius: 0 !important;
+	// border-radius: 0 !important;
 	width: 100%;
 	display: block;
 	caret-color: inherit;
+
 	&.--form-focus {
 	}
 	&.--form-error {
@@ -27,6 +28,6 @@ textarea {
 	}
 }
 textarea.input {
-	resize: vertical;
-	padding: 0px 0px;
+	resize: none;
+	// padding: 0px 0px;
 }
