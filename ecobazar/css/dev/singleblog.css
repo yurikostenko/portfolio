@@ -10,7 +10,7 @@
   border-bottom: 0.0625rem solid #e6e6e6;
   padding-bottom: 1.25rem;
 }
-.singleblog__header {
+.singleblog__header.header-catalog {
   display: none;
 }
 
@@ -370,7 +370,7 @@
   .singleblog__filter.filter--active {
     display: block;
   }
-  .singleblog__header {
+  .singleblog__header.header-catalog {
     display: block;
   }
 }
