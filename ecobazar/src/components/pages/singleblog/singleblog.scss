@@ -57,7 +57,7 @@
 		}
 	}
 	// .singleblog__header
-	&__header {
+	&__header.header-catalog {
 		display: none;
 		@media (max-width: toEm($tablet)) {
 			display: block;

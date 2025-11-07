@@ -213,7 +213,8 @@
 
 body[data-page="catalog"] .menu,
 body[data-page="product"] .menu,
-body[data-page="bloglist"] .menu {
+body[data-page="bloglist"] .menu,
+body[data-page="singleblog"] .menu {
 	// .menu__item
 	&__item {
 		color: $grey6;
