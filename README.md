@@ -1,9 +1,6 @@
-# My Front-End Portfolio 🚀  
+# Front-End Portfolio — Yurii Kostenko
 
- Привіт! Мене звати **Юрій Костенко** — Front-End Developer, який спеціалізується 
-на верстці адаптивних інтерфейсів та інтерактивних компонентів.  
- Після проходження професійного курсу HTML/CSS/JavaScript я створив кілька власних
-проєктів, з якими можна ознайомитися нижче.
+I develop responsive, accessible, and maintainable front-end interfaces using **HTML, SCSS, JavaScript**, and modern layout techniques.
 
 | Project | Demo | Repo |
 |---------|------|------|
@@ -38,6 +35,7 @@ _(сертифікат після проходження курсу HTML/CSS/JS)
 
 - [LinkedIn](https://www.linkedin.com/in/%D1%8E%D1%80%D1%96%D0%B9-%D0%BA%D0%BE%D1%81%D1%82%D0%B5%D0%BD%D0%BA%D0%BE-061247309/)
 - [Email](mailto:papayy3@gmail.com)
+
 
 
 
