@@ -38,6 +38,41 @@ function initSliders() {
 			},
 		})
 	}
+	// ====================== TEAM SLIDER ======================
+	if (document.querySelector('.team-about__slider')) {
+		new Swiper('.team-about__slider', {
+			modules: [Navigation],
+			loop: true,
+			speed: 700,
+			navigation: {
+				nextEl: '.team-about__button--right',
+				prevEl: '.team-about__button--left',
+			},
+			breakpoints: {
+				320: {
+					slidesPerView: 1.1,
+					spaceBetween: 10,
+				},
+				400: {
+					slidesPerView: 1.6,
+					spaceBetween: 15,
+				},
+				600: {
+					slidesPerView: 2.5,
+					spaceBetween: 15,
+				},
+				768: {
+					slidesPerView: 3,
+					spaceBetween: 20,
+				},
+				1050: {
+					slidesPerView: 4,
+					spaceBetween: 24,
+				},
+			},
+		})
+	}
+
 
 	// ====================== PRODUCT GALLERY SLIDERS ======================
 	// ====================== PRODUCT GALLERY SLIDERS ======================

@@ -1,0 +1,229 @@
+<script type="module" src="@components/pages/about/about.js"></script>
+<link rel="stylesheet" href="@components/pages/about/about.scss">
+<link rel="stylesheet" href="@components/custom/advantage/avantage.scss">
+<link rel="stylesheet" href="@components/custom/reviews/reviews.scss">
+<link rel=" stylesheet" href="@components/forms/rating/rating.scss">
+<link rel="stylesheet" href="@components/custom/titles/titles.scss">
+<link rel="stylesheet" href="@components/custom/partners/partners.scss">
+<link rel="stylesheet" href="@components/pages/catalog/catalog.scss">
+
+
+<include src="@components/custom/breadcrumbs/breadcrumbs.html" locals='{
+  "breadcrumbs": [
+    { "name": "About", "last": true }
+  ]
+}'></include>
+
+<main class="about">
+
+   <h1 class="visually-hidden">About Us</h1>
+
+   <section class="about__intro intro-about">
+      <div class="intro-about__container">
+         <div class="intro-about__body">
+            <h2 class="intro-about__title">100% Trusted<br> Organic Food Store</h2>
+            <p>Morbi porttitor ligula in nunc varius sagittis. Proin dui nisi, laoreet ut tempor ac, cursus vitae
+               eros.
+               Cras quis ultricies elit. Proin ac lectus arcu. Maecenas aliquet vel tellus at accumsan. Donec a
+               eros non
+               massa vulputate ornare. Vivamus ornare commodo ante, at commodo felis congue vitae.
+            </p>
+         </div>
+         <figure class="intro-about__picture">
+            <img class="intro-about__image" src="@img/about/01.webp" alt="Image">
+         </figure>
+      </div>
+   </section>
+
+   <section class="about__advantages advantages-about">
+      <div class="advantages-about__container">
+         <figure class="advantages-about__picture">
+            <img class="advantages-about__image" src="@img/about/02.webp" alt="Image">
+         </figure>
+         <div class="advantages-about__body">
+            <div class="advantages-about__content">
+               <h2 class="advantages-about__title">100% Trusted<br> Organic Food Store</h2>
+               <p>Pellentesque a ante vulputate leo porttitor luctus sed eget eros. Nulla et rhoncus neque. Duis
+                  non
+                  diam
+                  eget est luctus tincidunt a a mi. Nulla eu eros consequat tortor tincidunt feugiat.
+               </p>
+            </div>
+            <ul class="advantages-about__items">
+               <li class="advantages-about__item item-advantage">
+                  <figure class="item-advantage__picture">
+                     <img class="item-advantage__icon" src="@img/home/advantages/05.svg" alt="Image">
+                  </figure>
+                  <div class="item-advantage__body">
+                     <h4 class="item-advantage__title">100% Organic food</h4>
+                     <p class="item-advantage__text">100% healthy & Fresh food.</p>
+                  </div>
+               </li>
+               <li class="advantages-about__item item-advantage">
+                  <figure class="item-advantage__picture">
+                     <img class="item-advantage__icon" src="@img/home/advantages/06.svg" alt="Image">
+                  </figure>
+                  <div class="item-advantage__body">
+                     <h4 class="item-advantage__title">Customer Feedback</h4>
+                     <p class="item-advantage__text">Our happy customer</p>
+                  </div>
+               </li>
+               <li class="advantages-about__item item-advantage">
+                  <figure class="item-advantage__picture">
+                     <img class="item-advantage__icon" src="@img/home/advantages/01.svg" alt="Image">
+                  </figure>
+                  <div class="item-advantage__body">
+                     <h4 class="item-advantage__title">Free Shipping</h4>
+                     <p class="item-advantage__text">Free shipping with discount</p>
+                  </div>
+               </li>
+               <li class="advantages-about__item item-advantage">
+                  <figure class="item-advantage__picture">
+                     <img class="item-advantage__icon" src="@img/home/advantages/02.svg" alt="Image">
+                  </figure>
+                  <div class="item-advantage__body">
+                     <h4 class="item-advantage__title">Great Support 24/7</h4>
+                     <p class="item-advantage__text">Instant access to Contact</p>
+                  </div>
+               </li>
+               <li class="advantages-about__item item-advantage">
+                  <figure class="item-advantage__picture">
+                     <img class="item-advantage__icon" src="@img/home/advantages/03.svg" alt="Image">
+                  </figure>
+                  <div class="item-advantage__body">
+                     <h4 class="item-advantage__title">100% Sucure Payment</h4>
+                     <p class="item-advantage__text">We ensure your money is save</p>
+                  </div>
+               </li>
+               <li class="advantages-about__item item-advantage">
+                  <figure class="item-advantage__picture">
+                     <img class="item-advantage__icon" src="@img/home/advantages/04.svg" alt="Image">
+                  </figure>
+                  <div class="item-advantage__body">
+                     <h4 class="item-advantage__title">100% Organic Food</h4>
+                     <p class="item-advantage__text">100% healthy & Fresh food.</p>
+                  </div>
+               </li>
+            </ul>
+         </div>
+      </div>
+   </section>
+
+   <section class="about__delivery delivery-about">
+      <div class="delivery-about__container">
+         <div class="delivery-about__body">
+            <h2 class="delivery-about__title">We Delivered, You Enjoy Your Order.</h2>
+            <p>Ut suscipit egestas suscipit. Sed posuere pellentesque nunc, ultrices consectetur velit dapibus eu.
+               Mauris sollicitudin dignissim diam, ac mattis eros accumsan rhoncus. Curabitur auctor bibendum nunc
+               eget elementum.</p>
+            <ul class="delivery-about__list">
+               <li class="delivery-about__item">Sed in metus pellentesque.</li>
+               <li class="delivery-about__item">Fusce et ex commodo, aliquam nulla efficitur, tempus lorem.</li>
+               <li class="delivery-about__item">Maecenas ut nunc fringilla erat varius.</li>
+            </ul>
+            <a data-fls-button data-fls-dynamic=".delivery-about__container, 991.98,2"
+               class="delivery-about__button button button--arrow button--icon-arrow" href="#">Shop
+               Now</a>
+         </div>
+         <figure class="delivery-about__picture">
+            <img class="delivery-about__image" src="@img/about/03.webp" alt="Image">
+         </figure>
+      </div>
+   </section>
+
+   <section class="about__team team-about">
+      <div class="team-about__container">
+         <div class="team-about__header">
+            <h2 class="team-about__title">Our Awesome Team</h2>
+            <div class="team-about__text">
+               Pellentesque a ante vulputate leo porttitor luctus sed eget eros. Nulla et rhoncus neque. Duis non diam
+               eget
+               est luctus tincidunt a a mi.
+            </div>
+         </div>
+         <div class="team-about__slider-wrapper">
+            <div class="team-about__slider swiper" data-fls-slider="team">
+               <div class="team-about__wrapper swiper-wrapper">
+                  <article class="team-about__slide swiper-slide">
+                     <figure class="team-about__picture">
+                        <img class="team-about__image" src="@img/about/04.webp" alt="Image">
+                        <figcaption class="team-about__info">
+                           <div class="team-about__name">Jenny Wilson</div>
+                           <div class="team-about__post">Ceo &amp; Founder</div>
+                        </figcaption>
+                     </figure>
+                     <div class="team-about__socials">
+                        <a href="#" class="team-about__social team-about__social--icon-s-facebook"
+                           aria-label="Facebook profile"></a>
+                        <a href="#" class="team-about__social team-about__social--icon-s-twitter"
+                           aria-label="Twitter profile"></a>
+                        <a href="#" class="team-about__social team-about__social--icon-s-pinterest"
+                           aria-label="Pinterest profile"></a>
+                        <a href="#" class="team-about__social team-about__social--icon-s-instagram"
+                           aria-label="Instagram profile"></a>
+                     </div>
+                  </article>
+                  <article class="team-about__slide swiper-slide">
+                     <figure class="team-about__picture">
+                        <img class="team-about__image" src="@img/about/05.webp" alt="Image">
+                        <figcaption class="team-about__info">
+                           <div class="team-about__name">Jane Cooper</div>
+                           <div class="team-about__post">Worker</div>
+                        </figcaption>
+                     </figure>
+                     <div class="team-about__socials">
+                        <a href="#" class="team-about__social team-about__social--icon-s-facebook"></a>
+                        <a href="#" class="team-about__social team-about__social--icon-s-twitter"></a>
+                        <a href="#" class="team-about__social team-about__social--icon-s-pinterest"></a>
+                        <a href="#" class="team-about__social team-about__social--icon-s-instagram"></a>
+                     </div>
+                  </article>
+                  <article class="team-about__slide swiper-slide">
+                     <figure class="team-about__picture">
+                        <img class="team-about__image" src="@img/about/06.webp" alt="Image">
+                        <figcaption class="team-about__info">
+                           <div class="team-about__name">Cody Fisher</div>
+                           <div class="team-about__post">Security Guard</div>
+                        </figcaption>
+                     </figure>
+                     <div class="team-about__socials">
+                        <a href="#" class="team-about__social team-about__social--icon-s-facebook"></a>
+                        <a href="#" class="team-about__social team-about__social--icon-s-twitter"></a>
+                        <a href="#" class="team-about__social team-about__social--icon-s-pinterest"></a>
+                        <a href="#" class="team-about__social team-about__social--icon-s-instagram"></a>
+                     </div>
+                  </article>
+                  <article class="team-about__slide swiper-slide">
+                     <figure class="team-about__picture">
+                        <img class="team-about__image" src="@img/about/07.webp" alt="Image">
+                        <figcaption class="team-about__info">
+                           <div class="team-about__name">Robert Fox</div>
+                           <div class="team-about__post">Senior Farmer Manager</div>
+                        </figcaption>
+                     </figure>
+                     <div class="team-about__socials">
+                        <a href="#" class="team-about__social team-about__social--icon-s-facebook"></a>
+                        <a href="#" class="team-about__social team-about__social--icon-s-twitter"></a>
+                        <a href="#" class="team-about__social team-about__social--icon-s-pinterest"></a>
+                        <a href="#" class="team-about__social team-about__social--icon-s-instagram"></a>
+                     </div>
+                  </article>
+               </div>
+            </div>
+            <button type="button" aria-label="Previous slide"
+               class="team-about__button team-about__button--left team-about__button--icon-arrow"></button>
+            <button type="button" aria-label="Next slide"
+               class="team-about__button team-about__button--right team-about__button--icon-arrow"></button>
+         </div>
+      </div>
+   </section>
+
+   <section class="about__reviews reviews">
+      <include src="@components/custom/reviews/reviews.html"></include>
+   </section>
+
+   <div class="about__partners partners">
+      <include src="@components/custom/partners/partners.html"></include>
+   </div>
+
+</main>

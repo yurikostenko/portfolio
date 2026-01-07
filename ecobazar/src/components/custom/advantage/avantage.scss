@@ -1,0 +1,27 @@
+.item-advantage {
+   display: flex;
+   align-items: center;
+   gap: 16px;
+
+   // .item-advantage__picture
+   &__picture {
+      text-align: center;
+      width: 40px;
+      flex-shrink: 0;
+   }
+   // .item-advantage__body
+   &__body {
+      display: grid;
+      gap: 8px;
+   }
+   // .item-advantage__title
+   &__title {
+      @include typography("M", 600);
+      color: $grey9;
+   }
+   // .item-advantage__text
+   &__text {
+      color: $grey4;
+      @include typography("S");
+   }
+}

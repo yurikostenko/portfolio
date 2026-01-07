@@ -1,6 +1,9 @@
 <script type="module" src="@components/pages/index/index.js"></script>
 <link rel="stylesheet" href="@components/pages/index/index.scss">
 <link rel="stylesheet" href="@components/custom/titles/titles.scss">
+<link rel="stylesheet" href="@components/custom/advantage/avantage.scss">
+<link rel="stylesheet" href="@components/custom/reviews/reviews.scss">
+<link rel="stylesheet" href="@components/custom/partners/partners.scss">
 
 <main class="page">
 	<div class="page__hero hero">
@@ -1157,141 +1160,10 @@
 		</div>
 	</section>
 	<section class="page__reviews reviews">
-		<div class="reviews__container">
-			<div class="reviews__block-header block-header block-header--margin">
-				<h2 class="block-header__title title">Client Testimonials</h2>
-				<div class="block-header__slider-arrows">
-					<button aria-label="Previous slide"
-						class="block-header__slider-arrow block-header__slider-arrow--left block-header__slider-arrow--icon-arrow"></button>
-					<button aria-label="Next slide"
-						class="block-header__slider-arrow block-header__slider-arrow--right block-header__slider-arrow--icon-arrow"></button>
-				</div>
-			</div>
-			<div class="reviews__slider slider-reviews swiper" data-fls-slider="reviews">
-				<div class="slider-reviews__wrapper swiper-wrapper">
-					<div class="slider-reviews__slide swiper-slide">
-						<article class="item-review item-review--icon-quote">
-							<div class="item-review__text">
-								<p>Pellentesque eu nibh eget mauris congue mattis mattis nec tellus. Phasellus imperdiet elit eu
-									magna dictum, bibendum cursus velit sodales. Donec sed neque eget</p>
-							</div>
-							<div class="item-review__footer">
-								<div class="item-review__author author-review">
-									<figure class="author-review__picture">
-										<img src="@img/reviews/avatar-01.jpg" class="author-review__avatar" alt="Image">
-									</figure>
-									<div class="author-review__body">
-										<h4 class="author-review__title">Robert Fox</h4>
-										<div class="author-review__type">Customer</div>
-									</div>
-								</div>
-								<div class="item-review__rating rating rating--static rating--big">
-									<div class="rating__items">
-										<div class="rating__item rating__item--active"></div>
-										<div class="rating__item rating__item--active"></div>
-										<div class="rating__item rating__item--active"></div>
-										<div class="rating__item rating__item--active"></div>
-										<div class="rating__item"></div>
-									</div>
-								</div>
-							</div>
-						</article>
-					</div>
-					<div class="slider-reviews__slide swiper-slide">
-						<article class="item-review item-review--icon-quote">
-							<div class="item-review__text">
-								<p>Pellentesque eu nibh eget mauris congue mattis mattis nec tellus. Phasellus imperdiet elit eu
-									magna dictum, bibendum cursus velit sodales. Donec sed neque eget</p>
-							</div>
-							<div class="item-review__footer">
-								<div class="item-review__author author-review">
-									<figure class="author-review__picture">
-										<img src="@img/reviews/avatar-02.jpg" class="author-review__avatar" alt="Image">
-									</figure>
-									<div class="author-review__body">
-										<h4 class="author-review__title">Robert Fox</h4>
-										<div class="author-review__type">Customer</div>
-									</div>
-								</div>
-								<div class="item-review__rating rating rating--static rating--big">
-									<div class="rating__items">
-										<div class="rating__item rating__item--active"></div>
-										<div class="rating__item rating__item--active"></div>
-										<div class="rating__item rating__item--active"></div>
-										<div class="rating__item rating__item--active"></div>
-										<div class="rating__item rating__item--active"></div>
-									</div>
-								</div>
-							</div>
-						</article>
-					</div>
-					<div class="slider-reviews__slide swiper-slide">
-						<article class="item-review item-review--icon-quote">
-							<div class="item-review__text">
-								<p>Pellentesque eu nibh eget mauris congue mattis mattis nec tellus. Phasellus imperdiet elit eu
-									magna dictum, bibendum cursus velit sodales. Donec sed neque eget</p>
-							</div>
-							<div class="item-review__footer">
-								<div class="item-review__author author-review">
-									<figure class="author-review__picture">
-										<img src="@img/reviews/avatar-03.jpg" class="author-review__avatar" alt="Image">
-									</figure>
-									<div class="author-review__body">
-										<h4 class="author-review__title">Robert Fox</h4>
-										<div class="author-review__type">Customer</div>
-									</div>
-								</div>
-								<div class="item-review__rating rating rating--static rating--big">
-									<div class="rating__items">
-										<div class="rating__item rating__item--active"></div>
-										<div class="rating__item rating__item--active"></div>
-										<div class="rating__item rating__item--active"></div>
-										<div class="rating__item rating__item--active"></div>
-										<div class="rating__item rating__item--active"></div>
-									</div>
-								</div>
-							</div>
-						</article>
-					</div>
-				</div>
-			</div>
-		</div>
+		<include src="@components/custom/reviews/reviews.html"></include>
 	</section>
 	<div class="page__partners partners">
-		<div class="partners__container">
-			<ul class="partners__list">
-				<li class="partners__item">
-					<a href="#" class="partners__link">
-						<img src="@img/partners/01.svg" alt="Image">
-					</a>
-				</li>
-				<li class="partners__item">
-					<a href="#" class="partners__link">
-						<img src="@img/partners/02.svg" alt="Image">
-					</a>
-				</li>
-				<li class="partners__item">
-					<a href="#" class="partners__link">
-						<img src="@img/partners/03.svg" alt="Image">
-					</a>
-				</li>
-				<li class="partners__item">
-					<a href="#" class="partners__link">
-						<img src="@img/partners/04.svg" alt="Image">
-					</a>
-				</li>
-				<li class="partners__item">
-					<a href="#" class="partners__link">
-						<img src="@img/partners/05.svg" alt="Image">
-					</a>
-				</li>
-				<li class="partners__item">
-					<a href="#" class="partners__link">
-						<img src="@img/partners/06.svg" alt="Image">
-					</a>
-				</li>
-			</ul>
-		</div>
+		<include src="@components/custom/partners/partners.html"></include>
 	</div>
 	<section class="page__instagram instagram">
 		<div class="instagram__container">

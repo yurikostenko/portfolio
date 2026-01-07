@@ -395,7 +395,8 @@
 body[data-page="catalog"] .header,
 body[data-page="product"] .header,
 body[data-page="bloglist"] .header,
-body[data-page="singleblog"] .header {
+body[data-page="singleblog"] .header,
+body[data-page="about"] .header {
 	.top-header {
 		background-color: $grey8;
 		color: $grey3;

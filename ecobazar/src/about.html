@@ -1,0 +1,28 @@
+<template src="@components/templates/inner/inner.html" locals='{
+		"title":"About", 
+		"lang":"en",
+		"home":"false",
+		"preloader": {
+			"enable":"false",
+			"once":"false"
+		},
+		"keywords":"", 
+		"description":""
+	}'>
+	<block name="header">
+		<include src="@components/layout/header/header.html" locals='{
+			"active":"About Us",
+			"title":"About",
+			"home": false
+		}'></include>
+	</block>
+	<block name="main">
+		<include src="@components/pages/about/about.html" locals='{}'></include>
+	</block>
+	<block name="aside">
+		<include src="@components/layout/aside/aside.html"></include>
+	</block>
+	<block name="footer">
+		<include src="@components/layout/footer/footer.html" locals='{}'></include>
+	</block>
+</template>
