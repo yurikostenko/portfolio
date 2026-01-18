@@ -1,7 +1,7 @@
 @font-face { 
 	font-family: "iconfont"; 
 	font-display: swap;
-	src: url("D://portfolio/ecobazar/src/assets/svgicons/preview/iconfont.woff2?9ff40f4e495a2c48df4f08839f93f7a9") format("woff2"); 
+	src: url("D://portfolio/ecobazar/src/assets/svgicons/preview/iconfont.woff2?106d2d3ac6029a38924ea5aed457f071") format("woff2"); 
 } 
 [class*="--icon-"]::before{
 	font-family: iconfont; 
