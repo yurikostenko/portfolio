@@ -1,1 +1,0 @@
-input[type=email],input[type=tel],input[type=text],textarea{-webkit-appearance:none;-moz-appearance:none;appearance:none}.input{caret-color:inherit;display:block;width:100%}.input[placeholder]:not([data-fls-placeholder-nohiden])::placeholder{transition:opacity .3s}.input[placeholder]:not([data-fls-placeholder-nohiden]):focus::placeholder{opacity:0}textarea.input{resize:none}
