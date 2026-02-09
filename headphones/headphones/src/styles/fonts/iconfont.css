@@ -1,0 +1,47 @@
+@font-face { 
+	font-family: "iconfont"; 
+	font-display: swap;
+	src: url("D://portfolio/headphones/headphones/src/assets/svgicons/preview/iconfont.woff2?3805b05cd209ac087149f347eaf28db4") format("woff2"); 
+} 
+[class*="--icon-"]::before{
+	font-family: iconfont; 
+}
+	[class*="--icon-x"]::before { 
+		content: "\f101"; 
+	} 
+	[class*="--icon-user-sound"]::before { 
+		content: "\f102"; 
+	} 
+	[class*="--icon-speaker"]::before { 
+		content: "\f103"; 
+	} 
+	[class*="--icon-minus"]::before { 
+		content: "\f104"; 
+	} 
+	[class*="--icon-microphone"]::before { 
+		content: "\f105"; 
+	} 
+	[class*="--icon-meta"]::before { 
+		content: "\f106"; 
+	} 
+	[class*="--icon-hand-tap"]::before { 
+		content: "\f107"; 
+	} 
+	[class*="--icon-equalizer"]::before { 
+		content: "\f108"; 
+	} 
+	[class*="--icon-ear"]::before { 
+		content: "\f109"; 
+	} 
+	[class*="--icon-drop"]::before { 
+		content: "\f10a"; 
+	} 
+	[class*="--icon-discord"]::before { 
+		content: "\f10b"; 
+	} 
+	[class*="--icon-cpu"]::before { 
+		content: "\f10c"; 
+	} 
+	[class*="--icon-battery-charging"]::before { 
+		content: "\f10d"; 
+	} 

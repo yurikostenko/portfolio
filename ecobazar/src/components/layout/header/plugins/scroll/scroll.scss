@@ -1,20 +1,24 @@
 [data-fls-header-scroll] {
 	&.--header-scroll {
-		// position: fixed;
-		position: sticky;
-		top: 0;
-		right: 0;
-		left: 0;
-		z-index: 50;
+		top: -136px;
 	}
 }
 
-[data-fls-header-scroll-show] {
-	&.--header-scroll {
+[data-fls-header-scroll-show],
+[data-fls-breadcrumbs-scroll-show] {
+	&.--header-scroll,
+	&.--breadcrumbs-scroll {
 		transition: translate 0.3s;
 		translate: 0px -100%;
 	}
-	&.--header-show {
+	&.--header-show,
+	&.--breadcrumbs-show {
 		translate: 0 0;
+	}
+}
+
+[data-fls-breadcrumbs-scroll] {
+	&.--breadcrumbs-scroll {
+		top: -124px;
 	}
 }

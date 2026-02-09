@@ -1,0 +1,29 @@
+<div class="header__menu menu">
+	<button type="button" data-fls-menu class="menu__icon icon-menu"><span></span></button>
+	<nav class="menu__body">
+		<ul class="menu__list">
+			<each loop='item in [
+					{"href": "#","ancor": "Home"},
+					{"href": "#","ancor": "Tech Specs"}
+				]'>
+				<if condition="'[[active]]' === '[[item.ancor]]'">
+					<li class="menu__item">
+						<a href="[[item.href]]" class="menu__link menu__link--active">[[item.ancor]]</a>
+					</li>
+				</if>
+				<else>
+					<li class="menu__item">
+						<a href="[[item.href]]" class="menu__link">[[item.ancor]]</a>
+					</li>
+				</else>
+			</each>
+			<li class="menu__item menu__item--padding">
+				<div class="menu__button button-border">
+					<a href="#" class="menu__link button menu__link--active" data-fls-button>
+						<span class="button__text">Compare</span>
+					</a>
+				</div>
+			</li>
+		</ul>
+	</nav>
+</div>

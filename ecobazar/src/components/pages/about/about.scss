@@ -10,7 +10,7 @@
    }
    // .about__delivery
    &__delivery {
-      margin-bottom: 0;
+      margin-bottom: 0 !important;
    }
    // .about__reviews
    &__reviews {
@@ -20,7 +20,7 @@
    }
    // .about__team
    &__team {
-      margin-bottom: 0;
+      margin-bottom: 0 !important;
    }
 }
 
@@ -278,7 +278,7 @@ body[data-page="about"] .item-advantage {
       position: relative;
       padding-left: 28px;
       &::before {
-         content: "\f119";
+         content: "\f11c";
          font-family: iconfont;
          font-size: 12.5px;
          color: $successDark;
