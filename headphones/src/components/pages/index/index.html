@@ -1,5 +1,123 @@
-<div data-fls-index class="index">
-   <div class="index__container">
+<main class="page" data-fls-index>
 
+   <section class="page__hero hero">
+      <div class="hero__container">
+         <picture class="hero__picture">
+            <source media="(max-width: 599.98px)" srcset="@img/hero/mobile.webp" width="420" height="420">
+            <img src="@img/hero/desktop.webp" width="1084" height="1084" alt="Headphones">
+         </picture>
+         <h1 class="hero__title">
+            <span class="hero__title-top">Resonance</span>
+            <span class="hero__title-bottom">Aura Pro II</span>
+         </h1>
+      </div>
+   </section>
+
+   <section class="page__carousel carousel">
+      <div class="carousel__container">
+
+         <div class="carousel__header">
+            <h2 class="carousel__title title">Your Style. Your Sound.</h2>
+            <p class="carousel__text text">Studio-grade acoustics that dissolve distractions and awaken clarity.</p>
+         </div>
+
+         <div class="carousel3d">
+
+            <div class="carousel3d__stage">
+               <img class="carousel3d__item left" src="@img/carousel/headphones-yellow.webp" alt="Yellow headphones">
+               <img class="carousel3d__item active" src="@img/carousel/headphones-green.webp" alt="Green headphones">
+               <img class="carousel3d__item right" src="@img/carousel/headphones-red.webp" alt="Red headphones">
+            </div>
+
+            <div class="carousel3d__dots">
+               <button class="dot" data-index="0" style="--color:#D8B74B"></button>
+               <button class="dot active" data-index="1" style="--color:#94915b"></button>
+               <button class="dot" data-index="2" style="--color:#883D39"></button>
+            </div>
+
+         </div>
+
+         <div class="carousel__footer">
+            <p class="carousel__text text">Choose a color that fits your flow.</p>
+         </div>
+
+      </div>
+   </section>
+
+   <div class="page__advantages advantages">
+      <div class="advantages__container">
+         <div data-fls-slider class="advantages__slider swiper" data-slider="advantages">
+            <div class="advantages__wrapper swiper-wrapper">
+               <div class="advantages__slide swiper-slide advantages__slide--bg-1">
+                  <div class="advantages__text advantages__text--max-width">Deep lows. Lush mids. Airy highs. All
+                     perfectly
+                     in balance.</div>
+                  <div class="advantages__picture">
+                     <img class="advantages__image" src="@img/slider/headphone-model.webp" alt="Image">
+                  </div>
+               </div>
+               <div class="advantages__slide swiper-slide advantages__slide--bg-2">
+                  <div class="advantages__text">Silence distractions. Control everything with a gentle tap.</div>
+                  <div class="advantages__picture">
+                     <img class="advantages__image" src="@img/slider/detail-1.webp" alt="Image">
+                  </div>
+               </div>
+               <div class="advantages__slide swiper-slide advantages__slide--bg-3">
+                  <div class="advantages__text">Thoughtfully packed in plastic-free, high quality materials.</div>
+                  <div class="advantages__picture">
+                     <img class="advantages__image" src="@img/slider/detail-2.webp" alt="Image">
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
    </div>
-</div>
+
+   <section class="page__details details">
+      <div class="details__container">
+         <div class="details__header">
+            <h2 class="details__title title">Every Detail matters</h2>
+            <p class="details__text text">From the stitch to the signal, precision lives here.</p>
+         </div>
+         <div data-fls-slider class="details__slider swiper" data-slider="details">
+            <div class="details__wrapper swiper-wrapper">
+               <div class="details__slide swiper-slide">
+                  <img class="details__image" src="@img/details/detail-4.webp" alt="Image">
+               </div>
+               <div class="details__slide swiper-slide">
+                  <img class="details__image" src="@img/details/detail-3.webp" alt="Image">
+               </div>
+               <div class="details__slide swiper-slide">
+                  <img class="details__image" src="@img/details/detail-5.webp" alt="Image">
+               </div>
+               <div class="details__slide swiper-slide">
+                  <img class="details__image" src="@img/details/detail-2.webp" alt="Image">
+               </div>
+               <div class="details__slide swiper-slide">
+                  <img class="details__image" src="@img/details/detail-6.webp" alt="Image">
+               </div>
+               <div class="details__slide swiper-slide">
+                  <img class="details__image" src="@img/details/detail-1.webp" alt="Image">
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <section class="page__banner banner">
+      <div class="banner__container">
+         <picture class="banner__picture">
+            <source media="(max-width: 599.98px)" srcset="@img/banner/mobile-image.webp" width="420" height="803">
+            <img src="@img/banner/desktop-image.webp" width="1280" height="894" alt="Headphones">
+         </picture>
+         <div class="banner__content">
+            <h2 class="banner__title">Dreamlike Sound</h2>
+            <p class="banner__text">Starting at $320 — Available Now.</p>
+            <a href="#" class="banner__button button button--light" data-fls-button>
+               <span class="button__text">Buy Now</span>
+            </a>
+         </div>
+      </div>
+   </section>
+
+</main>

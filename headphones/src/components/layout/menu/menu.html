@@ -3,8 +3,8 @@
 	<nav class="menu__body">
 		<ul class="menu__list">
 			<each loop='item in [
-					{"href": "#","ancor": "Home"},
-					{"href": "#","ancor": "Tech Specs"}
+					{"href": "index.html","ancor": "Home"},
+					{"href": "techspecs.html","ancor": "Tech Specs"}
 				]'>
 				<if condition="'[[active]]' === '[[item.ancor]]'">
 					<li class="menu__item">
@@ -18,11 +18,9 @@
 				</else>
 			</each>
 			<li class="menu__item menu__item--padding">
-				<div class="menu__button button-border">
-					<a href="#" class="menu__link button menu__link--active" data-fls-button>
-						<span class="button__text">Compare</span>
-					</a>
-				</div>
+				<a href="#" class="menu__button button" data-fls-button>
+					<span class="button__text">Compare</span>
+				</a>
 			</li>
 		</ul>
 	</nav>

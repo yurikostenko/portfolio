@@ -1,5 +1,115 @@
 .footer {
 	// .footer__container
 	&__container {
+		background: linear-gradient(180deg, rgb(245, 245, 245) 0%, rgb(210, 204, 198) 100%);
+	}
+	// .footer__top
+	&__top {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 16px;
+		@include adaptiveValue("padding-top", 80, 42);
+		padding-bottom: 42px;
+		padding-inline: 48px;
+	}
+	// .footer__title
+	&__title {
+		color: $titleColor;
+		font-size: 42px;
+		font-weight: 600;
+		line-height: 1.5;
+		text-align: center;
+		text-transform: capitalize;
+	}
+	// .footer__text
+	&__text {
+		text-align: center;
+		margin-bottom: 16px;
+		@include adaptiveValue("font-size", 20, 18);
+		line-height: 1.5;
+	}
+	// .footer__buttons
+	&__buttons {
+		display: flex;
+		align-items: center;
+		gap: 16px;
+	}
+	// .footer__button
+	&__button {
+	}
+	// .footer__bottom
+	&__bottom {
+		@include adaptiveValue("padding-inline", 80, 50);
+		padding-block: 26px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		border-top: 1px solid rgb(139, 135, 130);
+
+		@media (max-width: toEm($mobile)) {
+			justify-content: center;
+		}
+	}
+	// .footer__logo
+	&__logo {
+		@media (any-hover: hover) and (any-pointer: fine) {
+			&:hover {
+				.logo__text {
+					color: $mainColor;
+				}
+			}
+		}
+
+		@media (max-width: toEm($mobile)) {
+			display: none;
+		}
+	}
+
+	// .footer__info
+	&__info {
+		display: flex;
+		align-items: center;
+		gap: 16px;
+		color: $titleColor;
+
+		@media (max-width: toEm($mobile)) {
+			flex-direction: column;
+			gap: 40px;
+		}
+	}
+	// .footer__copyright
+	&__copyright {
+		font-size: 16px;
+	}
+	// .footer__links
+	&__links {
+		display: flex;
+		align-items: center;
+		gap: 16px;
+	}
+	// .footer__link
+	&__link {
+		font-size: 26px;
+		line-height: 1;
+		transition:
+			color 0.3s,
+			transform 0.3s;
+		// .footer__link--icon-discord
+		&--icon-discord {
+		}
+		// .footer__link--icon-x
+		&--icon-x {
+		}
+		// .footer__link--icon-meta
+		&--icon-meta {
+		}
+		@media (any-hover: hover) and (any-pointer: fine) {
+			&:hover {
+				color: $mainColor;
+				transform: scale(1.1);
+			}
+		}
 	}
 }

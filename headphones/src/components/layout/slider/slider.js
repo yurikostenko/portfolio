@@ -8,7 +8,8 @@
 // При необхідності підключаємо додаткові модулі слайдера, вказуючи їх у {} через кому
 // Приклад: { Navigation, Autoplay }
 import Swiper from 'swiper';
-import { Navigation } from 'swiper/modules';
+import { Pagination } from 'swiper/modules';
+// import { Navigation } from 'swiper/modules';
 /*
 Основні модулі слайдера:
 Navigation, Pagination, Autoplay, 
@@ -19,90 +20,85 @@ EffectFade, Lazy, Manipulation
 // Стилі Swiper
 // Підключення базових стилів
 import "./slider.scss";
+import 'swiper/css/pagination';
 // Повний набір стилів з node_modules
 // import 'swiper/css/bundle';
 
-// Ініціалізація слайдерів
-function initSliders() {
-	// Список слайдерів
-	// Перевіряємо, чи є слайдер на сторінці
-	if (document.querySelector('.swiper')) { // <- Вказуємо склас потрібного слайдера
-		// Створюємо слайдер
-		new Swiper('.swiper', { // <- Вказуємо склас потрібного слайдера
-			// Підключаємо модулі слайдера
-			// для конкретного випадку
-			modules: [Navigation],
-			observer: true,
-			observeParents: true,
-			slidesPerView: 1,
-			spaceBetween: 0,
-			//autoHeight: true,
-			speed: 800,
+// Базовий конфіг для всіх слайдерів
+const baseConfig = {
+	observer: true,
+	observeParents: true,
+	speed: 800,
+	grabCursor: true,
+	spaceBetween: 16,
+};
 
-			//touchRatio: 0,
-			//simulateTouch: false,
-			//loop: true,
-			//preloadImages: false,
-			//lazy: true,
+// Конфіги для різних типів слайдерів
+const sliderConfigs = {
+	advantages: {
+		slidesPerView: 1.11,
+		breakpoints: {
+			420: { slidesPerView: 1.15 },
+		},
+	},
 
-			/*
-			// Ефекти
-			effect: 'fade',
-			autoplay: {
-				delay: 3000,
-				disableOnInteraction: false,
-			},
-			*/
+	details: {
+		slidesPerView: 1.1,
+		breakpoints: {
+			600: { slidesPerView: 2 },
+			992: { slidesPerView: 3 },
+		},
+	},
 
-			// Пагінація
-			/*
-			pagination: {
-				el: '.swiper-pagination',
-				clickable: true,
-			},
-			*/
-
-			// Скроллбар
-			/*
-			scrollbar: {
-				el: '.swiper-scrollbar',
-				draggable: true,
-			},
-			*/
-
-			// Кнопки "вліво/вправо"
-			navigation: {
-				prevEl: '.swiper-button-prev',
-				nextEl: '.swiper-button-next',
-			},
-			/*
-			// Брейкпоінти
-			breakpoints: {
-				640: {
-					slidesPerView: 1,
-					spaceBetween: 0,
-					autoHeight: true,
-				},
-				768: {
-					slidesPerView: 2,
-					spaceBetween: 20,
-				},
-				992: {
-					slidesPerView: 3,
-					spaceBetween: 20,
-				},
-				1268: {
-					slidesPerView: 4,
-					spaceBetween: 30,
-				},
-			},
-			*/
-			// Події
-			on: {
-
-			}
-		});
+	techspecs: {
+		slidesPerView: 1,
 	}
+};
+
+// Ініціалізація 
+function initSliders() {
+
+	const sliders = document.querySelectorAll('[data-fls-slider]');
+
+	if (!sliders.length) return;
+
+	sliders.forEach(slider => {
+		const type = slider.dataset.slider;
+		const paginationEl = slider.querySelector('.swiper-pagination');
+
+		if (!sliderConfigs[type]) return;
+
+		let extraConfig = {};
+
+		if (type === 'techspecs' && paginationEl) {
+			const slides = slider.querySelectorAll('.swiper-slide');
+			const colors = [...slides].map(slide => slide.dataset.color);
+
+			extraConfig = {
+				pagination: {
+					el: paginationEl,
+					clickable: true,
+					renderBullet: function (index, className) {
+						return `<span class="${className}" style="background:${colors[index]}"></span>`;
+					},
+				},
+			};
+		}
+
+		new Swiper(slider, {
+			modules: paginationEl ? [Pagination] : [],
+			...baseConfig,
+			...sliderConfigs[type],
+			...extraConfig,
+			...(paginationEl && type !== 'techspecs' && {
+				pagination: {
+					el: paginationEl,
+					clickable: true,
+				},
+			}),
+		});
+	});
+
 }
-document.querySelector('[data-fls-slider]') ?
-	window.addEventListener("load", initSliders) : null
+
+window.addEventListener("load", initSliders) 

@@ -15,7 +15,7 @@ body {
 	color: $mainColor;
 	font-family: $fontFamily;
 	font-size: #{$fontSize}px;
-	// background-color: rgba(245, 245, 245, 1);
+	// background-color: rgb(245, 245, 245);
 
 	// Скролл заблоковано
 	[data-fls-scrolllock] & {
@@ -37,6 +37,8 @@ body {
 	display: flex;
 	flex-direction: column;
 	overflow: clip;
+	position: relative;
+	z-index: 0;
 
 	// Притискаємо footer
 	> main {
@@ -45,6 +47,19 @@ body {
 	// Фікс для слайдерів
 	> * {
 		min-width: 0;
+	}
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 100%;
+		max-width: 1280px;
+		min-height: 100%;
+		background-color: rgb(245, 245, 245);
+		z-index: -1;
+		pointer-events: none;
 	}
 }
 
@@ -105,7 +120,3 @@ body {
 // ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 // Загальні стилі для усього сайту
 // ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-[class*="__container"] {
-	background-color: rgba(245, 245, 245, 1);
-}

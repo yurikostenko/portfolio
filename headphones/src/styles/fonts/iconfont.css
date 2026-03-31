@@ -1,7 +1,7 @@
 @font-face { 
 	font-family: "iconfont"; 
 	font-display: swap;
-	src: url("D://portfolio/headphones/headphones/src/assets/svgicons/preview/iconfont.woff2?3805b05cd209ac087149f347eaf28db4") format("woff2"); 
+	src: url("D://portfolio/headphones/src/assets/svgicons/preview/iconfont.woff2?9a2a71129175e0fc38069d2c228224bb") format("woff2"); 
 } 
 [class*="--icon-"]::before{
 	font-family: iconfont; 

@@ -1,2 +1,399 @@
-.index {
+.page {
+   // .page__hero
+   &__hero {
+      @include adaptiveValue("margin-bottom", 80, 0);
+   }
+   // .page__carousel
+   &__carousel {
+      @include adaptiveValue(padding-block, 80, 42);
+      @include adaptiveValue("margin-top", -120, 0);
+   }
+   // .page__advantages
+   &__advantages {
+      @include adaptiveValue("padding-block", 80, 24);
+   }
+   // .page__details
+   &__details {
+      @include adaptiveValue("padding-top", 80, 42);
+      @include adaptiveValue("padding-bottom", 80, 0);
+   }
+   // .page__banner
+   &__banner {
+   }
+}
+
+// ====================================================
+
+.hero {
+   position: relative;
+   @include adaptiveValue(min-height, 936, 730);
+   &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      max-width: 1280px;
+      min-height: 100%;
+      background: linear-gradient(180deg, rgba(210.4, 204.52, 198.05, 1) 0%, rgba(245, 245, 245, 1) 100%);
+      z-index: -1;
+      pointer-events: none;
+   }
+
+   @media (width < 600px) {
+      background: rgb(212, 207, 201);
+   }
+   // .hero__container
+   &__container {
+      height: 100%;
+      position: relative;
+   }
+   // .hero__image
+   &__picture {
+      position: absolute;
+      z-index: 2;
+      aspect-ratio: 1 / 1;
+      left: 50%;
+      transform: translateX(-50%);
+      @include adaptiveValue("margin-top", -27, 297);
+      pointer-events: none;
+      @media (min-width: toEm($mobileSmall)) {
+         @include adaptiveValue("width", 1084, 420);
+      }
+      @media (max-width: toEm($mobileSmall)) {
+         width: 420px;
+      }
+
+      img {
+         width: 100%;
+         height: 100%;
+         object-fit: contain;
+         display: block;
+      }
+   }
+   // .hero__title
+   &__title {
+      position: absolute;
+      inset: 0;
+      @include adaptiveValue("top", 175, 80);
+      top: 175px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      pointer-events: none;
+      @include adaptiveValue("font-size", 180, 60);
+      font-weight: 600;
+   }
+   // .hero__title-top
+   &__title-top {
+      position: relative;
+      z-index: 3;
+      color: $titleColor;
+   }
+   // .hero__title-bottom
+   &__title-bottom {
+      position: relative;
+      z-index: 1;
+      background: linear-gradient(0deg, rgba(218.38, 203.94, 188.04, 1) 0%, rgba(175.01, 163.55, 150.93, 1) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+   }
+}
+
+// ====================================================
+
+.carousel {
+   position: relative;
+   // .carousel__container
+   &__container {
+   }
+   // .carousel__header
+   &__header {
+      padding-inline: 15px;
+      margin-bottom: 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+   }
+   // .carousel__title
+   &__title {
+   }
+   // .carousel__text
+   &__text {
+   }
+   // .carousel__footer
+   &__footer {
+      padding-inline: 15px;
+      display: flex;
+      justify-content: center;
+   }
+}
+
+.title {
+   color: $titleColor;
+   @include adaptiveValue("font-size", 56, 42);
+   font-weight: 600;
+   line-height: 1.5;
+   text-align: center;
+   text-transform: capitalize;
+}
+.text {
+   @include adaptiveValue("font-size", 24, 18);
+   line-height: 1.5;
+   text-align: center;
+}
+
+.carousel3d {
+   overflow: hidden;
+   padding-bottom: 32px;
+   --offset: 79%;
+   // .carousel3d__stage
+   &__stage {
+      position: relative;
+      @include adaptiveValue("height", 660, 380);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      perspective: 1000px;
+      margin-bottom: 24px;
+   }
+   // .carousel3d__item
+   &__item {
+      position: absolute;
+      @include adaptiveValue("width", 660, 380);
+      aspect-ratio: 1;
+      transition:
+         transform 0.6s cubic-bezier(0.4, 0.2, 0.2, 1),
+         filter 0.6s ease,
+         opacity 0.6s ease;
+      cursor: pointer;
+
+      &.left {
+         transform: translateX(calc(-1 * var(--offset))) scale(0.75);
+         z-index: 2;
+         filter: blur(4px);
+         opacity: 0.6;
+      }
+
+      &.active {
+         transform: translateX(0) scale(1);
+         z-index: 3;
+         filter: blur(0);
+         opacity: 1;
+      }
+
+      &.right {
+         transform: translateX(var(--offset)) scale(0.75);
+         z-index: 2;
+         filter: blur(4px);
+         opacity: 0.6;
+      }
+   }
+   // .carousel3d__dots
+   &__dots {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+   }
+}
+.dot {
+   width: 60px;
+   @include adaptiveValue("width", 60, 40);
+   aspect-ratio: 1;
+   border-radius: 50%;
+   background: var(--color);
+   border: none;
+   cursor: pointer;
+   position: relative;
+
+   &.active {
+      &::after {
+         content: "";
+         position: absolute;
+         inset: 0;
+         border: 2px solid $titleColor;
+         border-radius: 50%;
+      }
+   }
+}
+
+// ====================================================
+
+.advantages {
+   // .advantages__container
+   &__container {
+      @include adaptiveValue("padding-left", 80, 24);
+   }
+   // .advantages__slider
+   &__slider {
+   }
+   // .advantages__wrapper
+   &__wrapper {
+   }
+   // .advantages__slide
+   &__slide {
+      border-radius: 24px;
+      overflow: hidden;
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      @media (max-width: toEm(1200)) {
+         flex-direction: column;
+      }
+
+      // .advantages__slide--bg-1
+      &--bg-1 {
+         background: linear-gradient(180deg, rgba(210, 205, 198, 1) 0%, rgba(247.65, 190.83, 147.38, 1) 100%);
+      }
+      // .advantages__slide--bg-2
+      &--bg-2 {
+         background: linear-gradient(180deg, rgba(210, 205, 198, 1) 0%, rgba(241.75, 234.72, 226.98, 1) 100%);
+      }
+      // .advantages__slide--bg-3
+      &--bg-3 {
+         background: linear-gradient(180deg, rgba(216, 183, 75, 1) 0%, rgba(241.75, 234.72, 226.98, 1) 100%);
+      }
+   }
+   // .advantages__text
+   &__text {
+      padding-inline: 80px;
+      color: $sliderColor;
+      @include adaptiveValue("font-size", 32, 24);
+      font-weight: 500;
+      line-height: 1.3;
+      max-width: 584px;
+      // .advantages__text--max-width
+      &--max-width {
+         max-width: 532px;
+      }
+      @media (max-width: toEm(1200)) {
+         padding: 42px 32px;
+      }
+   }
+
+   // .advantages__picture
+   &__picture {
+      flex: 0 0 480px;
+      border-radius: 24px;
+      overflow: hidden;
+      @media (max-width: toEm($mobileSmall)) {
+         flex: 0 0 340px;
+      }
+   }
+   // .advantages__image
+   &__image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+   }
+}
+
+// ====================================================
+
+.details {
+   // .details__container
+   &__container {
+   }
+   // .details__header
+   &__header {
+      padding-inline: 15px;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      gap: 16px;
+   }
+   // .details__title
+   &__title {
+   }
+   // .details__text
+   &__text {
+      @media (max-width: toEm($mobileSmall)) {
+         max-width: 348px;
+      }
+   }
+   // .details__slider
+   &__slider {
+      @include adaptiveValue("padding-left", 80, 48);
+      padding-block: 80px;
+   }
+   // .details__wrapper
+   &__wrapper {
+   }
+   // .details__slide
+   &__slide {
+      flex: 0 0 auto;
+      aspect-ratio: 1;
+      border-radius: 26px;
+      overflow: hidden;
+   }
+   // .details__image
+   &__image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.3s ease;
+
+      @media (any-hover: hover) and (any-pointer: fine) {
+         &:hover {
+            transform: scale(1.05);
+         }
+      }
+   }
+}
+
+// ====================================================
+
+.banner {
+   // .banner__container
+   &__container {
+      position: relative;
+      overflow: hidden;
+      aspect-ratio: 1280 / 894;
+      @media (width < 600px) {
+         aspect-ratio: 420 / 803;
+      }
+   }
+   // .banner__picture
+   &__picture {
+      position: absolute;
+      inset: 0;
+      img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+         display: block;
+      }
+   }
+   // .banner__content
+   &__content {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
+      color: white;
+      @include adaptiveValue("padding-top", 80, 42);
+      padding-inline: 15px;
+      text-align: center;
+   }
+   // .banner__title
+   &__title {
+      @include adaptiveValue("font-size", 86, 60);
+      font-weight: 600;
+      line-height: 1.4;
+   }
+   // .banner__text
+   &__text {
+      font-size: 24px;
+      line-height: 1.5;
+   }
+   // .banner__button
+   &__button {
+   }
 }
