@@ -2,25 +2,33 @@
    padding-top: 92px;
    // .techspecs__hero
    &__hero {
-// position: relative;
+      // position: relative;
    }
    // .techspecs__container
    &__container {
-      @include adaptiveValue("padding-inline", 120, 24);
-      @include adaptiveValue("padding-block", 80, 42);
-      display: grid;
-      grid-template-columns: 300px minmax(0, 1fr);
-      gap: 24px 42px;
-      align-items: start;
+
+
+      &--hero {
+         @include adaptiveValue("padding-inline", 120, 24);
+         @include adaptiveValue("padding-block", 80, 42);
+         display: grid;
+         grid-template-columns: 300px minmax(0, 1fr);
+         gap: 24px 42px;
+         align-items: start;
+      }
+
+      &--content {
+      }
    }
    // .techspecs__title
-   &__title {
+   &__title,
+   &__item-title {
       color: $titleColor;
-font-size: 32px;
-font-weight: 600;
-line-height: 1.5;
-text-align: left;
-text-transform: capitalize;
+      font-size: 32px;
+      font-weight: 600;
+      line-height: 1.5;
+      text-align: left;
+      text-transform: capitalize;
    }
    // .techspecs__slider
    &__slider {
@@ -68,11 +76,50 @@ text-transform: capitalize;
    &__pagination .swiper-pagination-bullet-active {
       border-color: #000;
    }
-}
-.swiper {
-}
-.swiper-wrapper {
-}
-.swiper-slide {
+
+   // .techspecs__content
+   &__content {
+   }
+   // .techspecs__subtitle
+   &__subtitle {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+   }
+   // .techspecs__rows
+   &__rows {
+   }
+   // .techspecs__row
+   &__row {
+      @include adaptiveValue("padding-inline", 120, 24);
+      @include adaptiveValue("padding-block", 80, 42);
+      display: grid;
+      grid-template-columns: 320px minmax(0, 1fr);
+      gap: 24px 22px;
+      box-sizing: border-box;
+      border-top: 1px solid rgba(216, 216, 216);
+      &--accent{
+         background: linear-gradient(180.00deg, rgba(210, 205, 198, 1) 0%,rgba(241.75, 234.72, 226.98, 1) 100%);
+      }
+      @media (max-width: toEm($mobile)) {
+         grid-template-columns: 1fr;
+      }
+   }
+   // .techspecs__item-title
+   &__item-title {
+   }
+   // .techspecs__list
+   &__list {
+   }
+   // .techspecs__item
+   &__item {
+      line-height: 2.78;
+   }
 }
 
