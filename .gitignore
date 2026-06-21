@@ -25,4 +25,7 @@ dist/
 # Lock файли (різні редактори)
 *.lock
 
+# Автогенеровані iconfont-файли
+src/assets/svgicons/preview/
+src/styles/fonts/iconfont.css
 
