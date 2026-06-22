@@ -15,6 +15,9 @@
          grid-template-columns: 300px minmax(0, 1fr);
          gap: 24px 42px;
          align-items: start;
+         @media (max-width: toEm($mobile)) {
+         grid-template-columns: 1fr;
+      }
       }
 
       &--content {
@@ -71,6 +74,10 @@
       opacity: 1;
       border: 2px solid transparent;
       cursor: pointer;
+      @media (max-width: toEm($mobile)) {
+         width: 40px;
+         height: 40px;
+      }
    }
 
    &__pagination .swiper-pagination-bullet-active {
