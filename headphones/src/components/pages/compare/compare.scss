@@ -1,0 +1,29 @@
+.compare {
+   padding-top: 92px;
+		// .compare__container
+
+		&__container {
+          @include adaptiveValue("padding-inline", 100, 24);
+         @include adaptiveValue("padding-block", 80, 42);
+		}
+
+		// .compare__title
+
+		&__title {
+         text-align: center;
+         @include adaptiveValue("font-size",56 ,42 );
+         color: $titleColor;
+         font-weight: 600;
+         line-height: 1.42;
+         text-transform: capitalize;
+		}
+
+		// .compare__subtitle
+
+		&__subtitle {
+         text-align: center;
+         @include adaptiveValue("font-size",24 ,18 );
+         line-height: 1.5;
+		}
+}
+
