@@ -1,29 +1,105 @@
 .compare {
-   padding-top: 92px;
-		// .compare__container
+	padding-top: 92px;
+	// .compare__container
 
-		&__container {
-          @include adaptiveValue("padding-inline", 100, 24);
-         @include adaptiveValue("padding-block", 80, 42);
-		}
+	&__container {
+		@include adaptiveValue("padding-inline", 100, 24);
+		@include adaptiveValue("padding-block", 80, 42);
+	}
 
-		// .compare__title
+	// .compare__title
 
-		&__title {
-         text-align: center;
-         @include adaptiveValue("font-size",56 ,42 );
-         color: $titleColor;
-         font-weight: 600;
-         line-height: 1.42;
-         text-transform: capitalize;
-		}
+	&__title {
+		text-align: center;
+		@include adaptiveValue("font-size", 56, 42);
+		color: $titleColor;
+		font-weight: 600;
+		line-height: 1.42;
+		text-transform: capitalize;
+	}
 
-		// .compare__subtitle
+	// .compare__subtitle
 
-		&__subtitle {
-         text-align: center;
-         @include adaptiveValue("font-size",24 ,18 );
-         line-height: 1.5;
-		}
+	&__subtitle {
+		text-align: center;
+		@include adaptiveValue("font-size", 24, 18);
+		line-height: 1.5;
+	}
+}
+
+.compare {
+	// .compare__container
+	&__container {
+	}
+	// .compare__title
+	&__title {
+	}
+	// .compare__subtitle
+	&__subtitle {
+	}
+	// .compare__list
+	&__list {
+	}
+	// .compare__item
+	&__item {
+	}
+	// .compare__card
+	&__card {
+	}
+	// .compare__features
+	&__features {
+	}
+	// .compare__feature
+	&__feature {
+	}
+	// .compare__feature--icon-cpu
+	&__feature--icon-cpu {
+	}
+	// .compare__feature--icon-speaker
+	&__feature--icon-speaker {
+	}
+	// .compare__feature--icon-user-sound
+	&__feature--icon-user-sound {
+	}
+	// .compare__feature--icon-equalizer
+	&__feature--icon-equalizer {
+	}
+	// .compare__feature--icon-minus
+	&__feature--icon-minus {
+	}
+	// .compare__feature--icon-battery-charging
+	&__feature--icon-battery-charging {
+	}
+	// .compare__feature--icon-microphone
+	&__feature--icon-microphone {
+	}
+	// .compare__feature--icon-ear
+	&__feature--icon-ear {
+	}
+	// .compare__feature--icon-hand-tap
+	&__feature--icon-hand-tap {
+	}
+	// .compare__feature--icon-drop
+	&__feature--icon-drop {
+	}
+}
+.card {
+	// .card__title
+	&__title {
+	}
+	// .card__picture
+	&__picture {
+	}
+	// .card__pricing
+	&__pricing {
+	}
+	// .card__button
+	&__button {
+	}
+}
+.button {
+	// .button__text
+	&__text {
+	}
 }
 
