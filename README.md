@@ -7,6 +7,7 @@ I develop responsive, accessible, and maintainable front-end interfaces using **
 | Holiday Time | [Live Demo](https://yurikostenko.github.io/portfolio/holiday-time/) | [Code](https://github.com/yurikostenko/portfolio/tree/main/holiday-time) |
 | HYDRA | [Live Demo](https://yurikostenko.github.io/portfolio/hydra/dist/) | [Code](https://github.com/yurikostenko/portfolio/tree/main/hydra) |
 | Ecobazar | [Live Demo](https://yurikostenko.github.io/portfolio/ecobazar/) | [Code](https://github.com/yurikostenko/portfolio/tree/main/ecobazar) |
+| Headphones | [Live Demo](https://yurikostenko.github.io/portfolio/headphones/) | [Code](https://github.com/yurikostenko/portfolio/tree/main/headphones) |
 
 
 ---
