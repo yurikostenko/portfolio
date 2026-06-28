@@ -64,7 +64,7 @@ export default {
 		svgsprite: false,
 		optimize: {
 			enable: true,
-			edithtml: true,
+			edithtml: false, // ручна розмітка picture/img, без автозміни HTML
 			sizes: [600, 1200],
 			dpi: [],
 			attrignore: 'data-fls-image-ignore',

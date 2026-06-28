@@ -85,14 +85,14 @@
       @include adaptiveValue("font-size", 180, 60);
       font-weight: 600;
    }
-   // .hero__title-top
-   &__title-top {
+   // .hero__title-brand
+   &__title-brand {
       position: relative;
       z-index: 3;
       color: $titleColor;
    }
-   // .hero__title-bottom
-   &__title-bottom {
+   // .hero__title-model
+   &__title-model {
       position: relative;
       z-index: 1;
       background: linear-gradient(0deg, rgba(218.38, 203.94, 188.04, 1) 0%, rgba(175.01, 163.55, 150.93, 1) 100%);
