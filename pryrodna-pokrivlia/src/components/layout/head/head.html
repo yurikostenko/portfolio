@@ -1,4 +1,4 @@
- <head>
+<head>
 	<if condition="'[[preloader.enable]]' === 'true'">
 		<include src="@components/effects/preloader/preloader.html" locals='{"once":"[[preloader.once]]"}'></include>
 	</if>
@@ -8,7 +8,13 @@
 	<link rel="stylesheet" href="@styles/fonts/fonts.css">
 	<link rel="stylesheet" href="@styles/fonts/iconfont.css">
 	<link rel="stylesheet" href="@styles/style.scss">
-	<link rel="shortcut icon" href="@img/favicon.ico">
+
+	<link rel="icon" href="@img/logo-mobile.svg" sizes="any" type="image/svg+xml">
+	<link rel="icon" href="@img/favicon.ico" sizes="any">
+	<link rel="icon" type="image/png" sizes="32x32" href="@img/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="@img/favicon-16x16.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="@img/apple-touch-icon.png">
+
 	<if condition="'[[keywords]]' !== ''">
 		<meta name="keywords" content="[[keywords]]">
 	</if>

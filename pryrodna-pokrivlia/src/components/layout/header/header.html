@@ -1,5 +1,12 @@
 <header data-fls-header class="header">
 	<div class="header__container">
-		<!-- <include src="@components/layout/menu/menu.html" locals='{"active":"[[active]]"}'></include> -->
+		<picture class="header__logo">
+			<source srcset="@img/logo-mobile.svg" media="(max-width: 480px)" width="60" alt="Logo">
+			<img src="@img/logo.svg" width="160" alt="Logo">
+		</picture>
+
+		<include src="@components/layout/menu/menu.html" locals='{"active":"[[active]]"}'></include>
+		<a class="header__phone" data-fls-dynamic=".header__container, 768, 1" href="tel:+380974301403">+38 (097) 430 14
+			03</a>
 	</div>
 </header>

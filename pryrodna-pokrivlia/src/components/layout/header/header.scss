@@ -1,5 +1,30 @@
 .header {
+	border-bottom: 1px solid var(--color-border);
+	@media (width <= toEm($mobileSmall)) {
+		padding-block: 5px;
+	}
 	// .header__container
 	&__container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 15px;
+	}
+	// .header__logo
+	&__logo {
+		flex-shrink: 0;
+	}
+	// .header__phone
+	&__phone {
+		flex-shrink: 0;
+		font-weight: 700;
+		transition: scale 0.3s;
+		html:not([data-fls-touch]) & {
+			@media (any-hover: hover), (pointer: fine) {
+				&:hover {
+					scale: 1.05;
+				}
+			}
+		}
 	}
 }

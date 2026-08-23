@@ -3,10 +3,11 @@
 	<nav class="menu__body">
 		<ul class="menu__list">
 			<each loop='item in [
-					{"href": "https://google.com","ancor": "Home"},
-					{"href": "#","ancor": "About"},
-					{"href": "#","ancor": "Blog"},
-					{"href": "#","ancor": "Contacts"}
+					{"href": "index.html","ancor": "Головна"},
+					{"href": "#","ancor": "Про нас"},
+					{"href": "#","ancor": "Послуги"},
+					{"href": "#","ancor": "Галерея"},
+					{"href": "#","ancor": "Контакти"}
 				]'>
 				<if condition="'[[active]]' === '[[item.ancor]]'">
 					<li class="menu__item">
@@ -22,10 +23,3 @@
 		</ul>
 	</nav>
 </div>
-
-<!-- 
-<fetch url="@components/layout/menu/menu.json">
-	<each loop='item in response'>
-	</each>
-</fetch>
--->

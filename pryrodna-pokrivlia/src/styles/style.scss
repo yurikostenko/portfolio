@@ -6,15 +6,17 @@
 // Підключення загальних віддалених шрифтів (Google Fonts)
 // Використовуйте плагін для VS Code Better Google Fonts for VS Code (https://marketplace.visualstudio.com/items?itemName=Pavlo-K.better-google-fonts)
 // ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto%20Sans:wght@400;500;700&display=swap");
 // ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 // Стилі тега BODY
 // ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 body {
-	color: var(--main-color);
-	font-family: var(--font-family);
+	background-color: var(--color-bg);
+	color: var(--color-text);
+	font-family: var(--font-family-base);
 	font-size: var(--font-size);
-
+	line-height: 1.5;
 	min-width: #{$minWidth}px;
 
 	// Скролл заблоковано
