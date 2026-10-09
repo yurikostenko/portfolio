@@ -12,7 +12,19 @@
 	}
 	// .header__logo
 	&__logo {
-		flex-shrink: 0;
+		display: block;
+		flex: 0 0 auto;
+		width: 160px;
+
+		@media (max-width: 480px) {
+			width: 60px;
+		}
+
+		img {
+			display: block;
+			width: 100%;
+			height: auto;
+		}
 	}
 	// .header__phone
 	&__phone {

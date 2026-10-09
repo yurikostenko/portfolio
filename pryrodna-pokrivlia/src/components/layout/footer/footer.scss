@@ -1,5 +1,79 @@
 .footer {
-	// .footer__container
+	@include adaptiveValue("padding-top", 24, 20);
+
+	border-top: 1px solid var(--color-border);
+
 	&__container {
+		display: flex;
+		flex-direction: column;
+		@include adaptiveValue("gap", 24, 20);
+	}
+
+	&__main {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		@include adaptiveValue("gap", 30, 20);
+
+		@media (width < toEm($mobileSmall)) {
+			align-items: flex-start;
+			flex-direction: column;
+		}
+	}
+
+	&__logo-link {
+		display: inline-flex;
+		flex: 0 0 auto;
+		align-items: center;
+	}
+
+	&__logo {
+		display: block;
+		width: 160px;
+		@media (width < toEm($mobile)) {
+			width: 120px;
+		}
+	}
+
+	&__nav {
+		min-width: 0;
+	}
+
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 12px 24px;
+	}
+
+	&__link {
+		color: var(--color-text);
+		text-decoration: none;
+		transition: color 0.3s;
+
+		html:not([data-fls-touch]) & {
+			@media (hover: hover) and (pointer: fine) {
+				&:hover {
+					color: var(--color-accent);
+				}
+			}
+		}
+	}
+
+	&__bottom {
+		display: flex;
+		justify-content: space-between;
+		gap: 16px;
+		padding-block: 16px;
+		border-top: 1px solid var(--color-border);
+
+		@media (width < toEm($mobile)) {
+			flex-direction: column;
+			gap: 8px;
+		}
+	}
+
+	&__copyright {
+		color: var(--color-text-muted);
+		font-size: 14px;
 	}
 }
