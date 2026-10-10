@@ -162,11 +162,6 @@
         }
     }
 }
-.title {
-    @include adaptiveValue("font-size", 30, 20);
-    font-family: var(--font-family-title);
-    line-height: 1.2;
-}
 
 /* ===== SERVICES ===== */
 
@@ -313,6 +308,7 @@
 
 .contacts-preview {
     @include adaptiveValue("padding-block", 70, 40);
+    background-color: var(--color-surface);
 
     &__container {
         display: grid;
@@ -365,16 +361,11 @@
     &__phone,
     &__messenger {
         color: var(--color-text);
-        text-decoration: underline;
-        transition:
-            color 0.3s,
-            text-decoration-color 0.3s;
 
         html:not([data-fls-touch]) & {
             @media (hover: hover) and (pointer: fine) {
                 &:hover {
                     color: var(--color-accent);
-                    text-decoration-color: currentColor;
                 }
             }
         }
@@ -384,7 +375,7 @@
         @include adaptiveValue("font-size", 30, 24);
         font-family: var(--font-family-title);
         line-height: 1.2;
-        text-underline-offset: 5px;
+        transition: color 0.3s;
     }
 
     &__messengers {
@@ -397,8 +388,20 @@
         display: inline-block;
         padding-block: 6px;
         font-weight: 700;
+        text-decoration: underline;
         text-underline-offset: 3px;
         text-decoration-color: var(--color-border);
+        transition:
+            color 0.3s,
+            text-decoration-color 0.3s;
+
+        html:not([data-fls-touch]) & {
+            @media (hover: hover) and (pointer: fine) {
+                &:hover {
+                    text-decoration-color: currentColor;
+                }
+            }
+        }
     }
 
     &__note {

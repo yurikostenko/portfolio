@@ -1,0 +1,199 @@
+.about {
+   @include adaptiveValue("padding-block-end", 50, 30);
+   // .about__hero
+   &__hero {
+   }
+   // .about__history
+   &__history {
+   }
+   // .about__development
+   &__development {
+   }
+   // .about__cta
+   &__cta {
+   }
+}
+
+/* ===== HERO-ABOUT ===== */
+
+.hero-about {
+   @include adaptiveValue("padding-block", 50, 30);
+   // .hero-about__container
+   &__container {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      align-items: center;
+      @include adaptiveValue("column-gap", 40, 20);
+
+      @media (width < toEm($tablet)) {
+         grid-template-columns: 1fr;
+         @include adaptiveValue("row-gap", 40, 24);
+      }
+   }
+   // .hero-about__content
+   &__content {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+      @include adaptiveValue("gap", 30, 15);
+   }
+   // .hero-about__title
+   &__title {
+      @include adaptiveValue("font-size", 35, 25);
+      font-family: var(--font-family-title);
+      line-height: 1.2;
+   }
+   // .hero-about__lead
+   &__lead {
+      max-width: 500px;
+   }
+   // .hero-about__image
+   &__image {
+      aspect-ratio: 4 / 3;
+      overflow: hidden;
+
+      img {
+         display: block;
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
+   }
+}
+
+/* ===== HISTORY-ABOUT ===== */
+
+.history-about {
+   @include adaptiveValue("padding-block", 50, 25);
+   // .history-about__container
+   &__container {
+      display: grid;
+      grid-template-columns: minmax(280px, 0.8fr) minmax(0, 1.2fr);
+      grid-template-areas: "image content";
+      align-items: start;
+      @include adaptiveValue("column-gap", 100, 30);
+
+      @media (width < toEm($tablet)) {
+         grid-template-columns: 1fr;
+         grid-template-areas: "content" "image";
+         @include adaptiveValue("row-gap", 40, 24);
+      }
+   }
+   // .history-about__image
+   &__image {
+      grid-area: image;
+      overflow: hidden;
+      aspect-ratio: 3 / 4;
+
+      img {
+         display: block;
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
+
+      @media (width < toEm($tablet)) {
+         aspect-ratio: 16 / 10;
+      }
+   }
+   // .history-about__content
+   &__content {
+      grid-area: content;
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+      @include adaptiveValue("gap", 24, 16);
+   }
+   // .history-about__title
+   &__title {
+   }
+}
+
+/* ===== DEVELOPMENT-ABOUT ===== */
+
+.development-about {
+   @include adaptiveValue("padding-block", 50, 25);
+   // .development-about__container
+   &__container {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(280px, 1fr);
+      align-items: start;
+      @include adaptiveValue("column-gap", 100, 30);
+
+      @media (width < toEm($tablet)) {
+         grid-template-columns: 1fr;
+         @include adaptiveValue("row-gap", 40, 24);
+      }
+   }
+   // .development-about__content
+   &__content {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+      @include adaptiveValue("gap", 24, 16);
+   }
+   // .development-about__title
+   &__title {
+   }
+   // .development-about__image
+   &__image {
+      overflow: hidden;
+      aspect-ratio: 4 / 3;
+
+      img {
+         display: block;
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
+   }
+}
+
+/* ===== CTA-ABOUT ===== */
+
+.cta-about {
+   // .cta-about__container
+   &__container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+      @include adaptiveValue("padding-block", 40, 25);
+      @include adaptiveValue("padding-inline", 30, 20);
+      background-color: var(--color-surface);
+
+      @media (width < toEm($mobile)) {
+         flex-direction: column;
+         align-items: flex-start;
+      }
+   }
+   // .cta-about__content
+   &__content {
+      display: flex;
+      flex-direction: column;
+      @include adaptiveValue("gap", 24, 16);
+   }
+   // .cta-about__title
+   &__title {
+   }
+   // .cta-about__text
+   &__text {
+   }
+   // .cta-about__phone
+   &__phone {
+      flex: 0 0 auto;
+      color: var(--color-text);
+      font-family: var(--font-family-title);
+      @include adaptiveValue("font-size", 30, 24);
+      line-height: 1.2;
+      transition: color 0.3s;
+
+      html:not([data-fls-touch]) & {
+         @media (hover: hover) and (pointer: fine) {
+            &:hover {
+               color: var(--color-accent);
+            }
+         }
+      }
+   }
+}

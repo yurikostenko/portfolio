@@ -1,0 +1,5 @@
+.title {
+   @include adaptiveValue("font-size", 30, 20);
+   font-family: var(--font-family-title);
+   line-height: 1.2;
+}
