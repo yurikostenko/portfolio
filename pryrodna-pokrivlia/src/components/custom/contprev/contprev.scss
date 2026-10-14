@@ -1,0 +1,102 @@
+.contacts-preview {
+   @include adaptiveValue("padding-block", 70, 40);
+   background-color: var(--color-surface);
+
+   &__container {
+      display: grid;
+      grid-template-columns: minmax(260px, 0.8fr) minmax(0, 1.2fr);
+      @include adaptiveValue("gap", 70, 30);
+      align-items: start;
+
+      @media (width < toEm($tablet)) {
+         grid-template-columns: 1fr;
+      }
+   }
+
+   &__intro {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      @include adaptiveValue("gap", 20, 15);
+   }
+
+   &__details {
+      position: relative;
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      @include adaptiveValue("gap", 28, 20);
+      @include adaptiveValue("padding-left", 50, 20);
+
+      &::before {
+         content: "";
+         position: absolute;
+         inset-block: 0;
+         inset-inline-start: 0;
+         width: 1px;
+         background-color: var(--color-border);
+      }
+   }
+
+   &__item {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 4px;
+   }
+
+   &__caption {
+      color: var(--color-text-muted);
+   }
+
+   &__phone,
+   &__messenger {
+      color: var(--color-text);
+
+      html:not([data-fls-touch]) & {
+         @media (hover: hover) and (pointer: fine) {
+            &:hover {
+               color: var(--color-accent);
+            }
+         }
+      }
+   }
+
+   &__phone {
+      @include adaptiveValue("font-size", 30, 24);
+      font-family: var(--font-family-title);
+      line-height: 1.2;
+      transition: color 0.3s;
+   }
+
+   &__messengers {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 25px;
+   }
+
+   &__messenger {
+      display: inline-block;
+      padding-block: 6px;
+      font-weight: 700;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-color: var(--color-border);
+      transition:
+         color 0.3s,
+         text-decoration-color 0.3s;
+
+      html:not([data-fls-touch]) & {
+         @media (hover: hover) and (pointer: fine) {
+            &:hover {
+               text-decoration-color: currentColor;
+            }
+         }
+      }
+   }
+
+   &__note {
+      color: var(--color-text-muted);
+   }
+}

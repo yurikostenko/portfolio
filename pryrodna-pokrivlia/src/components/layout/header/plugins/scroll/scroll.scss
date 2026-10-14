@@ -11,7 +11,7 @@
 
 [data-fls-header-scroll-show] {
 	&.--header-scroll {
-		transition: translate 0.3s;
+		transition: translate 0.25s;
 		translate: 0px -100%;
 	}
 	&.--header-show {

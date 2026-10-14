@@ -1,7 +1,27 @@
 .header {
+	position: relative;
+	isolation: isolate;
 	border-bottom: 1px solid var(--color-border);
 	@media (width <= toEm($mobileSmall)) {
 		padding-block: 5px;
+	}
+
+	&::before {
+		position: absolute;
+		z-index: -1;
+		inset: 0;
+		background-color: var(--color-surface);
+		box-shadow: 0 4px 16px rgb(0 0 0 / 8%);
+		content: "";
+		opacity: 0;
+		pointer-events: none;
+		transition: opacity 0.3s ease;
+	}
+
+	&.--header-scroll {
+		&::before {
+			opacity: 1;
+		}
 	}
 	// .header__container
 	&__container {
@@ -32,7 +52,7 @@
 		font-weight: 700;
 		transition: scale 0.3s;
 		html:not([data-fls-touch]) & {
-			@media (any-hover: hover), (pointer: fine) {
+			@media (hover: hover) and (pointer: fine) {
 				&:hover {
 					scale: 1.05;
 				}

@@ -50,15 +50,20 @@ if (galleries.length) {
 }
 */
 // Запуск
-function initGallery() {
-	if (document.querySelector('[data-fls-gallery]')) {
-		const gallery = new lightGallery(document.querySelector('[data-fls-gallery]'), {
-			//plugins: [lgZoom, lgThumbnail],
-			licenseKey: KEY,
-			selector: 'a',
-			speed: 500,
-		})
-	}
-}
-window.addEventListener('load', initGallery())
 
+function initGallery() {
+	document.querySelectorAll('[data-fls-gallery]').forEach((gallery) => {
+		lightGallery(gallery, {
+			licenseKey: KEY,
+			selector: '[data-gallery-item]',
+			speed: 500,
+			download: false,
+		});
+	});
+}
+
+if (document.readyState === 'complete') {
+	initGallery();
+} else {
+	window.addEventListener('load', initGallery, { once: true });
+}

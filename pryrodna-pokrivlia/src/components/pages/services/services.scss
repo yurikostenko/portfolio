@@ -1,0 +1,299 @@
+.services {
+   > .item-service:nth-child(even of .item-service) {
+      @media (width >= toEm($tablet)) {
+         .item-service__container {
+            grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+         }
+
+         .item-service__content {
+            grid-column: 2;
+            grid-row: 1;
+         }
+
+         .item-service__gallery {
+            grid-column: 1;
+            grid-row: 1;
+         }
+      }
+   }
+   // .services__hero
+   &__hero {
+   }
+
+   // .services__navigation
+   &__navigation {
+   }
+
+   // .services__item
+   &__item {
+   }
+
+   // .services__cta
+   &__cta {
+   }
+}
+
+/* ===== HERO-SERVICES ===== */
+
+.hero-services {
+   @include adaptiveValue("padding-block", 50, 30);
+
+   // .hero-services__container
+   &__container {
+      display: grid;
+      grid-template-columns: minmax(0, 0.5fr) minmax(0, 1.5fr);
+      align-items: center;
+      @include adaptiveValue("column-gap", 40, 20);
+
+      @media (width < toEm($tablet)) {
+         grid-template-columns: 1fr;
+         @include adaptiveValue("row-gap", 40, 24);
+      }
+   }
+
+   // .hero-services__content
+   &__content {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+      @include adaptiveValue("gap", 30, 15);
+   }
+
+   // .hero-services__title
+   &__title {
+      @include adaptiveValue("font-size", 35, 25);
+      font-family: var(--font-family-title);
+      line-height: 1.2;
+   }
+
+   // .hero-services__lead
+   &__lead {
+   }
+
+   // .hero-services__image
+   &__image {
+      overflow: hidden;
+      aspect-ratio: 1200 / 518;
+      aspect-ratio: 16 / 9;
+
+      img {
+         display: block;
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
+   }
+}
+
+/* ===== NAVIGATION-SERVICES ===== */
+
+.navigation-services {
+   // .navigation-services__container
+   &__container {
+   }
+   // .navigation-services__list
+   &__list {
+      counter-reset: item;
+   }
+   // .navigation-services__item
+   &__item {
+      counter-increment: item;
+
+      &:not(:last-child) {
+         .navigation-services__link {
+            border-bottom: 1px solid var(--color-border);
+         }
+      }
+   }
+   // .navigation-services__link
+   &__link {
+      display: flex;
+      align-items: center;
+      column-gap: 32px;
+      width: 100%;
+      max-width: 820px;
+
+      @include adaptiveValue("padding-block", 28, 18);
+
+      &::before {
+         content: counter(item, decimal-leading-zero);
+         font-weight: 500;
+         line-height: 1.2;
+         opacity: 0.6;
+      }
+      // .navigation-services__link--arrow
+      &--arrow {
+         &::after {
+            content: "→";
+
+            margin-inline-start: auto;
+
+            @include adaptiveValue("font-size", 24, 18);
+            line-height: 1;
+            transition: transform 0.3s ease;
+         }
+      }
+
+      html:not([data-fls-touch]) & {
+         @media (hover: hover) and (pointer: fine) {
+            &:hover {
+               &::after {
+                  transform: translateX(6px);
+               }
+            }
+         }
+      }
+
+      &:focus-visible {
+         outline: 2px solid currentColor;
+         outline-offset: 4px;
+         border-radius: 2px;
+      }
+   }
+}
+
+/* ===== ITEM-SERVICE ===== */
+
+.item-service {
+   @include adaptiveValue("padding-block", 50, 30);
+   // .item-service__container
+   &__container {
+      display: grid;
+      grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+      align-items: start;
+      column-gap: 64px;
+
+      @include adaptiveValue("column-gap", 64, 32);
+
+      @media (width < toEm($tablet)) {
+         grid-template-columns: minmax(0, 1fr);
+
+         @include adaptiveValue("row-gap", 32, 24);
+      }
+   }
+   // .item-service__content
+   &__content {
+      min-width: 0;
+      > *:not(:last-child) {
+         @include adaptiveValue("margin-bottom", 30, 20);
+      }
+   }
+   // .item-service__title
+   &__title {
+   }
+   // .item-service__description
+   &__description {
+      > *:not(:last-child) {
+         @include adaptiveValue("margin-bottom", 30, 20);
+      }
+   }
+   // .item-service__subtitle
+   &__subtitle {
+      @include adaptiveValue("font-size", 24, 18);
+      font-weight: 500;
+      font-family: var(--font-family-title);
+      line-height: 1.2;
+      margin-bottom: 20px;
+   }
+   // .item-service__spollers
+   &__spollers {
+   }
+   // .item-service__link
+   &__link {
+      display: inline-flex;
+      align-items: center;
+      column-gap: 12px;
+      width: fit-content;
+
+      color: var(--color-text);
+      font-weight: 500;
+      // .item-service__link--arrow
+      &--arrow {
+         &::after {
+            content: "→";
+            color: var(--color-accent);
+            @include adaptiveValue("font-size", 24, 18);
+            transition: transform 0.3s ease;
+         }
+      }
+      html:not([data-fls-touch]) & {
+         @media (hover: hover) and (pointer: fine) {
+            &:hover {
+               &::after {
+                  transform: translateX(5px);
+               }
+            }
+         }
+      }
+      &:focus-visible {
+         outline: 2px solid var(--color-accent);
+         outline-offset: 5px;
+         border-radius: 2px;
+      }
+   }
+   // .item-service__gallery
+   &__gallery {
+      min-width: 0;
+   }
+   // .item-service__slider
+   &__slider {
+      overflow: hidden;
+      margin-bottom: 16px;
+   }
+   // .item-service__wrapper
+   &__wrapper {
+   }
+   // .item-service__thumbs
+   &__thumbs {
+      overflow: hidden;
+
+      .block__slide {
+         position: relative;
+         overflow: hidden;
+         aspect-ratio: 4 / 3;
+         cursor: pointer;
+
+         &::after {
+            position: absolute;
+            inset: 0;
+            border: 2px solid transparent;
+            content: "";
+            pointer-events: none;
+            transition: border-color 0.3s ease;
+         }
+
+         img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+         }
+
+         &.swiper-slide-thumb-active {
+            &::after {
+               border-color: var(--color-accent);
+            }
+         }
+      }
+   }
+
+   // Велике фото
+   &__slider {
+      .block__slide {
+         overflow: hidden;
+         aspect-ratio: 4 / 3;
+
+         img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+         }
+      }
+   }
+}
+.title {
+}
+.swiper {
+}
+.swiper-wrapper {
+}

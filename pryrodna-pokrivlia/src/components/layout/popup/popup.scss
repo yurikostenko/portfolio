@@ -63,3 +63,83 @@ body::after {
 	width: 100%;
 	aspect-ratio: 16 / 9;
 }
+
+.popup {
+	// .popup__body
+	&__body {
+		width: min(100% - 32px, 420px);
+		padding: 48px 40px;
+		background-color: var(--color-surface);
+		color: var(--color-text);
+	}
+
+	// .popup__close
+	&__close {
+		top: 16px;
+		right: 16px;
+	}
+	// .popup__text
+	&__text {
+		display: grid;
+		justify-items: center;
+		row-gap: 24px;
+	}
+	// .popup__phone
+	&__phone {
+		color: var(--color-text);
+		font-size: 24px;
+		font-weight: 500;
+		line-height: 1.2;
+		text-decoration: none;
+		transition: color 0.3s ease;
+
+		html:not([data-fls-touch]) & {
+			@media (hover: hover) and (pointer: fine) {
+				&:hover {
+					color: var(--color-accent);
+				}
+			}
+		}
+
+		&:focus-visible {
+			outline: 2px solid var(--color-accent);
+			outline-offset: 5px;
+		}
+	}
+	// .popup__messengers
+	&__messengers {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 16px;
+	}
+	// .popup__messenger
+	&__messenger {
+		display: grid;
+		width: 52px;
+		aspect-ratio: 1;
+		place-items: center;
+		transition: transform 0.25s ease;
+
+		img {
+			display: block;
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+
+		html:not([data-fls-touch]) & {
+			@media (hover: hover) and (pointer: fine) {
+				&:hover {
+					transform: translateY(-3px);
+				}
+			}
+		}
+
+		&:focus-visible {
+			outline: 2px solid var(--color-accent);
+			outline-offset: 4px;
+			border-radius: 4px;
+		}
+	}
+}
