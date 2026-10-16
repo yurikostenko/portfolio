@@ -14,7 +14,7 @@ const KEY = '7EC452A9-0CFD441C-BD984C7C-17C8456E';
 // Плагіни
 // lgZoom, lgAutoplay, lgComment, lgFullscreen, lgHash, lgPager, lgRotate, lgShare, lgThumbnail, lgVideo, lgMediumZoom
 // import lgThumbnail from 'lightgallery/plugins/thumbnail/lg-thumbnail.min.js'
-//import lgZoom from 'lightgallery/plugins/zoom/lg-zoom.min.js'
+import lgZoom from 'lightgallery/plugins/zoom/lg-zoom.min.js'
 
 // Базові стилі
 import './assets/lightgallery.css';
@@ -24,7 +24,7 @@ import './assets/lightgallery.css';
 // import './assets/lg-thumbnail.css';
 // import './assets/lg-video.css';
 // import './assets/lg-autoplay.css';
-// import './assets/lg-zoom.css';
+import './assets/lg-zoom.css';
 // import './assets/lg-pager.css';
 // import './assets/lg-fullscreen.css';
 // import './assets/lg-share.css';
@@ -55,6 +55,7 @@ function initGallery() {
 	document.querySelectorAll('[data-fls-gallery]').forEach((gallery) => {
 		lightGallery(gallery, {
 			licenseKey: KEY,
+			plugins: [lgZoom],
 			selector: '[data-gallery-item]',
 			speed: 500,
 			download: false,

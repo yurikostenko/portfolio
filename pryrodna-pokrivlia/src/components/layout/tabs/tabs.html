@@ -1,18 +1,237 @@
-<div data-fls-tabs class="tabs">
-	<nav data-fls-tabs-titles class="tabs__navigation">
-		<button type="button" class="tabs__title --tab-active">Таб №1</button>
-		<button type="button" class="tabs__title">Таб №2</button>
-		<button type="button" class="tabs__title">Таб №3</button>
-	</nav>
-	<div data-fls-tabs-body class="tabs__content">
-		<div class="tabs__body">
-			Вміст першого таба
-		</div>
-		<div class="tabs__body">
-			Вміст другого таба
-		</div>
-		<div class="tabs__body">
-			Вміст третього таба
-		</div>
-	</div>
+<div data-fls-tabs class="works-gallery__tabs tabs">
+    <nav data-fls-tabs-titles class="tabs__navigation">
+        <button type="button" class="tabs__title --tab-active">
+            Будинки
+        </button>
+
+        <button type="button" class="tabs__title">
+            Альтанки
+        </button>
+
+        <button type="button" class="tabs__title">
+            Лазні
+        </button>
+
+        <button type="button" class="tabs__title">
+            Мініоб’єкти
+        </button>
+
+        <button type="button" class="tabs__title">
+            Відео
+        </button>
+    </nav>
+
+    <div data-fls-tabs-body class="tabs__content">
+        <div class="tabs__body">
+            <include src="@components/layout/masonry/masonry.html" locals='{
+            "items": [	 
+                { "img": "@img/main_page/thousand.webp", "title": "Дерев’яна будівля з фігурною очеретяною покрівлею на березі водойми" },						 
+                { "img": "@img/gallery/houses/062.webp", "title": "Велика будівля з очеретяною покрівлею — вигляд з подвір’я" },						 
+                { "img": "@img/gallery/houses/097.webp", "title": "Двоповерховий будинок з темними дерев’яними балками та очеретяним дахом" },						 
+                { "img": "@img/gallery/houses/099.webp", "title": "Очеретяна покрівля з невеликим слуховим вікном" },						 
+                { "img": "@img/gallery/houses/101.webp", "title": "Будинок з дерев’яними балками та очеретяною покрівлею — вигляд з газону" },						 
+                { "img": "@img/gallery/houses/171155.webp", "title": "Будинок з очеретяним дахом і прибудованим гаражем" },						 
+                { "img": "@img/gallery/houses/a101.webp", "title": "Будинки з очеретяними дахами навколо зеленого подвір’я" },						 
+                { "img": "@img/gallery/houses/a102.webp", "title": "Одноповерховий будинок з очеретяним дахом і критою терасою" },						 
+                { "img": "@img/gallery/houses/a103.webp", "title": "Ряд будівель з очеретяними дахами вздовж подвір’я" },						 
+                { "img": "@img/gallery/houses/a104.webp", "title": "Велика будівля з очеретяним дахом і відкритою галереєю" },						 
+                { "img": "@img/gallery/houses/av1.webp", "title": "Дерев’яний будинок з округлою очеретяною покрівлею" },						 
+                { "img": "@img/gallery/houses/av2.webp", "title": "Дерев’яний будинок з очеретяним дахом серед сосен — вигляд спереду" },						 
+                { "img": "@img/gallery/houses/av3.webp", "title": "Дерев’яний будинок з очеретяним дахом серед сосен — вигляд збоку" },						 
+                { "img": "@img/gallery/houses/b101.webp", "title": "Світла будівля з очеретяною покрівлею та арковим вікном" },						 
+                { "img": "@img/gallery/houses/b102.webp", "title": "Будівля зі світлими стінами та широким очеретяним дахом" },						 
+                { "img": "@img/gallery/houses/b103.webp", "title": "Дерев’яна галерея під звисом очеретяної покрівлі" },						 
+                { "img": "@img/gallery/houses/b104.webp", "title": "Двоповерхова будівля з очеретяним дахом серед дерев" },						 
+                { "img": "@img/about/b105.webp", "title": "Очеретяна покрівля на будинку" },						 
+                { "img": "@img/gallery/houses/kaban1.webp", "title": "Дерев’яний будинок з багаторівневою очеретяною покрівлею" },						 
+                { "img": "@img/services/reed-roofs/kaban2.webp", "title": "Очеретяний дах будинку" },						 
+                { "img": "@img/about/kaban3.webp", "title": "Будинок з очеретяною покрівлею" },						 
+                { "img": "@img/gallery/houses/kanev1.webp", "title": "Світлий будинок з очеретяним дахом" },						 
+                { "img": "@img/gallery/houses/kanev2.webp", "title": "Будівля з широким очеретяним дахом — вигляд із газону" },						 
+                { "img": "@img/gallery/houses/kanev3.webp", "title": "Будинок з очеретяною покрівлею серед дерев і газону" },						 
+                { "img": "@img/gallery/houses/keliberda6.webp", "title": "Будинок з очеретяним дахом" },						 
+                { "img": "@img/gallery/houses/lesniki11.webp", "title": "Влаштування кроквяної системи на будинку — загальний вигляд" },						 
+                { "img": "@img/gallery/houses/lesniki12.webp", "title": "Монтаж очеретяного даху з відкритими ділянками крокв" },						 
+                { "img": "@img/gallery/houses/lesniki13.webp", "title": "Будинок зі складною очеретяною покрівлею під час виконання робіт" },						 
+                { "img": "@img/gallery/houses/lesniki15.webp", "title": "Монтаж очеретяної покрівлі на будинку з округлими стінами" },						 
+                { "img": "@img/gallery/houses/lesniki16.webp", "title": "Дерев’яний будинок під час облаштування очеретяного даху" },						 
+                { "img": "@img/services/lesniki17.webp", "title": "Будинок з натуральною очеретяною покрівлею" },						 
+                { "img": "@img/gallery/houses/lesniki18.webp", "title": "Будинок з багаторівневою очеретяною покрівлею — загальний вигляд" },						 
+                { "img": "@img/about/lukovica1.webp", "title": "Майстри накривають очеретом дах будинку" },						 
+                { "img": "@img/gallery/houses/lukovica2.webp", "title": "Зруб із високою очеретяною покрівлею та відкритою верандою" },						 
+                { "img": "@img/gallery/houses/mini7.webp", "title": "Дерев’яна будівля з очеретяним дахом і рядом вікон" },						 
+                { "img": "@img/gallery/houses/mini15.webp", "title": "Велика дерев’яна будівля з очеретяною покрівлею — вигляд спереду" },						 
+                { "img": "@img/gallery/houses/mini16.webp", "title": "Дерев’яна будівля з очеретяним дахом і центральним входом" },						 
+                { "img": "@img/services/reed-covering/moshun2.webp", "title": "Монтаж очеретяної покрівлі" },						 
+                { "img": "@img/services/reed-roofs/moshun3.webp", "title": "Будинок під очеретом" },						 
+                { "img": "@img/gallery/houses/oseshina4.webp", "title": "Фасад будинку з очеретяним дахом і рядом вікон" },						 
+                { "img": "@img/gallery/houses/oseshina6.webp", "title": "Будинок з очеретяною покрівлею та заскленою верандою" },						 
+                { "img": "@img/gallery/houses/oseshina9.webp", "title": "Будинок з очеретяним дахом і дерев’яним оздобленням фасаду" },						 
+                { "img": "@img/gallery/houses/petroci2.webp", "title": "Світлий кам`яний будинок з очеретяною покрівлею" },						 
+                { "img": "@img/gallery/houses/petroci3.webp", "title": "Світлий кам`яний будинок зі складним очеретяним дахом — вигляд із подвір’я" },						 
+                { "img": "@img/gallery/houses/pluty1.webp", "title": "Будинок з очеретяним дахом і слуховим вікном серед сосен" },						 
+                { "img": "@img/gallery/houses/pluty2.webp", "title": "Світлий будинок з очеретяною покрівлею та мансардним слуховим вікном" },						 
+                { "img": "@img/gallery/houses/pluty3.webp", "title": "Лісовий будинок з очеретяним дахом , оточений густими деревами" },						 
+                { "img": "@img/gallery/houses/restoran003.webp", "title": "Будівля з великим заскленим фронтоном під очеретяним дахом" },						 
+                { "img": "@img/gallery/houses/srub1.webp", "title": "Зруб з очеретяною покрівлею та відкритою терасою — вигляд спереду" },						 
+                { "img": "@img/gallery/houses/srub2.webp", "title": "Зруб з очеретяною покрівлею та терасою серед дерев" },						 
+                { "img": "@img/gallery/houses/vd1.webp", "title": "Будинок з округлими формами очеретяної покрівлі — вигляд із кута" },						 
+                { "img": "@img/gallery/houses/vd2.webp", "title": "Очеретяна покрівля з виступом навколо вікна — крупний план" }						 
+				  ]
+            }'>
+            </include>
+        </div>
+
+        <div class="tabs__body">
+            <include src="@components/layout/masonry/masonry.html" locals='{
+            "items": [						 
+                { "img": "@img/gallery/gazebos/a109.webp", "title": "Відкрита альтанка з очеретяним дахом серед зелені" },						 
+                { "img": "@img/gallery/gazebos/a111.webp", "title": "Альтанка з очеретяною покрівлею біля басейну" },						 
+                { "img": "@img/gallery/gazebos/a112.webp", "title": "Альтанка з широким очеретяним дахом — вигляд із газону" },						 
+                { "img": "@img/gallery/gazebos/altanka000.webp", "title": "Дерев’яний каркас альтанки перед укладанням покрівлі" },
+                { "img": "@img/services/gazebos/altanka002.webp", "title": "Альтанка під натуральною очеретяною покрівлею" },						 
+                { "img": "@img/gallery/gazebos/baniya4.webp", "title": "Велика відкрита альтанка під час укладання очеретяного даху" },						 
+                { "img": "@img/gallery/gazebos/d101.webp", "title": "Дерев’яна альтанка з очеретяним дахом серед сосен" },						 
+                { "img": "@img/gallery/gazebos/d102.webp", "title": "Дерев’яна альтанка з високим дахом і різьбленим оздобленням входу" },
+                { "img": "@img/services/gazebos/d103.webp", "title": "Дерев’яна альтанка під очеретяною стріхою" },						 
+                { "img": "@img/gallery/gazebos/damba1.webp", "title": "Альтанка з очеретяним дахом і цегляним димоходом — вигляд із кута" },	
+                { "img": "@img/services/gazebos/dubechny1.webp", "title": "Альтанка з покрівлею з натурального очерету" },					 
+                { "img": "@img/gallery/gazebos/dubechny2.webp", "title": "Піч усередині альтанки з дерев’яними поручнями" },						 
+                { "img": "@img/gallery/gazebos/kanal2.webp", "title": "Альтанки з очеретяними дахами серед садової зелені" },						 
+                { "img": "@img/gallery/gazebos/kanal3.webp", "title": "Відкрита альтанка з очеретяною покрівлею та дерев’яною огорожею" },						 
+                { "img": "@img/gallery/gazebos/kanal4.webp", "title": "Дерев’яна альтанка з округлими схилами очеретяного даху" },						 
+                { "img": "@img/gallery/gazebos/kanal5.webp", "title": "Дерев’яна альтанка з очеретяною покрівлею в саду" },						 
+                { "img": "@img/gallery/gazebos/keliberda2.webp", "title": "Засклена альтанка з фігурною очеретяною покрівлею біля басейну" },						 
+                { "img": "@img/gallery/gazebos/keliberda3.webp", "title": "Інтер’єр альтанки з відкритими дерев’яними кроквами та підвісними світильниками" },						 
+                { "img": "@img/gallery/gazebos/keliberda4.webp", "title": "Альтанка з очеретяним дахом, дерев’яними поручнями та складеними дровами" },						 
+                { "img": "@img/gallery/gazebos/keliberda5.webp", "title": "Світла альтанка з очеретяним дахом і димоходом — вигляд із газону" },						 
+                { "img": "@img/gallery/gazebos/kgd130.webp", "title": "Дерев’яна альтанка з очеретяним дахом на березі водойми" },						 
+                { "img": "@img/gallery/gazebos/kiev.webp", "title": "Альтанка зі зрубу з очеретяною покрівлею та піччю — загальний вигляд" },						 
+                { "img": "@img/gallery/gazebos/kiev2.webp", "title": "Альтанка зі зрубу — дерев’яні стіни та різьблені стовпи під звисом даху" },						 
+                { "img": "@img/gallery/gazebos/kiev3.webp", "title": "Цегляний пічний комплекс усередині дерев’яної альтанки" },						 
+                { "img": "@img/gallery/gazebos/lesniki2.webp", "title": "Альтанка з широким очеретяним дахом і піччю біля будинку" },						 
+                { "img": "@img/gallery/gazebos/lesniki3.webp", "title": "Очеретяний дах альтанки біля тераси з дерев’яними поручнями" },						 
+                { "img": "@img/gallery/gazebos/lesniki4.webp", "title": "Альтанка з очеретяною покрівлею поруч зі спортивним майданчиком" },						 
+                { "img": "@img/gallery/gazebos/marhali1.webp", "title": "Альтанка з округлою очеретяною покрівлею — вигляд спереду" },						 
+                { "img": "@img/gallery/gazebos/marhali2.webp", "title": "Альтанка з очеретяним дахом і відкритим дерев’яним фронтоном" },						 
+                { "img": "@img/gallery/gazebos/marhali3.webp", "title": "Укладання очеретяної покрівлі альтанки — крупний план схилу даху" },						 
+                { "img": "@img/gallery/gazebos/mini1.webp", "title": "Альтанка з високою округлою очеретяною покрівлею біля будинку" },						 
+                { "img": "@img/gallery/gazebos/mini2.webp", "title": "Альтанка з очеретяним дахом поруч із басейном — вигляд із подвір’я" },						 
+                { "img": "@img/gallery/gazebos/mini3.webp", "title": "Кругла альтанка з конічним очеретяним дахом" },						 
+                { "img": "@img/gallery/gazebos/mini5.webp", "title": "Відкрита дерев’яна альтанка з конічним очеретяним дахом" },						 
+                { "img": "@img/gallery/gazebos/mini6.webp", "title": "Невелика прямокутна будівля з очеретяною покрівлею на газоні" },						 						 
+                { "img": "@img/gallery/gazebos/mini10.webp", "title": "Альтанки з очеретяними дахами біля водойми з кам’янистим берегом" },						 
+                { "img": "@img/gallery/gazebos/mini11.webp", "title": "Альтанки з очеретяними дахами на протилежному березі водойми" },						 
+                { "img": "@img/gallery/gazebos/mini12.webp", "title": "Альтанка з очеретяним дахом на газоні біля будинку" },						 
+                { "img": "@img/gallery/gazebos/mini13.webp", "title": "Відкрита дерев’яна альтанка з округлим очеретяним дахом і поручнями" },						 
+                { "img": "@img/gallery/gazebos/mr3.webp", "title": "Альтанка з очеретяним дахом і піччю серед дерев — вигляд спереду" },						 
+                { "img": "@img/gallery/gazebos/mr4.webp", "title": "Альтанка з очеретяним дахом, білою піччю та складеними дровами — вигляд збоку" },						 
+                { "img": "@img/gallery/gazebos/odess3.webp", "title": "Альтанка з очеретяною покрівлею на просторому газоні — загальний вигляд" },						 
+                { "img": "@img/gallery/gazebos/original1.webp", "title": "Монтаж очеретяної покрівлі на дерев’яній альтанці з будівельними риштуваннями" },						 
+                { "img": "@img/gallery/gazebos/original2.webp", "title": "Дерев’яна будівля з очеретяним дахом і трьома мансардними вікнами" },						 
+                { "img": "@img/gallery/gazebos/original3.webp", "title": "Дерев’яні крокви та мансардні вікна — вигляд зсередини будівлі" },						 
+                { "img": "@img/gallery/gazebos/r101.webp", "title": "Альтанка зі зрубу з фігурною очеретяною покрівлею та димоходом" },						 
+                { "img": "@img/gallery/gazebos/r102.webp", "title": "Альтанка зі зрубу з високим двосхилим очеретяним дахом" },						 
+                { "img": "@img/gallery/gazebos/relaks1.webp", "title": "Дерев’яна альтанка з очеретяним дахом на підвищенні над кам’яною стіною" },
+                { "img": "@img/services/gazebos/relaks2.webp", "title": "Дерев’яна альтанка з очеретяним дахом" },						 
+                { "img": "@img/gallery/gazebos/res1.webp", "title": "Дерев’яна альтанка з багаторівневою очеретяною покрівлею серед сосен" },						 
+                { "img": "@img/gallery/gazebos/res2.webp", "title": "Фігурна очеретяна покрівля великої дерев’яної альтанки" },						 
+                { "img": "@img/gallery/gazebos/res3.webp", "title": "Альтанка з хвилястими схилами очеретяного даху та дерев’яними поручнями" },						 
+                { "img": "@img/gallery/gazebos/res4.webp", "title": "Відкрита альтанка з очеретяною покрівлею та перехресною дерев’яною огорожею в сосновому лісі" },						 
+                { "img": "@img/gallery/gazebos/t101.webp", "title": "Простора альтанка з очеретяним дахом і пічним комплексом — вигляд спереду" },						 
+                { "img": "@img/gallery/gazebos/t102.webp", "title": "Альтанка з широкою очеретяною покрівлею та дерев’яною огорожею — вигляд із кута" },						 
+                { "img": "@img/gallery/gazebos/t103.webp", "title": "Альтанка з фігурним звисом очеретяного даху та білим димоходом" },						 
+                { "img": "@img/gallery/gazebos/uzin1.webp", "title": "Великий павільйон з очеретяним дахом і арковими прорізами біля майданчика" },						 
+                { "img": "@img/gallery/gazebos/uzin2.webp", "title": "Павільйон з очеретяною покрівлею та арковими вікнами — вигляд із кута" },						 
+                { "img": "@img/gallery/gazebos/uzin3.webp", "title": "Павільйон з очеретяним дахом і дерев’яними будиночками під стріхою" },						 
+                { "img": "@img/gallery/gazebos/uzin4.webp", "title": "Ряд дерев’яних будиночків з очеретяними дахами вздовж доріжки" },						 
+                { "img": "@img/gallery/gazebos/uzin5.webp", "title": "Дерев’яні будиночки з очеретяними покрівлями навколо озелененого подвір’я" },						 
+                { "img": "@img/gallery/gazebos/uzin6.webp", "title": "Дерев’яні будиночки з очеретяними дахами біля вимощеного подвір’я" },						 
+                { "img": "@img/gallery/gazebos/vg1.webp", "title": "Велика засклена альтанка з очеретяною покрівлею серед беріз" },						 
+                { "img": "@img/gallery/gazebos/vyshgora03.webp", "title": "Інтер’єр просторої альтанки з відкритими дерев’яними кроквами, столами та барною стійкою" },						 
+                { "img": "@img/gallery/gazebos/vyshgora05.webp", "title": "Столики та дерев’яні опори всередині заскленої альтанки" },						 
+                { "img": "@img/gallery/gazebos/vyshgora08.webp", "title": "Відкриті альтанки з крутими очеретяними дахами та опорами з колод" },						 
+                { "img": "@img/gallery/gazebos/vyshgora09.webp", "title": "Альтанки з очеретяними дахами та відкритими трикутними входами — загальний вигляд" },						 
+                { "img": "@img/gallery/gazebos/vyshgora10.webp", "title": "Альтанка з крутим очеретяним дахом і перехрещеними колодами над входом — вигляд збоку" },						 
+                { "img": "@img/gallery/gazebos/vyshgora11.webp", "title": "Відкрита альтанка з очеретяним дахом на масивних дерев’яних опорах — вигляд спереду" },						 
+                { "img": "@img/gallery/gazebos/vyshgora12.webp", "title": "Альтанка з очеретяним дахом і мангалом на майданчику перед входом" },						 
+                { "img": "@img/gallery/gazebos/vyshgora13.webp", "title": "Засклений павільйон з високою фігурною очеретяною покрівлею серед дерев" }						 
+				  ]
+            }'>
+        </div>
+
+        <div class="tabs__body">
+            <include src="@components/layout/masonry/masonry.html" locals='{
+            "items": [
+                { "img": "@img/gallery/baths/012.webp", "title": "Дерев’яна лазня з очеретяним дахом серед лісової зелені — вигляд спереду" },						 
+                { "img": "@img/gallery/baths/019.webp", "title": "Лазня зі світлого зрубу з очеретяною покрівлею та критим входом" },						 
+                { "img": "@img/gallery/baths/baniya.webp", "title": "Лазня зі зрубу з двосхилим очеретяним дахом і ґанком на дерев’яних стовпах" },						 
+                { "img": "@img/gallery/baths/baniya1.webp", "title": "Лазня зі світлими стінами та округлим очеретяним дахом серед сосен" },						 
+                { "img": "@img/gallery/baths/baniya1h.webp", "title": "Лазня з темного зрубу з очеретяною покрівлею та кам’яним димоходом — загальний вигляд" },						 
+                { "img": "@img/gallery/baths/baniya1p.webp", "title": "Кругла лазня зі зрубу з широким конічним очеретяним дахом — вигляд збоку" },						 
+                { "img": "@img/gallery/baths/baniya1z.webp", "title": "Лазня зі зрубу з вигнутими схилами очеретяного даху та високим відкритим фронтоном" },						 
+                { "img": "@img/gallery/baths/baniya2.webp", "title": "Лазня зі зрубу з фігурним очеретяним дахом і невеликим слуховим вікном — вигляд із кута" },						 
+                { "img": "@img/gallery/baths/baniya2h.webp", "title": "Лазня з темного зрубу під очеретяним дахом із кам’яним димоходом — вигляд із подвір’я" },						 
+                { "img": "@img/gallery/baths/baniya2p.webp", "title": "Кругла лазня зі зрубу з конічною очеретяною покрівлею — вигляд на вхід" },						 
+                { "img": "@img/gallery/baths/baniya2z.webp", "title": "Дерев’яна лазня з очеретяною покрівлею та трикутним вікном під фронтоном" },						 
+                { "img": "@img/gallery/baths/baniya3.webp", "title": "Лазня зі зрубу з округлим звисом очеретяного даху над слуховим вікном — вигляд спереду" },						 
+                { "img": "@img/gallery/baths/oster1.webp", "title": "Лазня зі зрубу з широкою очеретяною покрівлею та димоходом — вигляд із кута" },						 
+                { "img": "@img/gallery/baths/oster2.webp", "title": "Дерев’яна лазня зі складною очеретяною покрівлею та прибудованою критою терасою" },						 
+                { "img": "@img/gallery/baths/oster3.webp", "title": "Велика лазня зі зрубу з багатосхилим очеретяним дахом — вигляд із газону" },						 
+                { "img": "@img/gallery/baths/srub4.webp", "title": "Лазня зі світлого зрубу з фігурною очеретяною покрівлею та високим навісом над входом" },						 
+                { "img": "@img/gallery/baths/srub5.webp", "title": "Лазня зі зрубу з високим дерев’яним фронтоном і вигнутими схилами очеретяного даху" },						 
+                { "img": "@img/gallery/baths/srub6.webp", "title": "Лазня зі зрубу з широкими звисами очеретяної покрівлі — вигляд збоку" }						 
+				  ]
+            }'>
+        </div>
+
+        <div class="tabs__body">
+            <include src="@components/layout/masonry/masonry.html" locals='{
+            "items": [
+                { "img": "@img/gallery/mini-objects/a106.webp", "title": "Садовий навіс із грибоподібною очеретяною покрівлею серед беріз" },						 
+                { "img": "@img/gallery/mini-objects/a108.webp", "title": "Дерев’яні в’їзні ворота з декоративними візерунками під очеретяним дахом" },						 
+                { "img": "@img/gallery/mini-objects/a109.webp", "title": "В’їзні ворота та сторожка з очеретяними дахами — загальний вигляд" },						 
+                { "img": "@img/gallery/mini-objects/a110.webp", "title": "Навіс із широкою очеретяною покрівлею над столиком у березовому гаю" },						 
+                { "img": "@img/gallery/mini-objects/a111.webp", "title": "Відкритий дерев’яний навіс із фігурним очеретяним дахом на піщаному майданчику" },						 
+                { "img": "@img/gallery/mini-objects/b106.webp", "title": "Невелика біла споруда з дерев’яними дверима та вигнутим очеретяним дахом" },						 
+                { "img": "@img/gallery/mini-objects/b107.webp", "title": "Кругла біла споруда з широкою очеретяною покрівлею серед сосен" },						 
+                { "img": "@img/gallery/mini-objects/baniya3h.webp", "title": "Дерев’яний колодязний будиночок із ґратчастими стінками та конічним очеретяним дахом" },						 
+                { "img": "@img/gallery/mini-objects/kanal6.webp", "title": "Вхід до погреба з дерев’яним оздобленням і крутим очеретяним дахом" },						 
+                { "img": "@img/gallery/mini-objects/keliberda1.webp", "title": "Дерев’яна садова гойдалка під двосхилим очеретяним навісом" },						 
+                { "img": "@img/gallery/mini-objects/mini14.webp", "title": "Декоративний будиночок у формі гриба з очеретяним дахом і арковими дверцятами" },						 
+                { "img": "@img/gallery/mini-objects/mini4.webp", "title": "Дерев’яний колодязний будиночок із багатоярусною очеретяною покрівлею" },						 
+                { "img": "@img/gallery/mini-objects/odess1.webp", "title": "Садова гойдалка на дерев’яних опорах під очеретяним дахом" },						 
+                { "img": "@img/gallery/mini-objects/r103.webp", "title": "Садові споруди з очеретяними дахами — гойдалка, альтанка і собача будка" },						 
+                { "img": "@img/gallery/mini-objects/r104.webp", "title": "Собача будка зі світлого зрубу з очеретяним дахом і різьбленим оздобленням входу" },						 
+                { "img": "@img/gallery/mini-objects/r105.webp", "title": "Собача будка зі зрубу з двосхилою очеретяною покрівлею — вигляд із кута" }						 
+				  ]
+            }'>
+        </div>
+
+        <div class="tabs__body">
+            <div class="video-gallery">
+                <each loop="item in [
+        {'id':'CQcLwqz3vqw','title':'Як виглядає очеретяна покрівля після 10 років експлуатації?'},
+        {'id':'bGXHUHXNCpA','title':'Альтанки з очеретяним покриттям'},
+        {'id':'RswD6vZ5rtI','title':'Очерет, сланець, водостік'},
+        {'id':'ujEH6ZF18PE','title':'Як горить очеретяний дах?'}
+    ]">
+                    <button class="video-gallery__item" type="button" data-fls-popup-link="gallery-video"
+                        data-fls-popup-youtube="[[item.id]]" aria-label="Відтворити: [[item.title]]">
+                        <span class="video-gallery__preview">
+                            <img class="video-gallery__image" src="https://img.youtube.com/vi/[[item.id]]/hqdefault.jpg"
+                                alt="" loading="lazy" width="480" height="360">
+                            <span class="video-gallery__play" aria-hidden="true">
+                                <svg width="24" height="28" viewBox="0 0 24 28" fill="none">
+                                    <path d="M24 14L0 28V0L24 14Z" fill="currentColor" />
+                                </svg>
+                            </span>
+                        </span>
+
+                        <span class="video-gallery__title">[[item.title]]</span>
+                    </button>
+                </each>
+            </div>
+        </div>
+    </div>
 </div>

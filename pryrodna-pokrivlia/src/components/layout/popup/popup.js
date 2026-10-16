@@ -263,11 +263,20 @@ class Popup {
 			}
 		}));
 		// YouTube
-		if (this.targetOpen.element.querySelector(`[${this.options.youtubePlaceAttribute}]`)) {
-			setTimeout(() => {
-				this.targetOpen.element.querySelector(`[${this.options.youtubePlaceAttribute}]`).innerHTML = ''
-			}, 500);
+		// if (this.targetOpen.element.querySelector(`[${this.options.youtubePlaceAttribute}]`)) {
+		// 	setTimeout(() => {
+		// 		this.targetOpen.element.querySelector(`[${this.options.youtubePlaceAttribute}]`).innerHTML = ''
+		// 	}, 500);
+		// }
+		const youtubePlace = this.previousOpen.element.querySelector(
+			`[${this.options.youtubePlaceAttribute}]`
+		);
+
+		if (youtubePlace) {
+			youtubePlace.replaceChildren();
 		}
+
+
 		this.previousOpen.element.removeAttribute(this.options.classes.popupActive);
 		// aria-hidden
 		this.previousOpen.element.setAttribute('aria-hidden', 'true');

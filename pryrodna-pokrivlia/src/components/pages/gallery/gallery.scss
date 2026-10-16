@@ -1,0 +1,114 @@
+.gallery {
+   // .gallery__intro
+   &__intro {
+      @include adaptiveValue("padding-block", 50, 30);
+   }
+
+   // .gallery__works
+   &__works {
+      @include adaptiveValue("padding-block-end", 50, 30);
+   }
+}
+
+.intro-gallery {
+   // .intro-gallery__title
+   &__title {
+      @include adaptiveValue("margin-bottom", 20, 16);
+      @include adaptiveValue("font-size", 35, 25);
+      font-family: var(--font-family-title);
+      line-height: 1.2;
+   }
+
+   // .intro-gallery__description
+   &__description {
+   }
+}
+
+/* ===== VIDEO-GALLERY ===== */
+
+.video-gallery {
+   display: grid;
+   grid-template-columns: repeat(2, minmax(0, 1fr));
+   gap: 24px;
+
+   &__item {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      color: inherit;
+      font: inherit;
+      text-align: left;
+      cursor: pointer;
+
+      &:focus-visible {
+         outline: 3px solid var(--color-accent);
+         outline-offset: 5px;
+      }
+
+      html:not([data-fls-touch]) & {
+         @media (hover: hover) and (pointer: fine) {
+            &:hover .video-gallery__image {
+               transform: scale(1.02);
+            }
+
+            &:hover .video-gallery__play {
+               background-color: var(--color-accent);
+            }
+         }
+      }
+   }
+
+   &__preview {
+      position: relative;
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      border-radius: 8px;
+      background: #171717;
+   }
+
+   &__image {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s;
+   }
+
+   &__play {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      display: grid;
+      place-items: center;
+      width: 68px;
+      height: 68px;
+      border-radius: 50%;
+      background: rgb(0 0 0 / 70%);
+      color: #fff;
+      transform: translate(-50%, -50%);
+      transition: background-color 0.3s;
+      pointer-events: none;
+
+      svg {
+         margin-left: 5px;
+      }
+   }
+
+   &__title {
+      display: block;
+      padding-top: 12px;
+      @include adaptiveValue("font-size", 20, 18);
+      font-weight: 500;
+      line-height: 1.4;
+   }
+
+   @media (max-width: 600px) {
+      grid-template-columns: minmax(0, 1fr);
+      gap: 20px;
+   }
+}
