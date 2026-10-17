@@ -158,6 +158,7 @@
                 { "img": "@img/gallery/gazebos/vyshgora13.webp", "title": "Засклений павільйон з високою фігурною очеретяною покрівлею серед дерев" }						 
 				  ]
             }'>
+            </include>
         </div>
 
         <div class="tabs__body">
@@ -183,6 +184,7 @@
                 { "img": "@img/gallery/baths/srub6.webp", "title": "Лазня зі зрубу з широкими звисами очеретяної покрівлі — вигляд збоку" }						 
 				  ]
             }'>
+            </include>
         </div>
 
         <div class="tabs__body">
@@ -206,21 +208,24 @@
                 { "img": "@img/gallery/mini-objects/r105.webp", "title": "Собача будка зі зрубу з двосхилою очеретяною покрівлею — вигляд із кута" }						 
 				  ]
             }'>
+            </include>
         </div>
+
+
 
         <div class="tabs__body">
             <div class="video-gallery">
                 <each loop="item in [
-        {'id':'CQcLwqz3vqw','title':'Як виглядає очеретяна покрівля після 10 років експлуатації?'},
-        {'id':'bGXHUHXNCpA','title':'Альтанки з очеретяним покриттям'},
-        {'id':'RswD6vZ5rtI','title':'Очерет, сланець, водостік'},
-        {'id':'ujEH6ZF18PE','title':'Як горить очеретяний дах?'}
-    ]">
+            {'id':'CQcLwqz3vqw','img':'@img/gallery/video-cover/video-cover-1.jpg','title':'Як виглядає очеретяна покрівля після 10 років експлуатації?'},
+            {'id':'bGXHUHXNCpA','img':'@img/gallery/video-cover/video-cover-2.jpg','title':'Альтанки з очеретяним покриттям'},
+            {'id':'RswD6vZ5rtI','img':'@img/gallery/video-cover/video-cover-3.jpg','title':'Очерет, сланець, водостік'},
+            {'id':'ujEH6ZF18PE','img':'@img/gallery/video-cover/video-cover-4.jpg','title':'Як горить очеретяний дах?'}
+        ]">
                     <button class="video-gallery__item" type="button" data-fls-popup-link="gallery-video"
                         data-fls-popup-youtube="[[item.id]]" aria-label="Відтворити: [[item.title]]">
                         <span class="video-gallery__preview">
-                            <img class="video-gallery__image" src="https://img.youtube.com/vi/[[item.id]]/hqdefault.jpg"
-                                alt="" loading="lazy" width="480" height="360">
+                            <img class="video-gallery__image" src="[[item.img]]" alt="" loading="lazy" width="480"
+                                height="360">
                             <span class="video-gallery__play" aria-hidden="true">
                                 <svg width="24" height="28" viewBox="0 0 24 28" fill="none">
                                     <path d="M24 14L0 28V0L24 14Z" fill="currentColor" />
@@ -233,5 +238,6 @@
                 </each>
             </div>
         </div>
+
     </div>
 </div>
