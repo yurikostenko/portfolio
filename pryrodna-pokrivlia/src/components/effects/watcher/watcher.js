@@ -88,10 +88,26 @@ class ScrollWatcher {
 			FLS(`_FLS_WATCHER_NOPARENT`, paramsWatch.root)
 		}
 		// Відступ спрацьовування
-		configWatcher.rootMargin = paramsWatch.margin;
-		if (paramsWatch.margin.indexOf('px') < 0 && paramsWatch.margin.indexOf('%') < 0) {
-			FLS(`_FLS_WATCHER_WARN_MARGIN`)
-			return
+		// configWatcher.rootMargin = paramsWatch.margin;
+		// if (paramsWatch.margin.indexOf('px') < 0 && paramsWatch.margin.indexOf('%') < 0) {
+		// 	FLS(`_FLS_WATCHER_WARN_MARGIN`)
+		// 	return
+		// }
+		let margin = paramsWatch.margin;
+
+		if (margin === 'reveal') {
+			const offset = Math.round(
+				Math.min(200, Math.max(60, window.innerHeight * 0.2))
+			);
+
+			margin = `0px 0px -${offset}px 0px`;
+		}
+
+		configWatcher.rootMargin = margin;
+
+		if (margin.indexOf('px') < 0 && margin.indexOf('%') < 0) {
+			FLS(`_FLS_WATCHER_WARN_MARGIN`);
+			return;
 		}
 		// Точки спрацьовування
 		if (paramsWatch.threshold === 'prx') {

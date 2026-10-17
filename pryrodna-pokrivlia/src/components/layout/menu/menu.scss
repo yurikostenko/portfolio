@@ -77,6 +77,15 @@
 			transform: translateX(-50%);
 			transition: all 0.3s ease;
 		}
+
+		&--active {
+			color: var(--color-accent);
+
+			&::after {
+				width: 100%;
+			}
+		}
+
 		html:not([data-fls-touch]) & {
 			@media (hover: hover) and (pointer: fine) {
 				&:hover {
@@ -86,8 +95,6 @@
 					}
 				}
 			}
-		}
-		@media (max-width: toEm($mobile)) {
 		}
 	}
 }

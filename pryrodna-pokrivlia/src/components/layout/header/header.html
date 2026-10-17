@@ -1,9 +1,19 @@
 <header data-fls-header data-fls-header-scroll data-fls-header-scroll-show class="header">
 	<div class="header__container">
-		<picture class="header__logo">
-			<source srcset="@img/logo-mobile.svg" media="(max-width: 480px)">
-			<img src="@img/logo.svg" alt="Природна покрівля">
-		</picture>
+		<if condition="'[[active]]' === 'Головна'">
+			<picture class="header__logo">
+				<source srcset="@img/logo-mobile.svg" media="(max-width: 480px)">
+				<img src="@img/logo.svg" width="160" alt="Природна покрівля">
+			</picture>
+		</if>
+		<else>
+			<a class="header__logo" href="index.html">
+				<picture>
+					<source srcset="@img/logo-mobile.svg" media="(max-width: 480px)">
+					<img src="@img/logo.svg" width="160" alt="Природна покрівля — на головну">
+				</picture>
+			</a>
+		</else>
 
 		<include src="@components/layout/menu/menu.html" locals='{"active":"[[active]]"}'></include>
 		<a class="header__phone" data-fls-dynamic=".header__container, 768, 1" href="tel:+380974301403">+38 (097) 430 14

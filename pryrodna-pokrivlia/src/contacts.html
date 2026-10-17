@@ -1,0 +1,21 @@
+<template src="@components/templates/main/main.html" locals='{
+		"title":"Контакти — Природна покрівля", 
+		"lang":"uk",
+		"preloader": {
+			"enable":"false",
+			"once":"false"
+		},
+		"keywords":"", 
+		"description":"Контакти компанії «Природна покрівля»: телефон, Telegram, Viber і WhatsApp. Обговорення проєктів в Україні та за кордоном. Зустрічі за домовленістю."
+	}'>
+	<block name="header">
+		<include src="@components/layout/header/header.html" locals='{"active":"Контакти"}'></include>
+	</block>
+	<block name="main">
+		<include src="@components/pages/contacts/contacts.html" locals='{}'></include>
+	</block>
+	<block name="footer">
+		<include src="@components/layout/footer/footer.html" locals='{}'></include>
+	</block>
+	<block name="popup"></block>
+</template>

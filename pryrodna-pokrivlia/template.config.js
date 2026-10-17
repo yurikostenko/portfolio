@@ -1,5 +1,5 @@
 import path from 'path';
-import { optimize } from 'svgo';
+
 const projectName = path.basename(path.resolve()).toLowerCase()
 
 const isProduction = process.env.NODE_ENV === 'production'
@@ -57,7 +57,7 @@ export default {
 		pxtorem: true,
 		critical: false,
 		codesplit: true,
-		devfiles: true,
+		devfiles: false,
 	},
 	fonts: {
 		iconsfont: false,
@@ -87,7 +87,7 @@ export default {
 	},
 	js: {
 		hotmodules: true,
-		devfiles: true,
+		devfiles: false,
 		bundle: {
 			// Збирає в один JS та один CSS файли
 			// незалежно від налаштування

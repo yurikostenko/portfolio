@@ -1,5 +1,6 @@
 .header {
 	position: relative;
+	z-index: 50;
 	isolation: isolate;
 	border-bottom: 1px solid var(--color-border);
 	@media (width <= toEm($mobileSmall)) {
@@ -50,13 +51,26 @@
 	&__phone {
 		flex-shrink: 0;
 		font-weight: 700;
-		transition: scale 0.3s;
+
+		text-decoration-line: underline;
+		text-decoration-color: transparent;
+		text-decoration-thickness: 1px;
+		text-underline-offset: 0.25em;
+
+		transition: text-decoration-color 0.3s;
+
 		html:not([data-fls-touch]) & {
 			@media (hover: hover) and (pointer: fine) {
 				&:hover {
-					scale: 1.05;
+					text-decoration-color: currentColor;
 				}
 			}
+		}
+
+		&:focus-visible {
+			text-decoration-color: currentColor;
+			outline: 2px solid currentColor;
+			outline-offset: 5px;
 		}
 	}
 }
