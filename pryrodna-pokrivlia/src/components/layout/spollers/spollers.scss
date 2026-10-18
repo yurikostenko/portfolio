@@ -20,7 +20,6 @@
 }
 // Спойлер
 .spollers__item {
-	// font-size: toRem(20);
 }
 // Заголовок спойлера
 .spollers__title {
@@ -29,22 +28,19 @@
 	text-align: left;
 	font-weight: 500;
 	color: var(--color-accent);
-	// border: 1px solid currentColor;
 	padding: 10px 15px;
-	// border-radius: 5px;
 	position: relative;
 	list-style: none;
 	&::marker,
 	&::-webkit-details-marker {
 		display: none;
 	}
-	.--spoller-init & {
+	[class~="--spoller-init"] & {
 		cursor: pointer;
 		&::before,
 		&::after {
 			content: "";
 			position: absolute;
-			// right: 10px;
 			left: 150px;
 			top: 50%;
 			background-color: var(--color-accent);
@@ -61,7 +57,7 @@
 		&::after {
 			transform: translate(0, -50%) rotate(-40deg);
 		}
-		&.--spoller-active {
+		&[class~="--spoller-active"] {
 			&::before {
 				transform: translateX(-75%) rotate(-40deg);
 			}
@@ -81,9 +77,6 @@
 }
 // Контент спойлера
 .spollers__body {
-	// padding: 20px 0;
-	// border-radius: 5px;
-	// border: 1px solid #eee;
 	> *:not(:last-child) {
 		margin-bottom: 16px;
 	}
@@ -99,35 +92,3 @@ details[open] > .spollers__title .spollers__title-text--closed {
 details[open] > .spollers__title .spollers__title-text--open {
 	display: inline;
 }
-
-// .--spoller-init & {
-// 	position: relative;
-// 	width: 100%;
-// 	text-align: left;
-// 	&::before,
-// 	&::after {
-// 		content: "";
-// 		position: absolute;
-// 		right: 0;
-// 		top: toRem(12);
-// 		height: toRem(1);
-// 		transition: all 0.3s ease 0s;
-// 		width: toRem(10);
-// 		background-color: #000;
-// 	}
-// 	&::before {
-// 		transform: rotate(40deg);
-// 		right: toRem(7);
-// 	}
-// 	&::after {
-// 		transform: rotate(-40deg);
-// 	}
-// }
-// &.--spoller-active {
-// 	&::before {
-// 		transform: rotate(-40deg);
-// 	}
-// 	&::after {
-// 		transform: rotate(40deg);
-// 	}
-// }

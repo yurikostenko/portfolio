@@ -1,5 +1,5 @@
 [data-fls-header-scroll] {
-	&.--header-scroll {
+	&[class~="--header-scroll"] {
 		// position: fixed;
 		position: sticky;
 		top: 0;
@@ -10,11 +10,11 @@
 }
 
 [data-fls-header-scroll-show] {
-	&.--header-scroll {
+	&[class~="--header-scroll"] {
 		transition: translate 0.25s;
 		translate: 0px -100%;
 	}
-	&.--header-show {
+	&[class~="--header-show"] {
 		translate: 0 0;
 	}
 }

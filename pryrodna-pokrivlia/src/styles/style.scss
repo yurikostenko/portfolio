@@ -126,7 +126,7 @@ html {
 			opacity 0.6s ease,
 			transform 0.6s ease;
 
-		&.--watcher-view {
+		&[class~="--watcher-view"] {
 			opacity: 1;
 			transform: none;
 		}

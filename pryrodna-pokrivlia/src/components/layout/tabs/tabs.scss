@@ -34,14 +34,14 @@
 			transition: none;
 		}
 
-		&.--tab-active {
+		&[class~="--tab-active"] {
 			color: var(--color-accent);
 			border-bottom-color: var(--color-accent);
 		}
 
 		html:not([data-fls-touch]) & {
 			@media (hover: hover) and (pointer: fine) {
-				&:not(.--tab-active):hover {
+				&:not([class~="--tab-active"]):hover {
 					color: var(--color-accent);
 				}
 			}
