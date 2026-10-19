@@ -30,6 +30,7 @@
 	&__logo {
 		display: block;
 		width: 160px;
+		height: auto;
 		@media (width < toEm($mobile)) {
 			width: 120px;
 		}
