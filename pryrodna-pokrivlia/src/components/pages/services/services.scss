@@ -243,15 +243,35 @@
    }
    // .item-service__slider
    &__slider {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 4 / 3;
       overflow: hidden;
       margin-bottom: 16px;
 
+      > .swiper-wrapper {
+         position: absolute;
+         inset: 0;
+         height: 100%;
+      }
+
       .block__slide {
+         position: relative;
+         height: 100%;
          overflow: hidden;
-         aspect-ratio: 4 / 3;
          cursor: pointer;
 
+         > picture {
+            position: absolute;
+            inset: 0;
+            display: block;
+            width: 100%;
+            height: 100%;
+         }
+
          img {
+            position: absolute;
+            inset: 0;
             display: block;
             width: 100%;
             height: 100%;
@@ -286,12 +306,45 @@
    // .item-service__thumbs
    &__thumbs {
       overflow: hidden;
+      height: auto;
+
+      > .swiper-wrapper {
+         position: relative;
+         height: auto;
+         align-items: flex-start;
+      }
 
       .block__slide {
          position: relative;
+         display: block;
+         height: auto;
+         min-height: 0;
+         aspect-ratio: auto;
          overflow: hidden;
-         aspect-ratio: 4 / 3;
          cursor: pointer;
+
+         &::before {
+            content: "";
+            display: block;
+            padding-top: 75%;
+         }
+
+         > picture {
+            position: absolute;
+            inset: 0;
+            display: block;
+            width: 100%;
+            height: 100%;
+         }
+
+         img {
+            position: absolute;
+            inset: 0;
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+         }
 
          &::after {
             position: absolute;
@@ -300,12 +353,6 @@
             content: "";
             pointer-events: none;
             transition: border-color 0.3s ease;
-         }
-
-         img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
          }
 
          &.swiper-slide-thumb-active {
