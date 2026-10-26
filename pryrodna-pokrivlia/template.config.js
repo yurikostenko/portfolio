@@ -55,7 +55,7 @@ export default {
 		optimize: true, // зробити
 		tailwindcss: false,
 		pxtorem: true,
-		critical: false,
+		critical: true,
 		codesplit: true,
 		devfiles: false,
 	},

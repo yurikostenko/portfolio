@@ -137,3 +137,7 @@ html {
 		}
 	}
 }
+
+img[width][height] {
+	aspect-ratio: attr(width) / attr(height);
+}
