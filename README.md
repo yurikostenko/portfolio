@@ -8,6 +8,7 @@ I develop responsive, accessible, and maintainable front-end interfaces using **
 | HYDRA | [Live Demo](https://yurikostenko.github.io/portfolio/hydra/dist/) | [Code](https://github.com/yurikostenko/portfolio/tree/main/hydra) |
 | Ecobazar | [Live Demo](https://yurikostenko.github.io/portfolio/ecobazar/) | [Code](https://github.com/yurikostenko/portfolio/tree/main/ecobazar) |
 | Headphones | [Live Demo](https://yurikostenko.github.io/portfolio/headphones/) | [Code](https://github.com/yurikostenko/portfolio/tree/main/headphones) |
+| Pryrodna-pokrivlia | [Live Demo](https://yurikostenko.github.io/portfolio/pryrodna-pokrivlia/) | [Code](https://github.com/yurikostenko/portfolio/tree/main/pryrodna-pokrivlia) |
 
 
 ---
